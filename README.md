@@ -1,6 +1,6 @@
 # ProgrammeerprojectData
 
-# Syrië: Wie deed wat, waar en wanneer?
+**Visualistion of "The Syrian Archive"**
 
 "The Syrian Archive" is een archief waarin bewijsmteriaal (video's, foto's) van incidenten waarbij mensenrechten zijn geschonden in Syrië worden gedocumenteerd.
 In dit archief wordt van een incident bijgehouden wat er is gebeurd, waar het is gebeurd, welk wapen is gebruikt, wie de daders zijn, hoeveel slachtoffers
