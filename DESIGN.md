@@ -1,12 +1,15 @@
 # Design "The Syrian Archive"
 
 **Visualistion of "The Syrian Archive"**
+
 Alle visualisaties zullen in één dashboard/pagina worden weergegeven. Hoe de indeling van de visualisaties precies zal zijn weet ik nog niet precies.
 
 *Algemene Time slider*
+
 Bovenaan mijn dashboard komt een timeslider per jaartal wanneer de incidenten hebben plaatsgevonden. Deze timeslider zal gelinkt worden aan alle drie de visualisaties.
 
 *Calendar view*
+
 Voorbeeld: http://bl.ocks.org/mbostock/4063318
 
 Data: de datum van het incident. Vervolgens moet het aantal incidenten per dag bij elkaar worden opgeteld.
