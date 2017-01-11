@@ -113,3 +113,34 @@ text {
   background-color: #999999;
   color: white;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    padding: 10px 40px;
+    font-family: Gill Sans, Verdana;
+    font-size: 15px;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
