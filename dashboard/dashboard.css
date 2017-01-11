@@ -1,0 +1,115 @@
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
+/* Style for the headtitle*/
+#headtitle {
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: #444;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 35px;
+  letter-spacing: -1.5px;
+  font-weight: bold;
+}
+
+/* Style for the subtitle*/
+#subtitle {
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: #444;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 24px;
+  letter-spacing: -1.5px;
+  font-weight: bold;
+}
+
+/* Style for the text of the page*/
+text {
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: #444;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 24px;
+  letter-spacing: -1.5px;
+}
+
+/* Style for the bars*/
+.chart rect {
+  fill: #2b8cbe;
+}
+
+/* Style for the chart text*/
+.chart text {
+  fill: black;
+  font: 12px sans-serif;
+  text-anchor: end;
+}
+
+/* Style for the path and line of the axis*/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+/* Style for the text on the axis*/
+.axis text {
+  font: 13px sans-serif;
+}
+
+/* Style for the d3-tip*/
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: black;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+/* Style for the buttons*/
+#year2015,
+#year2016 {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  background-color: #595959;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#year2015:hover,
+#year2016:hover {
+    background-color: #999999;
+    color: white;
+}
+
+#year2015:disabled,
+#year2016:disabled {
+  background-color: #999999;
+  color: white;
+}

@@ -15,50 +15,37 @@ BACKUP_HTML = 'syrianarchive.html'
 OUTPUT_CSV = 'syrianarchive.csv'
 
 
-def extract_tvseries(dom):
+def extract_incidents(dom):
     """
     TODO
     """
 
     incident_list = []
+    i = 0
 
-    for incident in dom.by_tag('div.desc'):
+    print dom.by_tag('tr')
 
+    for pages in range(50):
+        for incident in dom.by_tag('tr'):
+            if i > 0:
+                link = incident.by_tag('a')[0].content
+                description = incident.by_tag('div')[0].content[1:]
+                date = incident.by_tag('td')[2].content[1:]
+                location = incident.by_tag('td')[3].content[1:]
+                violation = incident.by_tag('td')[4].content[1:]
+                incident_list.append([link.encode('utf-8'), description.encode('utf-8'), date.encode('utf-8'), location.encode('utf-8'), violation.encode('utf-8')])
+            i += 1
 
+    return incident_list
 
-        title = movie.by_tag('a')[1].content
-        rating = movie.by_tag('strong')[0].content
-
-        # grab the string from the second character, because the first two characters are /n
-        genre_unstripped = movie.by_tag('span.genre')[0].content[1:]
-        # get rid of the extra white space at the end of the string
-        genre = genre_unstripped.strip()
-
-        stars_list = ""
-        stars = movie.by_tag('p')[2]
-        # iterates over the <a> tags of every actor/actress
-        for element in stars.by_tag('a'):
-            # store the content of the <a> tags in the string stars_list
-            stars_list += element.content.encode('utf-8')
-
-        runtime = movie.by_tag('span.runtime')[0].content
-        # split the string 'runtime' to store only the number
-        number_runtime = runtime.split()[0]
-
-        # store the extracted information in the array tv_list
-        # because it deletes each utf-8 character you need to specify this
-        tv_list.append([title.encode('utf-8'), rating.encode('utf-8'), genre.encode('utf-8'), stars_list, number_runtime.encode('utf-8')])
-
-    return tv_list
-
-def save_csv(f, tvseries):
+def save_csv(f, incidents):
     '''
-    Output a CSV file containing highest rated TV-series.
+    TODO
     '''
     writer = csv.writer(f)
-    writer.writerow(['Title', 'Rating', 'Genre', 'Actors', 'Runtime'])
+    writer.writerow(['link', 'description', 'date', 'location', 'violation'])
 
-    for row in tvseries:
+    for row in incidents:
         writer.writerow(row)
 
 if __name__ == '__main__':
@@ -75,8 +62,9 @@ if __name__ == '__main__':
     dom = DOM(html)
 
     # Extract the tv series (using the function you implemented)
-    tvseries = extract_tvseries(dom)
+    incidents = extract_incidents(dom)
+    print incidents
 
     # Write the CSV file to disk (including a header)
     with open(OUTPUT_CSV, 'wb') as output_file:
-        save_csv(output_file, tvseries)
+        save_csv(output_file, incidents)

@@ -6,13 +6,13 @@ import csv
 import json
 
 # open the needed files
-csvfile = open('test_data.csv', 'r')
-jsonfile = open('test_data.json', 'w')
+csvfile = open('databarchart.csv', 'r')
+jsonfile = open('databarchart.json', 'w')
 
 # define fieldnames
 fieldnames = (
-        "Date",
-        "TypeofViolation")
+        "TypeofViolation",
+        "Amount")
 
 reader = csv.DictReader(csvfile, fieldnames)
 
