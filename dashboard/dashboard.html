@@ -6,25 +6,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="dashboard.css"/>
 
-<ul>
-  <li><a href="#2013">2012</a></li>
-  <li><a href="#2013">2013</a></li>
-  <li><a href="#2014">2014</a></li>
-  <li><a href="#2015">2015</a></li>
-  <li><a href="#2016">2016</a></li>
+    <div class="title">
+        <text id="headtitle">The Syrian Archive</text>
+    </div>
 
-</ul>
+    <div class="image"></div>
+
+    <div class="timebuttons">
+        <button id="year2012" onclick="disableButton2015(); loadChartData2015()">2012</button>
+        <button id="year2013" onclick="disableButton2016(); loadChartData2016()">2013</button>
+        <button id="year2014" onclick="disableButton2016(); loadChartData2016()">2014</button>
+        <button id="year2015" onclick="disableButton2016(); loadChartData2016()">2015</button>
+        <button id="year2016" onclick="disableButton2016(); loadChartData2016()">2016</button>
+        <button id="all" onclick="disableButton2016(); loadChartData2016()">ALL</button>
+    </div>
 </head>
-    <head>
-        <link rel="stylesheet" type="text/css" href="dashboard.css"/>
-    </head>
 
-    <body>
-        <svg class="chart"></svg>
+
+<body>
+    <div class="merge">
+        <div class="barchart">
+            <svg class="chart"></svg>
+        </div>
+
         <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <script src="barchart.js"></script>
-    </body>
 
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="datamaps.world.min.js"></script>
+
+        <div class="map" id="container" style="position: relative; width: 750px; height: 450px;"></div>
+    </div>
+
+    <script src="map.js"></script>
 </html>

@@ -5,14 +5,13 @@
 
 /* Style for the headtitle*/
 #headtitle {
-  font-family: times, Times New Roman, times-roman, georgia, serif;
-  color: #444;
-  margin: 0;
-  padding: 0px 0px 6px 0px;
-  font-size: 35px;
-  letter-spacing: -1.5px;
-  font-weight: bold;
-}
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Adobe Heiti Std R';
+  font-size: 45px;
+ }
 
 /* Style for the subtitle*/
 #subtitle {
@@ -88,59 +87,74 @@ text {
 }
 
 /* Style for the buttons*/
+
+#background,
+#visualisation,
+#aboutme,
+#year2012,
+#year2013,
+#year2014,
 #year2015,
-#year2016 {
+#year2016,
+#all {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
-  background-color: #595959;
+  background-color: #333;
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-family: Gill Sans, Verdana;
+  font-size: 15px;
+  font-weight: bold;
 }
 
+#background:hover,
+#visualisation:hover,
+#aboutme:hover,
+#year2012:hover,
+#year2013:hover,
+#year2014:hover,
 #year2015:hover,
-#year2016:hover {
-    background-color: #999999;
+#year2016:hover,
+#all:hover {
+    background-color: #ff7f50;
     color: white;
 }
 
+#year2012:disabled,
+#year2013:disabled,
+#year2014:disabled,
 #year2015:disabled,
-#year2016:disabled {
+#year2016:disabled,
+#all:disabled {
   background-color: #999999;
   color: white;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.timebuttons {
+    text-align: center;
     background-color: #333;
 }
 
-li {
-    float: left;
-    padding: 10px 40px;
-    font-family: Gill Sans, Verdana;
-    font-size: 15px;
-    line-height: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: bold;
+.image {
+  height: 150px;
+  background-image: url(https://syrianarchive.org/static/img/english_front_splash.jpg);
 }
 
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 10px 40px;
-    text-decoration: none;
+.title {
+  height: 50px;
+  text-align: center;
+  background-color: #333
 }
 
-li a:hover {
-    background-color: #111;
+.map,
+.barchart {
+  display: inline-block;
+}
+
+.merge {
+  text-align: center;
 }
