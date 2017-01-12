@@ -36,7 +36,7 @@ text {
 
 /* Style for the bars*/
 .chart rect {
-  fill: #2b8cbe;
+  fill: #333;
 }
 
 /* Style for the chart text*/
@@ -102,12 +102,12 @@ text {
   background-color: #333;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 75px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: Gill Sans, Verdana;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
 }
 
@@ -124,30 +124,20 @@ text {
     color: white;
 }
 
-#year2012:disabled,
-#year2013:disabled,
-#year2014:disabled,
-#year2015:disabled,
-#year2016:disabled,
-#all:disabled {
-  background-color: #999999;
-  color: white;
-}
-
 .timebuttons {
     text-align: center;
     background-color: #333;
 }
 
 .image {
-  height: 150px;
+  height: 175px;
   background-image: url(https://syrianarchive.org/static/img/english_front_splash.jpg);
 }
 
 .title {
-  height: 50px;
+  height: 15px;
   text-align: center;
-  background-color: #333
+  background-color: #ff7f50;
 }
 
 .map,
@@ -159,7 +149,30 @@ text {
   text-align: center;
 }
 
-.calendarview {
-  background: #fff;
-  margin: 5px;
+.calender-map {
+  margin-top: 50px;
+  font: 10px sans-serif;
+  shape-rendering: crispEdges;
 }
+
+.day {
+  stroke: #666;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.RdYlGn .q0-11{fill:rgb(165,0,38)}
+.RdYlGn .q1-{fill:rgb(215,48,39)}
+.RdYlGn .q2-11{fill:rgb(244,109,67)}
+.RdYlGn .q3-11{fill:rgb(253,174,97)}
+.RdYlGn .q4-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(217,239,139)}
+.RdYlGn .q7-11{fill:rgb(166,217,106)}
+.RdYlGn .q8-11{fill:rgb(102,189,99)}
+.RdYlGn .q9-11{fill:rgb(26,152,80)}
+.RdYlGn .q10-11{fill:rgb(0,104,55)}
