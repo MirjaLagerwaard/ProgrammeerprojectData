@@ -158,3 +158,8 @@ text {
 .merge {
   text-align: center;
 }
+
+.calendarview {
+  background: #fff;
+  margin: 5px;
+}
