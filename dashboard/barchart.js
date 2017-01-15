@@ -34,10 +34,10 @@ var chart = d3.select(".chart")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // load data from the json file into d3
-d3.json("databarchart.json", function(data) {
+d3.json("data2016barchart.json", function(data) {
   // set x- and y-domain
   x.domain(data.data.map(function(d) { return d.TypeofViolation; }));
-  y.domain([0, 2700]);
+  y.domain([0, 2000]);
 
   // create the d3-tip
   var tip = d3.tip()

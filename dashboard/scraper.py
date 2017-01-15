@@ -14,7 +14,7 @@ TARGET_URL = "https://syrianarchive.org/database/?page="
 INCIDENT_URL = "https://syrianarchive.org"
 BACKUP_HTML = 'syrianarchive.html'
 OUTPUT_CSV = 'syrianarchive.csv'
-PAGES = 55
+PAGES = 75
 
 def extract_incidents(dom):
     """

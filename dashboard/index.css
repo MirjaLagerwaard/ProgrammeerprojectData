@@ -1,0 +1,155 @@
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
+.orangebar {
+  height: 15px;
+  background-color: #ff7f50;
+}
+
+.image {
+  height: 175px;
+  background-image: url(https://syrianarchive.org/static/img/english_front_splash.jpg);
+}
+
+#title {
+  color: white;
+  font-family:Georgia,serif;
+  font-size: 75px;
+  letter-spacing:2px;
+ }
+
+ #home,
+ #visualisation,
+ #aboutme,
+ #gotosyrianarchive {
+   background-color: #333;
+   border: none;
+   padding: 15px 75px;
+   text-align: center;
+
+   color: white;
+   font-family: Gill Sans, Verdana;
+   font-size: 17px;
+   font-weight: bold;
+ }
+
+ #home:hover,
+ #visualisation:hover,
+ #aboutme:hover,
+ #gotosyrianarchive:hover {
+     background-color: #ff7f50;
+     color: white;
+ }
+
+ .timebuttons {
+     text-align: center;
+     background-color: #333;
+ }
+
+.chart rect {
+  fill: #333;
+}
+
+.chart text {
+  font-family: Gill Sans, Verdana;
+  font-size: 8px;
+  font-weight: bold;
+  fill: black;
+  text-anchor: end;
+}
+
+/* Style for the path and line of the axis*/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+/* Style for the text on the axis*/
+.axis text {
+  font: 13px sans-serif;
+}
+
+/* Style for the d3-tip*/
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: black;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+/* Style for the buttons*/
+
+.totaldiv
+{
+    margin-top: 25px;
+}
+
+.map,
+.slider,
+.barchart,
+.abbreviation {
+  display: inline-block;
+}
+
+.merge {
+  width: 50%;
+  margin: 0 auto;
+
+  color: black;
+  font-family: Gill Sans, Verdana;
+  font-size: 15px;
+
+}
+
+.calender-map {
+  margin-top: 25px;
+  font: 10px sans-serif;
+  shape-rendering: crispEdges;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.day {
+  stroke: #666;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.RdYlGn .q0-11{fill:rgb(165,0,38)}
+.RdYlGn .q1-{fill:rgb(215,48,39)}
+.RdYlGn .q2-11{fill:rgb(244,109,67)}
+.RdYlGn .q3-11{fill:rgb(253,174,97)}
+.RdYlGn .q4-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(217,239,139)}
+.RdYlGn .q7-11{fill:rgb(166,217,106)}
+.RdYlGn .q8-11{fill:rgb(102,189,99)}
+.RdYlGn .q9-11{fill:rgb(26,152,80)}
+.RdYlGn .q10-11{fill:rgb(0,104,55)}

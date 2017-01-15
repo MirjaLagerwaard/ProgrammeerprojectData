@@ -1,0 +1,96 @@
+<!-- /
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+
+    <div class="orangebar"></div>
+
+    <div class="image">
+        <text id="title">The Syrian Archive</text>
+    </div>
+
+    <div class="orangebar"></div>
+
+    <div class="timebuttons">
+        <button id="home">HOME</button>
+        <button id="visualisation">VISUALISATION</button>
+        <button id="aboutme">ABOUT ME</button>
+        <button id="gotosyrianarchive"  onclick="window.open('https://syrianarchive.org/')">GO TO THE SYRIAN ARCHIVE</button>
+    </div>
+</head>
+
+<body>
+    <div class="totaldiv" style="border:2px solid black;">
+
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
+        <script src="slider.js"></script>
+        <div class="slider" id="slider" style="border:2px solid black; width: 2000px; height: 100px;"></div>
+
+        <div class="calender-map" style="border:2px solid black; width: 2000px; height: 300px;"></div>
+
+        <script type="text/javascript" src="calendarview.js"></script>
+        <script src="calendarview.js"></script>
+
+        <div class="merge" style="border:2px solid black; width: 2000px;">
+            <div class="abbreviation" style="border:2px solid black; width: 400px; height: 450px">
+                <table style="width:100%">
+                     <tr>
+                       <th>Type of Incident</th>
+                       <th>Abbreviation</th>
+                     </tr>
+                     <tr>
+                       <td>Alleged civilian casualties from Russian attacks</td>
+                       <td>ACCFRA</td>
+                     </tr>
+                     <tr>
+                       <td>Use of illegal weapons</td>
+                       <td>UOIW</td>
+                     </tr>
+                     <tr>
+                       <td>Unlawfull attacks</td>
+                       <td>UA</td>
+                     </tr>
+                     <tr>
+                       <td>Specifically protected persons and objects</td>
+                       <td>SPPAO</td>
+                     </tr>
+                     <tr>
+                       <td>Sieges and economic, social and/or cultural rights</td>
+                       <td>SAESCR</td>
+                     </tr>
+                     <tr>
+                        <td>Violation of children's rights</td>
+                        <td>VOCR</td>
+                    </tr>
+                    <tr>
+                        <td>Abitrary and forcible displacement</td>
+                        <td>AAFD</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="barchart" style="border:2px solid black;">
+                <svg class="chart"></svg>
+            </div>
+
+            <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+            <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+            <script src="barchart.js"></script>
+
+            <script src="http://d3js.org/queue.v1.min.js"></script>
+            <script src="http://d3js.org/topojson.v1.min.js"></script>
+            <script src="datamaps.world.min.js"></script>
+
+            <div class="map" id="container" style="position: relative; width: 750px; height: 450px;" style="border:5px solid black;"></div>
+        </div>
+
+        <script src="map.js"></script>
+    </div>
+</html>
