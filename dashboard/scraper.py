@@ -14,7 +14,7 @@ TARGET_URL = "https://syrianarchive.org/database/?page="
 INCIDENT_URL = "https://syrianarchive.org"
 BACKUP_HTML = 'syrianarchive.html'
 OUTPUT_CSV = 'syrianarchive.csv'
-PAGES = 75
+PAGES = 77
 
 def extract_incidents(dom):
     """
@@ -36,12 +36,14 @@ def extract_incidents(dom):
 
             weapons = [weapon.strip() for weapon in dom_incident.by_tag('p')[16].content[27:].split('<br />')]
             weapons = ", ".join(weapons)[:-2]
+            latitude = dom_incident.by_tag('p')[2].content[33:].strip()
+            longitude = dom_incident.by_tag('p')[3].content[34:].strip()
 
             description = incident.by_tag('div')[0].content[1:].strip()
             date = incident.by_tag('td')[2].content[1:].strip()
             location = incident.by_tag('td')[3].content[1:].strip()
             violation = incident.by_tag('td')[4].content[1:].strip()
-            incident_list.append([link.encode('utf-8'), weapons.encode('utf-8'), description.encode('utf-8'), date.encode('utf-8'), location.encode('utf-8'), violation.encode('utf-8')])
+            incident_list.append([link.encode('utf-8'), location.encode('utf-8'), latitude.encode('utf-8'), longitude.encode('utf-8'), date.encode('utf-8'), violation.encode('utf-8'), weapons.encode('utf-8'), description.encode('utf-8')])
 
         i += 1
 

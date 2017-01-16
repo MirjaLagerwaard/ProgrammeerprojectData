@@ -10,7 +10,7 @@
 
 .image {
   height: 175px;
-  background-image: url(https://syrianarchive.org/static/img/english_front_splash.jpg);
+  background-image: url(https://syrianarchive.org/static/img/belowimage.jpg);
 }
 
 #title {
@@ -43,7 +43,7 @@
      color: white;
  }
 
- .timebuttons {
+ .menubuttons {
      text-align: center;
      background-color: #333;
  }
@@ -102,13 +102,8 @@
 
 /* Style for the buttons*/
 
-.totaldiv
-{
-    margin-top: 25px;
-}
 
 .map,
-.slider,
 .barchart,
 .abbreviation {
   display: inline-block;
@@ -124,7 +119,8 @@
 
 }
 
-.calender-map {
+.calender-map,
+.map {
   margin-top: 25px;
   font: 10px sans-serif;
   shape-rendering: crispEdges;
@@ -153,3 +149,9 @@
 .RdYlGn .q8-11{fill:rgb(102,189,99)}
 .RdYlGn .q9-11{fill:rgb(26,152,80)}
 .RdYlGn .q10-11{fill:rgb(0,104,55)}
+
+#map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }

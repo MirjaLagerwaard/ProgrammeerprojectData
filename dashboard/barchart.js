@@ -4,9 +4,9 @@
 */
 
 //set the margin
-var margin = {top: 20, right: 50, bottom: 115, left: 55},
-  width = 800 - margin.left - margin.right,
-  height = 450 - margin.top - margin.bottom;
+var margin = {top: 20, right: 50, bottom: 60, left: 75},
+  width = 1325 - margin.left - margin.right,
+  height = 520 - margin.top - margin.bottom;
 
 // set scale for x
 var x = d3.scale.ordinal()
@@ -34,9 +34,9 @@ var chart = d3.select(".chart")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // load data from the json file into d3
-d3.json("data2016barchart.json", function(data) {
+d3.json("syrianarchive.json", function(data) {
   // set x- and y-domain
-  x.domain(data.data.map(function(d) { return d.TypeofViolation; }));
+  x.domain(data.data.map(function(d) { return d.; }));
   y.domain([0, 2000]);
 
   // create the d3-tip
@@ -76,11 +76,11 @@ d3.json("data2016barchart.json", function(data) {
     .data(data.data)
   .enter().append("rect")
     .attr("class", "bar")
-    .attr("x", function(d) { return x(d.TypeofViolation); })
+    .attr("x", function(d) { return x(d.typeofviolation); })
     .attr("y", function(d) { return y(d.Amount); })
     .attr("height", function(d) { return height - y(d.Amount); })
     .attr("width", x.rangeBand())
-    .attr("id", function(d) { return d.TypeofViolation.replace(/\s/g, ''); })
+    .attr("id", function(d) { return d.typeofviolation.replace(/\s/g, ''); })
     // change color of the bars on mouse hover and show the data value by using the d3-tip
     .on("mouseover", function(d){
       d3.select(this)
