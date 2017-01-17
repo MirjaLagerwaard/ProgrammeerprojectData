@@ -6,19 +6,13 @@ import csv
 import json
 
 # open the needed files
-csvfile = open('syrianarchive.csv', 'r')
-jsonfile = open('syrianarchive.json', 'w')
+csvfile = open('barcharttest2.csv', 'r')
+jsonfile = open('barcharttest2.json', 'w')
 
 # define fieldnames
 fieldnames = (
-        "link",
-        "location",
-        "latitude",
-        "longitude",
-        "date",
         "typeofviolation",
-        "weapons",
-        "description")
+        "amount")
 
 reader = csv.DictReader(csvfile, fieldnames)
 

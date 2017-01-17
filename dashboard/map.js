@@ -3,9 +3,10 @@
 # Student number: 10363149
 */
 function initMap() {
-   var uluru = {lat: 34.75139, lng:  38.26806};
+   var syria = {lat: 34.75139, lng:  38.26806};
    var map = new google.maps.Map(document.getElementById('map'), {
      zoom: 7,
-     center: uluru
+     center: syria,
+    scrollwheel: false
    });
 }

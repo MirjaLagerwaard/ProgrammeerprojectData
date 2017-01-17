@@ -20,6 +20,11 @@
   letter-spacing:2px;
  }
 
+ .menubuttons {
+     text-align: center;
+     background-color: #333;
+ }
+
  #home,
  #visualisation,
  #aboutme,
@@ -43,9 +48,35 @@
      color: white;
  }
 
- .menubuttons {
-     text-align: center;
-     background-color: #333;
+ #data2012,
+ #data2013,
+ #data2014,
+ #data2015,
+ #data2016 {
+   background-color: #333;
+   border: none;
+   padding: 15px 75px;
+   text-align: center;
+   border-radius: 25px 25px 25px 25px;
+
+   color: white;
+   font-family: Gill Sans, Verdana;
+   font-size: 17px;
+   font-weight: bold;
+ }
+
+ #data2012:hover,
+ #data2013:hover,
+ #data2014:hover,
+ #data2015:hover,
+ #data2016:hover,
+ #data2012:disabled,
+ #data2013:disabled,
+ #data2014:disabled,
+ #data2015:disabled,
+ #data2016:disabled {
+     background-color: #ff7f50;
+     color: white;
  }
 
 .chart rect {
@@ -60,19 +91,16 @@
   text-anchor: end;
 }
 
-/* Style for the path and line of the axis*/
 .axis path,
 .axis line {
   fill: none;
   stroke: #000;
 }
 
-/* Style for the text on the axis*/
 .axis text {
   font: 13px sans-serif;
 }
 
-/* Style for the d3-tip*/
 .d3-tip {
   line-height: 1;
   font-weight: bold;
@@ -100,8 +128,9 @@
   left: 0;
 }
 
-/* Style for the buttons*/
-
+.timebuttons {
+  text-align: center;
+}
 
 .map,
 .barchart,
@@ -121,11 +150,9 @@
 
 .calender-map,
 .map {
-  margin-top: 25px;
   font: 10px sans-serif;
   shape-rendering: crispEdges;
   width: 50%;
-  margin: 0 auto;
 }
 
 .day {
@@ -154,4 +181,9 @@
    width: 100%;
    height: 400px;
    background-color: grey;
+ }
+
+ .horizontal {
+     display: inline-block;
+     width: 100px;
  }
