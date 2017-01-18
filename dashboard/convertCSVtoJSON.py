@@ -6,8 +6,8 @@ import csv
 import json
 
 # open the needed files
-csvfile = open('barcharttest2.csv', 'r')
-jsonfile = open('barcharttest2.json', 'w')
+csvfile = open('hoi.csv', 'r')
+jsonfile = open('hoi.json', 'w')
 
 # define fieldnames
 fieldnames = (

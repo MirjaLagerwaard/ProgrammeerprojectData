@@ -84,26 +84,37 @@
 }
 
 .chart text {
-  font-family: Gill Sans, Verdana;
-  font-size: 8px;
-  font-weight: bold;
-  fill: black;
-  text-anchor: end;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 6.5px;
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: none;
 }
 
 .axis text {
-  font: 13px sans-serif;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 400;
+	line-height: 6.5px;
 }
 
 .d3-tip {
   line-height: 1;
-  font-weight: bold;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 400;
+	line-height: 6.5px;
   padding: 12px;
   background: black;
   color: #fff;

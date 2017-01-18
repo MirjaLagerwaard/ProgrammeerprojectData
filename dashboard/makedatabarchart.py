@@ -3,7 +3,7 @@ import json
 
 # open the needed files
 csvfiletotal = open('syrianarchive.csv', 'r')
-jsonfile = open('barcharttest.json', 'w')
+jsonfile = open('data2012barchart.json', 'w')
 
 # define fieldnames
 fieldnames = (
@@ -18,7 +18,7 @@ fieldnames = (
 
 reader = csv.DictReader(csvfiletotal, fieldnames)
 
-# # Maak dict van type violation [type: 0] waar je 0 gaat optellen voor iedere violation die van een bepaald type is
+# Maak dict van type violation [type: 0] waar je 0 gaat optellen voor iedere violation die van een bepaald type is
 amountofviolation = {'ACCFRA':0, 'UOIW':0, 'UA':0, 'SPPAO':0, 'SAESCR':0, 'VOCR':0, 'AAFD':0, 'Other':0, 'None':0}
 translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
                     'Use of illegal weapons':'UOIW',
@@ -30,9 +30,8 @@ translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
                     'Other':'Other',
                     'None':'None'}
 
-
 for row in reader:
-    if row["date"][-2:] == '16':
+    if row["date"][-2:] == '12':
         typeViolation = row["typeofviolation"]
         short = translateDict[typeViolation]
         amountofviolation[short] += 1

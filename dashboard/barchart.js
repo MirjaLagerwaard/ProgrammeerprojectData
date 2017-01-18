@@ -3,11 +3,11 @@
 # Student number: 10363149
 */
 
-window.onload = loadChartData2012()
+window.onload = loadChartData2016()
 var data_json;
 
 function loadChartData2012() {
-  data_json = "barcharttest.json";
+  data_json = "data2012barchart.json";
   document.getElementById("data2012").disabled = true;
   document.getElementById("data2013").disabled = false;
   document.getElementById("data2014").disabled = false;
@@ -17,7 +17,7 @@ function loadChartData2012() {
 };
 
 function loadChartData2013() {
-  data_json = "barcharttest2.json";
+  data_json = "data2013barchart.json";
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = true;
   document.getElementById("data2014").disabled = false;
@@ -57,12 +57,12 @@ function loadChartData2016() {
 };
 
 function load_data_chart() {
-  d3.selectAll("svg > .chart").remove();
+  d3.selectAll("svg > *").remove();
 
   //set the margin
-  var margin = {top: 20, right: 50, bottom: 60, left: 75},
+  var margin = {top: 100, right: 100, bottom: 80, left: 100},
     width = 1325 - margin.left - margin.right,
-    height = 520 - margin.top - margin.bottom;
+    height = 650 - margin.top - margin.bottom;
 
   // set scale for x
   var x = d3.scale.ordinal()
