@@ -3,7 +3,7 @@ import json
 
 # open the needed files
 csvfiletotal = open('syrianarchive.csv', 'r')
-jsonfile = open('data2012barchart.json', 'w')
+jsonfile = open('data2016barchart.json', 'w')
 
 # define fieldnames
 fieldnames = (
@@ -33,7 +33,7 @@ translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
 result = []
 
 for row in reader:
-    if row["date"][-2:] == '12':
+    if row["date"][-2:] == '16':
         typeViolation = row["typeofviolation"]
         short = translateDict[typeViolation]
         amountofviolation[short] += 1

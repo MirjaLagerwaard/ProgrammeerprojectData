@@ -24,11 +24,10 @@ def extract_incidents(dom):
     incident_list = []
     i = 0
 
-    print dom.by_tag('tr')
-
     for incident in dom.by_tag('tr'):
         if i > 0:
             link = INCIDENT_URL + incident.by_tag('a')[0].href
+            print link
 
             url = URL(link)
             html = url.download(timeout=100)
@@ -54,25 +53,26 @@ def save_csv(f, incidents):
     TODO
     '''
     writer = csv.writer(f)
-    writer.writerow(['link', 'wapons', 'description', 'date', 'location', 'violation'])
+    writer.writerow(['link', 'weapons', 'description', 'date', 'location', 'violation'])
 
     for row in incidents:
         writer.writerow(row)
 
 if __name__ == '__main__':
-    # Download the HTML file
-    url = URL(TARGET_URL + '1')
-    html = url.download(timeout=100)
-
-    # Save a copy to disk in the current directory, this serves as an backup
-    # of the original HTML, will be used in grading.
-    with open(BACKUP_HTML, 'wb') as f:
-        f.write(html)
+    # # Download the HTML file
+    # url = URL(TARGET_URL + '1')
+    # html = url.download(timeout=100)
+    #
+    # # Save a copy to disk in the current directory, this serves as an backup
+    # # of the original HTML, will be used in grading.
+    # with open(BACKUP_HTML, 'wb') as f:
+    #     f.write(html)
 
     # Parse the HTML file into a DOM representation
     incidents = []
     for i in range(1, PAGES + 1):
         url = URL(TARGET_URL + str(i))
+        print url
         html = url.download(timeout=100)
         dom = DOM(html)
 

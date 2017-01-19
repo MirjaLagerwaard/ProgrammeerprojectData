@@ -3,6 +3,10 @@
 # Student number: 10363149
 */
 
+.syriamap, .syriamap svg {
+  position: absolute;
+}
+
 .orangebar {
   height: 15px;
   background-color: #ff7f50;

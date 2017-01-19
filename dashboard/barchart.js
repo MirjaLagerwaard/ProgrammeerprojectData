@@ -68,7 +68,7 @@ function load_data_chart() {
   d3.selectAll("svg.chart > *").remove();
 
   //set the margin
-  var margin = {top: 10, right: 25, bottom: 180, left: 100},
+  var margin = {top: 10, right: 25, bottom: 100, left: 100},
     width = 1160 - margin.left - margin.right,
     height = 650 - margin.top - margin.bottom;
 
@@ -101,7 +101,7 @@ function load_data_chart() {
   d3.json(data_json, function(data) {
     // set x- and y-domain
     x.domain(data.data.map(function(d) { return d.typeofviolation; }));
-    y.domain([0, 2000]);
+    y.domain([0, 2600]);
 
 
     chart.call(tip);

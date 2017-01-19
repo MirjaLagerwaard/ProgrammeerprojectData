@@ -1,0 +1,2660 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<title>Violation Database -  Syrian Archive | beta </title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Syrian Archive - Preserving open source documentation of human rights violations in Syria.">
+    <meta name="viewport" content="width=device-width">
+
+
+    <meta name="twitter:card" content="Preserving open source documentation of human rights violations in Syria.">
+    <meta name="twitter:site" content="@syrian_archive">
+    <meta name="twitter:creator" content="@syrian_archive">
+    <meta property="og:url" content="https://syrianarchive.org/">
+    <meta property="og:title" content="Syrian Archive">
+    <meta property="og:description" content="Preserving open source documentation of human rights violations in Syria.">
+    <meta property="og:image" content="https://syrianarchive.org/static/img/after.jpg">
+    <meta name="twitter:url" content="http%3A//syrianarchive.org/">
+    <meta name='twitter:image' content='https://syrianarchive.org/static/img/after.jpg'>
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+<script src="/static/bootstrap/js/jquery.js"></script>
+
+<!-- Bootstrap -->
+<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" href="/static/components/fontawesome/css/font-awesome.css">
+
+
+<!-- Select2 - magic beans.  including gere because its a heavy input/output site, and should be used everywhere -->
+<script src="/static/components/select2.0/select2.js"></script>
+<link href="/static/components/select2.0/select2.css" rel="stylesheet" media="screen">
+
+<!-- main app for site -->
+<script src="/static/js/app.js"></script>
+
+
+
+<link href="/static/css/main.css" rel="stylesheet" media="screen">
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Trocchi|Space+Mono|Droid+Sans' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+
+
+  <div class='notifications bottom-right'></div>
+
+    <div class="navbar navbar-fixed-top navbar-main">
+      <div class="navbar-inner">
+        <div class="container ">
+                  <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                  MENU
+          </button>
+
+        <div class="navbar-collapse collapse">
+
+
+
+          <ul class="nav navbar-nav">
+            <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        </ul>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/p/page/about"><i class="fa fa-question"></i> About</a></li>
+            </ul>
+
+        <ul class="nav navbar-nav">
+            <li><a href="/database"><i class="fa fa-database"></i> Violation Database</a></li>
+        </ul>
+<!--
+        <ul class="nav navbar-nav ">
+            <li class=""><a href="/database/collections"><i class="fa fa-caret-square-o-right "></i> Video Collections</a></li>
+        </ul> -->
+
+            <ul class="nav navbar-nav">
+                <li class=""><a href="/database/map"><i class="fa fa-map-marker "></i> Syria Map</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class=""><a href="/p/blog"><i class="fa fa-newspaper-o "></i> Investigations</a></li>
+            </ul>
+
+<!--
+            <ul class="nav navbar-nav">
+                <li><a href="/p/page/join"><i class="fa fa-plus-square-o"></i> Join Us</a></li>
+            </ul>
+ -->
+        <ul class="nav navbar-nav navbar-right">
+
+        <form action="/i18n/setlang/" method="post">
+
+          <input name="uhuh" type="hidden" />
+            
+            <select name="language" style="display:none;">
+              <option value="ar" selected="selected" type="hidden" >
+                العربيّة (ar)
+            </option>
+          </select>
+          <button  id="langswitcher"  type="submit" value="" >العربيّة (ar)</button>
+          
+          <input type='hidden' name='csrfmiddlewaretoken' value='RGPGiJQbBfJwLtoe1wVfruvHYEav4auF' />
+        </form>
+
+
+      </ul>
+
+
+
+        </div>
+    </div>
+      </div>
+    </div>
+
+
+<div class="logo">
+<h1>Syrian Archive</h1>
+</div>
+
+<!--
+  
+    <img class="logo" src="/static/img/syarch.png" width="100%" />
+  
+-->
+
+
+
+
+
+
+<div class="container main">
+
+
+    
+
+
+  <div class="row titlerow">
+    <div class="col-md-12">
+      <h1 class="pagetitle">Violation Database</h1>
+    </div>
+  </div>
+
+
+  <div class="row database-table">
+    <div class="col-md-3 filterrow">
+
+     <form method="get" action="/database">
+
+
+        
+        
+
+        <div class="filterfield">
+          <div class="filterlabel">
+            Type of Violation
+          </div>
+          <select id="id_type_of_violation" name="type_of_violation">
+<option value="" selected="selected">---------</option>
+<option value="1">Unlawful attacks</option>
+<option value="2">Specifically protected persons and objects</option>
+<option value="3">Use of illegal weapons</option>
+<option value="4">Sieges and economic, social and cultural rights</option>
+<option value="5"> Arbitrary and forcible displacement</option>
+<option value="6">Plunder and theft</option>
+<option value="7">Massacres and other unlawful killing</option>
+<option value="8">Arbitrary arrest and unlawful detention</option>
+<option value="9">Hostage-taking</option>
+<option value="10">Enforced disappearances</option>
+<option value="11">Torture and ill-treatment</option>
+<option value="12">Sexual and gender-based violence</option>
+<option value="13">Violation of children&#39;s rights</option>
+<option value="15">Other</option>
+<option value="16">Alleged civilian casualties from Russian attacks</option>
+</select>
+        </div>
+        <div class="filterfield">
+          <div class="filterlabel">
+            Weapons Used
+          </div>
+          <select multiple="multiple" id="id_weapons" name="weapons">
+<option value="1">Chemical Weapons</option>
+<option value="2">Chlorine Gas</option>
+<option value="3">Mustard Gas</option>
+<option value="4">Sarin</option>
+<option value="5">Cluster Munition</option>
+<option value="6">Incendiary Weapons</option>
+<option value="7"> ZAB-2.5S</option>
+<option value="8">ShOAB-0.5</option>
+<option value="9">AO-2.5RT/RTM</option>
+<option value="10">SPBE</option>
+<option value="11">ZAB-2.5SM</option>
+<option value="12">PTAB-1M</option>
+<option value="13">RBK-500</option>
+<option value="14">Barrel Bomb</option>
+</select>
+        </div>
+        <div class="filterfield">
+          <div class="filterlabel">
+            Location
+          </div>
+           <select id="id_location" name="location">
+<option value="" selected="selected">---------</option>
+<option value="1">ALEPPO</option>
+<option value="2">ALEPPO : Abi Fares al-Hamdani roundabout</option>
+<option value="3">ALEPPO : Akramiyah</option>
+<option value="4">ALEPPO : Ameriyah</option>
+<option value="5">ALEPPO : Ansari</option>
+<option value="6">ALEPPO : Aqabeh</option>
+<option value="7">ALEPPO : Aqioul</option>
+<option value="8">ALEPPO : Arqoub</option>
+<option value="9">ALEPPO : Ashrafiyeh</option>
+<option value="10">ALEPPO : Asilah</option>
+<option value="11">ALEPPO : Azamiyeh</option>
+<option value="12">ALEPPO : Bab al-Hadid</option>
+<option value="13">ALEPPO : Bab Jnein</option>
+<option value="14">ALEPPO : Bab al-Nasr</option>
+<option value="15">ALEPPO : Bab Nayrab</option>
+<option value="16">ALEPPO : Bab Street</option>
+<option value="17">ALEPPO : Ba&#39;idin</option>
+<option value="18">ALEPPO : Bani Zeid</option>
+<option value="19">ALEPPO : Banqusa</option>
+<option value="20">ALEPPO : Balleramoun</option>
+<option value="21">ALEPPO : Bayadah</option>
+<option value="22">ALEPPO : Bustan al-Basha</option>
+<option value="23">ALEPPO : Bustan al-Zahra</option>
+<option value="25">ALEPPO : Feid</option>
+<option value="26">ALEPPO : Hamidiyeh</option>
+<option value="27">ALEPPO : Thakanet Hananu</option>
+<option value="28">ALEPPO : Haydariyah</option>
+<option value="29">ALEPPO : Hazzazeh</option>
+<option value="30">ALEPPO : Helwaniyah</option>
+<option value="31">ALEPPO : Iza&#39;ah</option>
+<option value="32">ALEPPO : Jadet al-Khandaq</option>
+<option value="33">ALEPPO : Jalloum</option>
+<option value="34">ALEPPO : Jamiyat Mohandasin</option>
+<option value="35">ALEPPO : Jandoul</option>
+<option value="36">ALEPPO : Jazmati</option>
+<option value="37">ALEPPO : Karah Bridge</option>
+<option value="38">ALEPPO : Karam al-Beek</option>
+<option value="39">ALEPPO : Karam al-Jabal</option>
+<option value="40">ALEPPO : Karam al-Qaterji</option>
+<option value="41">ALEPPO : Kawakibi</option>
+<option value="42">ALEPPO : Kayyali St.</option>
+<option value="43">ALEPPO : Khan al-Harir</option>
+<option value="44">ALEPPO : Ma&#39;adi</option>
+<option value="45">ALEPPO : Maghayer</option>
+<option value="46">ALEPPO : Manshiyah al-Qadimeh</option>
+<option value="47">ALEPPO : Marjeh</option>
+<option value="48">ALEPPO : Martini</option>
+<option value="49">ALEPPO : Masaken Shebabi</option>
+<option value="50">ALEPPO : Mashhad</option>
+<option value="51">ALEPPO : Masharqah</option>
+<option value="52">ALEPPO : Mayasser</option>
+<option value="53">ALEPPO : Maysaloun</option>
+<option value="54">ALEPPO : Meridian</option>
+<option value="55">ALEPPO : Midan</option>
+<option value="56">ALEPPO : Military Academy</option>
+<option value="57">ALEPPO : Mohafaza</option>
+<option value="58">ALEPPO : Mokambo</option>
+<option value="59">ALEPPO : Mushatiyeh</option>
+<option value="60">ALEPPO : Nile St.</option>
+<option value="61">ALEPPO : Qadi Asker</option>
+<option value="62">ALEPPO : Qarleq</option>
+<option value="63">ALEPPO : Qastal Mosht</option>
+<option value="64">ALEPPO : Rasafeh</option>
+<option value="65">ALEPPO : Rashiddin</option>
+<option value="66">ALEPPO : Sabaa Bahrat</option>
+<option value="67">ALEPPO : Sabil</option>
+<option value="68">ALEPPO : Salah al-Din</option>
+<option value="69">ALEPPO : Salaheen</option>
+<option value="70">ALEPPO : Sijan St.</option>
+<option value="71">ALEPPO : Sanam Bridge</option>
+<option value="72">ALEPPO : Sayed Ali</option>
+<option value="73">ALEPPO : Seif al-Dawleh</option>
+<option value="74">ALEPPO : Shahba</option>
+<option value="75">ALEPPO : Alshaar</option>
+<option value="76">ALEPPO : Sheikh Fares</option>
+<option value="77">ALEPPO : Sheikh Khader</option>
+<option value="78">ALEPPO : Sheirran</option>
+<option value="79">ALEPPO : Souq al-Hal</option>
+<option value="80">ALEPPO : Sukkari</option>
+<option value="81">ALEPPO : Suleiman al-Halabi</option>
+<option value="82">ALEPPO : Suleimaniyah</option>
+<option value="83">ALEPPO : Suweiqah</option>
+<option value="84">ALEPPO : Tal az-Zarazir</option>
+<option value="85">ALEPPO : University Square</option>
+<option value="86">ALEPPO : Zabadiyah</option>
+<option value="87">ALEPPO : Zahra</option>
+<option value="88">ALEPPO : Zara&#39;a roundabout</option>
+<option value="89">ALEPPO : Abbad</option>
+<option value="90">ALEPPO : Abbin Samaan</option>
+<option value="91">ALEPPO : Ablah</option>
+<option value="92">ALEPPO : Abzemu</option>
+<option value="93">ALEPPO : Afrin</option>
+<option value="94">ALEPPO : Akhtarin</option>
+<option value="95">ALEPPO : Amarnah</option>
+<option value="96">ALEPPO : Arima</option>
+<option value="97">ALEPPO : Ayn al-Arab</option>
+<option value="98">ALEPPO : Ayoun</option>
+<option value="99">ALEPPO : Azaz</option>
+<option value="100">ALEPPO : Al Bab</option>
+<option value="101">ALEPPO : Babakah</option>
+<option value="102">ALEPPO : Baraj Abdullah</option>
+<option value="103">ALEPPO : Bashantara</option>
+<option value="104">ALEPPO : Bashqatin</option>
+<option value="105">ALEPPO : Bel</option>
+<option value="106">ALEPPO : Braghidah</option>
+<option value="107">ALEPPO : Darat Izzah</option>
+<option value="108">ALEPPO : Deir Hafir</option>
+<option value="109">ALEPPO : Ghandawi</option>
+<option value="110">ALEPPO : Ghouz</option>
+<option value="111">ALEPPO : Hawwar</option>
+<option value="112">ALEPPO : Ihtimalat</option>
+<option value="113">ALEPPO : Irshaf</option>
+<option value="114">ALEPPO : Asunbul</option>
+<option value="115">ALEPPO : Jab al-Khass</option>
+<option value="117">ALEPPO : Jindaris</option>
+<option value="118">ALEPPO : Kafar Aleppo</option>
+<option value="119">ALEPPO : Kafar Ameh</option>
+<option value="120">ALEPPO : Kafar Dael</option>
+<option value="121">ALEPPO : Kafar Ghan</option>
+<option value="122">ALEPPO : Kafar Karmin</option>
+<option value="123">ALEPPO : Kafar Naha</option>
+<option value="124">ALEPPO : Kafar Naseh</option>
+<option value="125">ALEPPO : Kafar Naya</option>
+<option value="126">ALEPPO : Khafisah</option>
+<option value="127">ALEPPO : Khan al-Asl</option>
+<option value="128">ALEPPO : Kuwayris Airbase</option>
+<option value="129">ALEPPO : Madiunah</option>
+<option value="130">ALEPPO : Manbij</option>
+<option value="131">ALEPPO : Mansoura</option>
+<option value="132">ALEPPO : Maqri</option>
+<option value="133">ALEPPO : Ma&#39;ranaz</option>
+<option value="134">ALEPPO : Mar&#39;e</option>
+<option value="135">ALEPPO : Maret Artiq</option>
+<option value="136">ALEPPO : Maryamayn</option>
+<option value="137">ALEPPO : Masalmiyah</option>
+<option value="138">ALEPPO : Maskanah</option>
+<option value="139">ALEPPO : Midanki</option>
+<option value="140">ALEPPO : Miznaz</option>
+<option value="141">ALEPPO : Niyarah</option>
+<option value="142">ALEPPO : Nubl</option>
+<option value="143">ALEPPO : Qastel Jendu</option>
+<option value="144">ALEPPO : Mregel</option>
+<option value="145">ALEPPO : Safirah</option>
+<option value="146">ALEPPO : Sakriyah Kabira</option>
+<option value="147">ALEPPO : Sandarah</option>
+<option value="148">ALEPPO : Sarrin</option>
+<option value="149">ALEPPO : Shaddar</option>
+<option value="150">ALEPPO : Shayukh Fuqani</option>
+<option value="151">ALEPPO : Shweiha</option>
+<option value="152">ALEPPO : Ta&#39;anah</option>
+<option value="153">ALEPPO : Tadif</option>
+<option value="154">ALEPPO : Tafriah</option>
+<option value="155">ALEPPO : Talafeh</option>
+<option value="156">ALEPPO : Tal Aran</option>
+<option value="157">ALEPPO : Tal Hodan</option>
+<option value="158">ALEPPO : Tal Jabin</option>
+<option value="159">ALEPPO : Tal Rifaat</option>
+<option value="160">ALEPPO : Tal Sullur</option>
+<option value="161">ALEPPO : Tawwamah</option>
+<option value="162">ALEPPO : Turkmen al-Bareh</option>
+<option value="163">ALEPPO : Umayjil</option>
+<option value="164">ALEPPO : Urum al-Kubra</option>
+<option value="166">ALEPPO : Zammar</option>
+<option value="167">ALEPPO : Zerbah</option>
+<option value="168">ALEPPO : Ziadiyah</option>
+<option value="169">ALEPPO : Al-Fardos</option>
+<option value="170">ALEPPO : Ashekh Saeed</option>
+<option value="171">DAMASCUS</option>
+<option value="172">DAMASCUS : Bahsah</option>
+<option value="173">DAMASCUS : Beit Saham</option>
+<option value="174">DAMASCUS : Daf al-Shook</option>
+<option value="175">DAMASCUS : Jamarek Sq</option>
+<option value="176">DAMASCUS : Jouret Sherabati</option>
+<option value="177">DAMASCUS : Khairo Yassin mosque</option>
+<option value="178">DAMASCUS : Khuzimeh mosque</option>
+<option value="179">DAMASCUS : Sakhanah Square</option>
+<option value="180">DAMASCUS : Sidi Moqdad</option>
+<option value="181">DAMASCUS : Tishreen</option>
+<option value="182">DAMASCUS : Zein al-Abideen Mosque</option>
+<option value="183">DAMASCUS : Yarmouk Camp</option>
+<option value="184">DAMASCUS : Al Midan</option>
+<option value="185">DAMASCUS : Ruken Al-Din</option>
+<option value="186">DAMASCUS : Qaboun</option>
+<option value="187">DAMASCUS : Barzeh</option>
+<option value="188">DAMASCUS : Jobar</option>
+<option value="189">DAMASCUS : Kafar souseh</option>
+<option value="190">DAMASCUS : Babila</option>
+<option value="191">DAMASCUS : Muadamiyat Al-sham</option>
+<option value="192">DAMASCUS : Yalda</option>
+<option value="193">DAMASCUS : Irbin nahiyah</option>
+<option value="194">DAMASCUS : Jaramana</option>
+<option value="195">DAMASCUS : Kafar Batna</option>
+<option value="196">DAMASCUS : Kiswah</option>
+<option value="197">DAMASCUS : Kiswah nahiyah</option>
+<option value="198">DAMASCUS : Mleiha</option>
+<option value="199">DAMASCUS : Daraya mantiqah</option>
+<option value="200">DAMASCUS : al-Hajar al-Aswad nahiyah</option>
+<option value="201">DAMASCUS : Sahnaya nahiyah</option>
+<option value="202">DAMASCUS : Duma</option>
+<option value="203">DAMASCUS : Dumayr nahiyah</option>
+<option value="204">DAMASCUS : Harasta nahiyah</option>
+<option value="205">DAMASCUS : Harran al-Awamid nahiyah</option>
+<option value="206">DAMASCUS : Nashabiyah nahiyah</option>
+<option value="207">DAMASCUS : Sabaa Biyar nahiyah</option>
+<option value="208">DAMASCUS : an-Nabek mantiqah</option>
+<option value="209">DAMASCUS : Deir Atiyah nahiyah</option>
+<option value="210">DAMASCUS : Qatana mantiqah</option>
+<option value="211">DAMASCUS : Beit Jen nahiyah</option>
+<option value="212">DAMASCUS : Sa&#39;sa&#39; nahiyah</option>
+<option value="213">DAMASCUS : Qudsaya mantiqah</option>
+<option value="214">DAMASCUS : Ayn al-Fijah nahiyah</option>
+<option value="215">DAMASCUS : al-Demas nahiyah</option>
+<option value="216">DAMASCUS : Qudsaya nahiyah</option>
+<option value="217">DAMASCUS : Qutayfah mantiqah</option>
+<option value="218">DAMASCUS : Jayrud nahiyah</option>
+<option value="219">DAMASCUS : Ma&#39;alula nahiyah</option>
+<option value="220">DAMASCUS : Ruhaybah nahiyah</option>
+<option value="221">DAMASCUS : at-Tal mantiqah</option>
+<option value="222">DAMASCUS : Rankous nahiyah</option>
+<option value="223">DAMASCUS : Seidnaya nahiyah</option>
+<option value="224">DAMASCUS : Yabrud mantiqah</option>
+<option value="225">DAMASCUS : Assal al-Ward nahiyah</option>
+<option value="226">DAMASCUS : Zabadani mantiqah</option>
+<option value="227">DAMASCUS : Madaya</option>
+<option value="228">DAMASCUS : Serghaya nahiyah</option>
+<option value="229">DAMASCUS : Az-Zabadani nahiyah</option>
+<option value="231">DAMASCUS : Ghazlaniyah nahiyah</option>
+<option value="237">DAMASCUS : an-Nabek nahiyah</option>
+<option value="240">DAMASCUS : Qatana nahiyah</option>
+<option value="253">DAMASCUS : Ashrafiat Wadi Barada</option>
+<option value="254">DAMASCUS : Wadi Barada Market</option>
+<option value="257">DAMASCUS : Jdaydet al-Fadel</option>
+<option value="258">DAMASCUS : Jdaydet Shibani</option>
+<option value="259">DARAA</option>
+<option value="260">DARAA : Dahiya Gharbiyah</option>
+<option value="261">DARAA : Kashef</option>
+<option value="262">DARAA : Matar</option>
+<option value="263">DARAA : Qusour</option>
+<option value="264">DARAA : Sahari</option>
+<option value="265">DARAA : Arab International (European) Uni</option>
+<option value="266">DARAA : Bosra</option>
+<option value="267">DARAA : Dael</option>
+<option value="268">DARAA : Herak</option>
+<option value="269">DARAA : Inkhil</option>
+<option value="270">DARAA : Izraa</option>
+<option value="271">DARAA : jasim</option>
+<option value="272">DARAA : Nafiah</option>
+<option value="273">DARAA : Nawa</option>
+<option value="274">DARAA : Sanamayn</option>
+<option value="275">DARAA : Sheikh Miskin</option>
+<option value="276">DARAA : Tafas</option>
+<option value="277">DEIR EZZOR</option>
+<option value="278">DEIR EZZOR : Abu Kamal mantiqah</option>
+<option value="279">DEIR EZZOR : Abu Kamal nahiyah</option>
+<option value="280">DEIR EZZOR : Hajez Jamyan</option>
+<option value="281">DEIR EZZOR : al-Jalaa nahiyah</option>
+<option value="282">DEIR EZZOR : as-Souseh nahiyah</option>
+<option value="283">DEIR EZZOR : Deir ez-Zour mantiqah</option>
+<option value="284">DEIR EZZOR : Busayrah nahiyah</option>
+<option value="285">DEIR EZZOR : Deir ez-Zour nahiyah</option>
+<option value="286">DEIR EZZOR : Kasra nahiyah</option>
+<option value="287">DEIR EZZOR : Khesham nahiyah</option>
+<option value="288">DEIR EZZOR : Muhasan nahiyah</option>
+<option value="289">DEIR EZZOR : Sour nahiyah</option>
+<option value="290">DEIR EZZOR : At-Tibni nahiyah</option>
+<option value="291">DEIR EZZOR : al-Mayadin mantiqah</option>
+<option value="292">DEIR EZZOR : Asharh nahiyah</option>
+<option value="293">DEIR EZZOR : Dhiban nahiyah</option>
+<option value="295">DEIR EZZOR : Baloum</option>
+<option value="296">DEIR EZZOR : Buomar</option>
+<option value="297">DEIR EZZOR : Dahleh</option>
+<option value="298">DEIR EZZOR : Ghamam</option>
+<option value="299">DEIR EZZOR : Hatilah</option>
+<option value="300">DEIR EZZOR : Mahaymidah</option>
+<option value="301">DEIR EZZOR : Safirat Tahtaniyah</option>
+<option value="302">DEIR EZZOR : Sawa&#39;ih</option>
+<option value="303">DEIR EZZOR : Shaitat</option>
+<option value="304">DEIR EZZOR : Shnan</option>
+<option value="305">DEIR EZZOR : Taybah</option>
+<option value="306">DEIR EZZOR : Zabari</option>
+<option value="307">DEIR EZZOR : Al-Sinaa</option>
+<option value="308">DEIR EZZOR : Hajin nahiyah</option>
+<option value="309">HAMA</option>
+<option value="310">HAMA : 15 March St</option>
+<option value="311">HAMA : Abi al-Fida</option>
+<option value="312">HAMA : Amiriyah</option>
+<option value="313">HAMA : Aylilat</option>
+<option value="314">HAMA : Bab al-Balad</option>
+<option value="315">HAMA : Bab Qebli</option>
+<option value="316">HAMA : Baraziyah</option>
+<option value="317">HAMA : Basher al-Hafi mosque</option>
+<option value="318">HAMA : Bayad</option>
+<option value="319">HAMA : Burhan Souq (Hader)</option>
+<option value="320">HAMA : Dabagha</option>
+<option value="321">HAMA : Farrayah</option>
+<option value="322">HAMA : Haddadin Souq</option>
+<option value="323">HAMA : Ibn Rashid St</option>
+<option value="324">HAMA : Jab roundabout</option>
+<option value="326">HAMA : Janoob al-Thakneh</option>
+<option value="327">HAMA : Jarajmeh</option>
+<option value="328">HAMA : Karam Hourani</option>
+<option value="329">HAMA : Marabet</option>
+<option value="330">HAMA : Mashaa al-Tayar</option>
+<option value="331">HAMA : Al-Madena</option>
+<option value="332">HAMA : Nasr</option>
+<option value="333">HAMA : Shamaliyeh</option>
+<option value="334">HAMA : Sharqiyah</option>
+<option value="335">HAMA : Sheikh Alwan</option>
+<option value="336">HAMA : Sheikh Anbar</option>
+<option value="337">HAMA : Sheikh Mohammed al-Hamid St</option>
+<option value="338">HAMA : Shuhada mosque</option>
+<option value="339">HAMA : Souq Taweel</option>
+<option value="340">HAMA : Taawniyah</option>
+<option value="342">HAMA : Abu Hanaya</option>
+<option value="343">HAMA : Abu Rimal</option>
+<option value="344">HAMA : Amiqiyah</option>
+<option value="345">HAMA : Aqayribat</option>
+<option value="346">HAMA : Arba&#39;een</option>
+<option value="347">HAMA : Arzeh</option>
+<option value="348">HAMA : Asharenah</option>
+<option value="349">HAMA : Ashrafiyah</option>
+<option value="351">HAMA : Aweinah</option>
+<option value="352">HAMA : Aziziyah</option>
+<option value="353">HAMA : Bab al-Taqah</option>
+<option value="355">HAMA : Balahsin</option>
+<option value="357">HAMA : Berri al-Sharqi</option>
+<option value="358">HAMA : Deemu</option>
+<option value="360">HAMA : Fan Shamali</option>
+<option value="361">HAMA : Fellah</option>
+<option value="362">HAMA : Halfaya</option>
+<option value="363">HAMA : Hamidiyah</option>
+<option value="364">HAMA : Hammadi al-Omar</option>
+<option value="365">HAMA : Hanjour</option>
+<option value="366">HAMA : Hawash</option>
+<option value="367">HAMA : Hawijah</option>
+<option value="368">HAMA : Hawiz</option>
+<option value="369">HAMA : Hayalin</option>
+<option value="370">HAMA : Jabriyah</option>
+<option value="371">HAMA : Jadideh</option>
+<option value="372">HAMA : Jalameh</option>
+<option value="373">HAMA : Jammaseh</option>
+<option value="374">HAMA : Jarjarah</option>
+<option value="375">HAMA : Jarjiseh</option>
+<option value="376">HAMA : Jayed</option>
+<option value="377">HAMA : Jennan</option>
+<option value="378">HAMA : Jibeen</option>
+<option value="379">HAMA : Jreijas</option>
+<option value="380">HAMA : Kafar Houd</option>
+<option value="381">HAMA : Kafar al-Toun</option>
+<option value="383">HAMA : Kafraa</option>
+<option value="384">HAMA : Karameh</option>
+<option value="385">HAMA : Karayam</option>
+<option value="386">HAMA : Khafsin</option>
+<option value="387">HAMA : Khnayzir</option>
+<option value="388">HAMA : Krah</option>
+<option value="389">HAMA : Latammin</option>
+<option value="390">HAMA : latamneh</option>
+<option value="391">HAMA : Ma&#39;arzaf</option>
+<option value="392">HAMA : Jubb Al-Aswad</option>
+<option value="393">HAMA : Marrashidah</option>
+<option value="394">HAMA : Massoud</option>
+<option value="395">HAMA : Misyaf</option>
+<option value="396">HAMA : Morek</option>
+<option value="397">HAMA : Muhradah</option>
+<option value="398">HAMA : Mustarihah</option>
+<option value="399">HAMA : Qaber Fidah</option>
+<option value="400">HAMA : Qabu</option>
+<option value="401">HAMA : Qanbar</option>
+<option value="402">HAMA : Qasr Abu Samrah</option>
+<option value="403">HAMA : Qassabiyah</option>
+<option value="404">HAMA : Qubeir</option>
+<option value="405">HAMA : Qubaybat</option>
+<option value="406">HAMA : Qulaydin</option>
+<option value="407">HAMA : Rihajan</option>
+<option value="408">HAMA : Sabburah</option>
+<option value="409">HAMA : Safsafeh</option>
+<option value="410">HAMA : Sahariyah</option>
+<option value="411">HAMA : Salamiyah</option>
+<option value="412">HAMA : Samalil</option>
+<option value="413">HAMA : Sa&#39;an</option>
+<option value="414">HAMA : Shaharnaz</option>
+<option value="415">HAMA : Shari&#39;ah</option>
+<option value="416">HAMA : Shayr</option>
+<option value="417">HAMA : Shayzer</option>
+<option value="418">HAMA : Sheikh Hadid</option>
+<option value="419">HAMA : Sheyha</option>
+<option value="420">HAMA : Sihriyah</option>
+<option value="421">HAMA : Sormaniyah</option>
+<option value="422">HAMA : Souha</option>
+<option value="423">IDLIB : Sukayk</option>
+<option value="424">HAMA : Suqaylabiyah</option>
+<option value="425">HAMA : Suran</option>
+<option value="427">HAMA : Tal Khanzir</option>
+<option value="428">HAMA : Tal Malah</option>
+<option value="429">HAMA : Tal Sakkin</option>
+<option value="431">HAMA : Talaf</option>
+<option value="432">HAMA : Talisiyah</option>
+<option value="433">HAMA : Tamana&#39;at al-Ghab</option>
+<option value="434">HAMA : Tarmala</option>
+<option value="435">HAMA : Tayyibat al-Imam</option>
+<option value="436">HAMA : Tayyibat al-Turki</option>
+<option value="437">HAMA : Toubah</option>
+<option value="438">HAMA : Traymseh</option>
+<option value="439">HAMA : Utshan</option>
+<option value="440">HAMA : Zakah</option>
+<option value="441">HAMA : Zeizoun</option>
+<option value="442">HAMA : Zillakiat</option>
+<option value="443">HAMA : Khatamlu</option>
+<option value="444">HAMA : KafrZita</option>
+<option value="445">HAMA : Al-Boida</option>
+<option value="446">HAMA : Ziyarah</option>
+<option value="447">HASAKAH</option>
+<option value="448">HASAKAH : Tall Bulayj</option>
+<option value="449">HASAKAH : Salihiyat Harb</option>
+<option value="450">HASAKAH : Haddadiyah</option>
+<option value="451">HASAKAH : al-Arisheh nahiyah</option>
+<option value="452">HASAKAH : Bir al-Helou nahiyah</option>
+<option value="453">HASAKAH : al-Hasakah nahiyah</option>
+<option value="454">HASAKAH : al-Houl nahiyah</option>
+<option value="455">HASAKAH : Markadeh nahiyah</option>
+<option value="456">HASAKAH : Shaddadeh nahiyah</option>
+<option value="457">HASAKAH : Tal Tamer nahiyah</option>
+<option value="458">HASAKAH : al-Malikiyah mantiqah</option>
+<option value="459">HASAKAH : Jawadiyah nahiyah</option>
+<option value="460">HASAKAH : al-Malikiyah nahiyah</option>
+<option value="461">HASAKAH : Yarubiyeh nahiyah</option>
+<option value="462">HASAKAH : Qamishli mantiqah</option>
+<option value="463">HASAKAH : Amouda nahiyah</option>
+<option value="464">HASAKAH : Qamishli nahiyah</option>
+<option value="465">HASAKAH : Tal Hamis nahiyah</option>
+<option value="466">HASAKAH : al-Qahtaniyeh nahiyah</option>
+<option value="467">HASAKAH : Ras al-Ayn mantiqah</option>
+<option value="468">HASAKAH : Darbasiyah nahiyah</option>
+<option value="469">HASAKAH : Ras al-Ayn nahiyah</option>
+<option value="470">HASAKAH : Khirbet Bajar</option>
+<option value="471">HASAKAH : Saba Arba&#39;een</option>
+<option value="472">HASAKAH : Tawarikh</option>
+<option value="473">HOMS</option>
+<option value="474">HOMS : Old Homs</option>
+<option value="475">HOMS : Adawiyah</option>
+<option value="476">HOMS : A&#39;iddine Camp</option>
+<option value="477">HOMS : Asheerah</option>
+<option value="478">HOMS : Bab Turkman</option>
+<option value="479">HOMS : Bani Sibai</option>
+<option value="481">HOMS : Dalati mosque</option>
+<option value="482">HOMS : Fakhoura</option>
+<option value="483">HOMS : Hama Street</option>
+<option value="484">HOMS : Jab al-Jandali</option>
+<option value="486">HOMS : Karam Shamsham</option>
+<option value="487">HOMS : Marija</option>
+<option value="488">HOMS : Rabia al-Arabi</option>
+<option value="489">HOMS : Rifai</option>
+<option value="490">HOMS : Sharakes</option>
+<option value="491">HOMS : Sultaniyah</option>
+<option value="492">HOMS : Wadi Arab</option>
+<option value="493">HOMS : Abel</option>
+<option value="494">HOMS : Al-Burayj</option>
+<option value="495">HOMS : Dhaba&#39;ah</option>
+<option value="496">HOMS : Dar-Assalamlam</option>
+<option value="497">HOMS : Gharnatah</option>
+<option value="498">HOMS : Ghasaniyah</option>
+<option value="499">HOMS : Hallat</option>
+<option value="500">HOMS : Kafar Laha</option>
+<option value="501">HOMS : Mahin</option>
+<option value="502">HOMS : Marmarita</option>
+<option value="503">HOMS : Muharram</option>
+<option value="504">HOMS : Naoureh</option>
+<option value="505">HOMS : Naqirah</option>
+<option value="506">HOMS : Palmyra</option>
+<option value="507">HOMS : Qalaat al-Hosn</option>
+<option value="508">HOMS : Qaryatayn</option>
+<option value="509">HOMS : Qusayr</option>
+<option value="510">HOMS : Rastan</option>
+<option value="511">HOMS : Shihshar</option>
+<option value="512">HOMS : Sukhnah</option>
+<option value="513">HOMS : Talbisah</option>
+<option value="514">HOMS : Talkalakh</option>
+<option value="515">HOMS : Zafaraneh</option>
+<option value="516">HOMS : Zara</option>
+<option value="517">HOMS : Dayr Baalbah</option>
+<option value="519">HOMS : Al-Khaldeeye</option>
+<option value="520">HOMS : Ash Shawmariyah</option>
+<option value="521">HOMS : Taldou</option>
+<option value="522">HOMS : Ter Maela</option>
+<option value="523">IDLIB</option>
+<option value="524">IDLIB : Abadeen</option>
+<option value="525">IDLIB : Ablin</option>
+<option value="526">IDLIB : Abu Makki</option>
+<option value="527">IDLIB : Abu al-Zuhour Airbase</option>
+<option value="528">IDLIB : Adwan</option>
+<option value="529">IDLIB : Ajaz</option>
+<option value="530">IDLIB : Akko</option>
+<option value="531">IDLIB : Allani</option>
+<option value="532">IDLIB : Aqrabat</option>
+<option value="533">IDLIB : Ariha</option>
+<option value="534">IDLIB : Armala</option>
+<option value="535">IDLIB : Arnaba</option>
+<option value="536">IDLIB : Ayn Bayda</option>
+<option value="537">IDLIB : Ayn Hour</option>
+<option value="538">IDLIB : Ayn Larouz</option>
+<option value="539">IDLIB : Ayn Sheeb</option>
+<option value="540">IDLIB : Azmarin</option>
+<option value="541">IDLIB : Babullah</option>
+<option value="543">IDLIB : Babuleen</option>
+<option value="544">IDLIB : Bafatamoun</option>
+<option value="545">IDLIB : Balioun</option>
+<option value="546">IDLIB : Basaida</option>
+<option value="547">IDLIB : Basqanoul</option>
+<option value="548">IDLIB : Bashiriyah</option>
+<option value="550">IDLIB : Bassamas</option>
+<option value="551">IDLIB : Bawaider</option>
+<option value="552">IDLIB : Bayates</option>
+<option value="553">IDLIB : Bazabor</option>
+<option value="554">IDLIB : Bdama</option>
+<option value="555">IDLIB : Bikafloun</option>
+<option value="556">IDLIB : Binein</option>
+<option value="557">IDLIB : Binnish</option>
+<option value="558">IDLIB : Bishlamoun</option>
+<option value="559">IDLIB : Burnan</option>
+<option value="560">IDLIB : Bzaytah</option>
+<option value="561">IDLIB : Dadikh</option>
+<option value="562">IDLIB : Dana</option>
+<option value="563">IDLIB : Dana village</option>
+<option value="564">IDLIB : Deir Gharbi</option>
+<option value="565">IDLIB : Deir Sinbal</option>
+<option value="566">IDLIB : Deir Sharqi</option>
+<option value="567">IDLIB : Faqi&#39;a</option>
+<option value="568">IDLIB : Farkaya</option>
+<option value="569">IDLIB : Fatirah</option>
+<option value="570">IDLIB : Ghafar</option>
+<option value="572">IDLIB : Hafsarjah</option>
+<option value="573">IDLIB : Halban</option>
+<option value="574">IDLIB : Hammameh</option>
+<option value="575">IDLIB : Hantutin</option>
+<option value="576">IDLIB : Harbanafsah</option>
+<option value="577">IDLIB : Harbanoush</option>
+<option value="578">IDLIB : Harem</option>
+<option value="579">IDLIB : Hartamiyah</option>
+<option value="580">IDLIB : Hawaij</option>
+<option value="581">IDLIB : Haysh</option>
+<option value="582">IDLIB : Hazano</option>
+<option value="583">IDLIB : Hazarin</option>
+<option value="584">IDLIB : Heraki</option>
+<option value="585">IDLIB : Jadraya</option>
+<option value="586">IDLIB : Jaradeh</option>
+<option value="587">IDLIB : Jbala</option>
+<option value="588">IDLIB : Jisr ash-Shughur</option>
+<option value="589">IDLIB : Joubas</option>
+<option value="590">IDLIB : Juzef</option>
+<option value="591">IDLIB : Kafar Amim</option>
+<option value="592">IDLIB : Kafar Arouq</option>
+<option value="593">IDLIB : Kafar Ayn</option>
+<option value="594">IDLIB : Kafar Batikh</option>
+<option value="595">IDLIB : Kafar Dariyan</option>
+<option value="596">IDLIB : Kafar Haya</option>
+<option value="597">IDLIB : Kafar Houm</option>
+<option value="598">IDLIB : Kafar Jalis</option>
+<option value="599">IDLIB : Kafar Kila</option>
+<option value="600">IDLIB : Kafar Latah</option>
+<option value="601">IDLIB : Kafar Meed</option>
+<option value="602">IDLIB : Kafar Nabil</option>
+<option value="603">IDLIB : Kafar Najed</option>
+<option value="604">IDLIB : Kafar Ruhin</option>
+<option value="605">IDLIB : Kafar Sejnah</option>
+<option value="606">IDLIB : Kafar Shalaya</option>
+<option value="607">IDLIB : Kafar Takharim</option>
+<option value="608">IDLIB : Kafar Ziba</option>
+<option value="609">IDLIB : Kafaraya</option>
+<option value="610">IDLIB : Kaniset Baniez</option>
+<option value="611">IDLIB : Kaniset Nakhleh</option>
+<option value="612">IDLIB : Karratin Al-kebire</option>
+<option value="613">IDLIB : Karratin Al-seghire</option>
+<option value="614">IDLIB : Kastan</option>
+<option value="615">IDLIB : Katian</option>
+<option value="616">IDLIB : Khan Shaykhun</option>
+<option value="617">IDLIB : Khan Subul</option>
+<option value="618">IDLIB : Khawari</option>
+<option value="619">IDLIB : Khirbet al-Jouz</option>
+<option value="620">IDLIB : Koukabah</option>
+<option value="621">IDLIB : Kouin</option>
+<option value="622">IDLIB : Kursaa</option>
+<option value="623">IDLIB : Laj</option>
+<option value="624">IDLIB : Ma&#39;di</option>
+<option value="625">IDLIB : Ma&#39;isrounah</option>
+<option value="626">IDLIB : Maghara</option>
+<option value="627">IDLIB : Mahalah</option>
+<option value="628">IDLIB : Mahambel</option>
+<option value="629">IDLIB : Majadaliya</option>
+<option value="630">IDLIB : Mantaf</option>
+<option value="631">IDLIB : Maisarounah</option>
+<option value="632">IDLIB : Mar Baleet</option>
+<option value="633">IDLIB : Mar Dibsah</option>
+<option value="634">IDLIB : Mar Shamarin</option>
+<option value="636">IDLIB : Mar Zita</option>
+<option value="637">IDLIB : Marateh</option>
+<option value="638">IDLIB : Marat Hermeh</option>
+<option value="639">IDLIB : Marat Hitat</option>
+<option value="640">IDLIB : Marat Mattar</option>
+<option value="641">IDLIB : Maret Misrin</option>
+<option value="642">IDLIB : Maret Al-khaskah</option>
+<option value="643">IDLIB : Areha</option>
+<option value="645">IDLIB : Kourin</option>
+<option value="646">IDLIB : Urum al-Jouz</option>
+<option value="647">IDLIB : Ehsem nahiyah</option>
+<option value="649">IDLIB : al-Barrah</option>
+<option value="650">IDLIB : Ehsem</option>
+<option value="651">IDLIB : Kansafrah</option>
+<option value="653">IDLIB : Mhambel nahiyah</option>
+<option value="656">IDLIB : Armanaz nahiyah</option>
+<option value="659">IDLIB : Kafr Takharim nahiyah</option>
+<option value="660">IDLIB : Qorqania nahiyah</option>
+<option value="661">IDLIB : Salqin nahiyah</option>
+<option value="663">IDLIB : Saraqib nahiyah</option>
+<option value="664">IDLIB : Sarmin nahiyah</option>
+<option value="665">IDLIB : Taftanaz</option>
+<option value="667">IDLIB : Darkoush nahiyah</option>
+<option value="668">IDLIB : al-Janudiyah nahiyah</option>
+<option value="669">IDLIB : Haish najiyah</option>
+<option value="670">IDLIB : Maret Numan</option>
+<option value="671">IDLIB : Kafranbel nahiyah</option>
+<option value="672">IDLIB : Sanjar nahiyah</option>
+<option value="673">IDLIB : Tamana&#39;ah nahiyah</option>
+<option value="674">IDLIB : Maret Sin</option>
+<option value="675">IDLIB : Mariyan</option>
+<option value="677">IDLIB : Maratin</option>
+<option value="678">IDLIB : Mashmashan</option>
+<option value="679">IDLIB : Ma&#39;tarem</option>
+<option value="680">IDLIB : Mouqa</option>
+<option value="681">IDLIB : Muzrah</option>
+<option value="682">IDLIB : Nabhan</option>
+<option value="683">IDLIB : Nahal</option>
+<option value="684">IDLIB : Nahlaya</option>
+<option value="685">IDLIB : Nahleh</option>
+<option value="686">IDLIB : Al Naqeer</option>
+<option value="687">IDLIB : Qarati</option>
+<option value="688">IDLIB : Qominas</option>
+<option value="689">IDLIB : Qouqafin</option>
+<option value="690">IDLIB : Qourqaniya</option>
+<option value="691">IDLIB : Rakaya</option>
+<option value="692">IDLIB : Rami</option>
+<option value="693">IDLIB : Rayan</option>
+<option value="694">IDLIB : Rusafa</option>
+<option value="695">IDLIB : San</option>
+<option value="696">IDLIB : Sararif</option>
+<option value="697">IDLIB : Sarjah</option>
+<option value="698">IDLIB : Saqi&#39;ah</option>
+<option value="699">IDLIB : Shagurit</option>
+<option value="700">IDLIB : Sheikh Idris</option>
+<option value="701">IDLIB : Sheikh Yusef</option>
+<option value="702">IDLIB : Shillakh</option>
+<option value="703">IDLIB : Shughour</option>
+<option value="704">IDLIB : Shuhah</option>
+<option value="706">IDLIB : Tah</option>
+<option value="707">IDLIB : Tahtaya</option>
+<option value="708">IDLIB : Tal Dabs</option>
+<option value="709">IDLIB : Tal Karameh</option>
+<option value="710">IDLIB : Mardikh</option>
+<option value="711">IDLIB : Tal Sandal</option>
+<option value="712">IDLIB : Tal Sultan</option>
+<option value="713">IDLIB : Talheya</option>
+<option value="715">IDLIB : Termala</option>
+<option value="716">IDLIB : Termanin</option>
+<option value="717">IDLIB : Tranbeh</option>
+<option value="718">IDLIB : Tur Laha</option>
+<option value="719">IDLIB : Zahera</option>
+<option value="720">IDLIB : Zarzour</option>
+<option value="721">IDLIB : Zeiyniyah</option>
+<option value="722">LATTAKIA</option>
+<option value="723">LATTAKIA : Ali Jamal</option>
+<option value="724">LATTAKIA : Amoud</option>
+<option value="726">LATTAKIA : Awainah</option>
+<option value="727">LATTAKIA : Beir Qaddar mosque</option>
+<option value="728">LATTAKIA : Joud mosque</option>
+<option value="729">LATTAKIA : Qneinas</option>
+<option value="730">LATTAKIA : Raml al-Shamali</option>
+<option value="731">LATTAKIA : Sidawi</option>
+<option value="732">LATTAKIA : Sleibeh</option>
+<option value="733">LATTAKIA : Sleibeh Projects</option>
+<option value="734">LATTAKIA : Tabayat</option>
+<option value="735">LATTAKIA : Tijar Souj</option>
+<option value="736">LATTAKIA : Aku</option>
+<option value="737">LATTAKIA : obin</option>
+<option value="738">LATTAKIA : Aydu</option>
+<option value="739">LATTAKIA : Ayn al-Qantarah</option>
+<option value="740">LATTAKIA : Dorrin</option>
+<option value="741">LATTAKIA : Duwayrikah</option>
+<option value="742">LATTAKIA : Ghanaymiyah</option>
+<option value="743">LATTAKIA : Haffah</option>
+<option value="744">LATTAKIA : Jabal Akrad</option>
+<option value="745">LATTAKIA : Jabal Turkman</option>
+<option value="746">LATTAKIA : Jableh</option>
+<option value="747">LATTAKIA : Kabanah</option>
+<option value="748">LATTAKIA : Kafar Ajouz</option>
+<option value="749">LATTAKIA : Kansiba</option>
+<option value="750">LATTAKIA : Dorien</option>
+<option value="751">LATTAKIA : Marand</option>
+<option value="752">IDLIB : Al-Najeya</option>
+<option value="753">LATTAKIA : Marj al-Zawiyah</option>
+<option value="754">LATTAKIA : Maruniyat</option>
+<option value="755">LATTAKIA : Mazzin</option>
+<option value="756">LATTAKIA : Mushayrifah</option>
+<option value="757">LATTAKIA : Nabi Yunes</option>
+<option value="758">LATTAKIA : Qardahah</option>
+<option value="759">LATTAKIA : Rabia</option>
+<option value="760">LATTAKIA : Rihaniyah</option>
+<option value="761">LATTAKIA : Salma</option>
+<option value="762">LATTAKIA : Shalaf</option>
+<option value="763">LATTAKIA : Shalfatiyah</option>
+<option value="764">LATTAKIA : Sharifah</option>
+<option value="766">LATTAKIA : Tardin</option>
+<option value="767">LATTAKIA : Wadi Basour</option>
+<option value="768">LATTAKIA : Wadi Shaykhan</option>
+<option value="769">LATTAKIA : Zanqufah</option>
+<option value="770">QUINETRA</option>
+<option value="771">QUINETRA : Jeba</option>
+<option value="772">QUINETRA : Bariqa</option>
+<option value="773">QUINETRA : BeerAjam</option>
+<option value="774">QUINETRA : Masharah</option>
+<option value="775">QUINETRA : Majduliyah</option>
+<option value="776">QUINETRA : Ar-RAQQAH</option>
+<option value="777">QUINETRA : al-Karamah nahiyah</option>
+<option value="778">QUINETRA : Ma&#39;adan nahiyah</option>
+<option value="779">QUINETRA : as-Sabkhah nahiyah</option>
+<option value="780">QUINETRA : Tal Abyad mantiqah</option>
+<option value="781">QUINETRA : Ayn Issa nahiyah</option>
+<option value="782">QUINETRA : Suluk nahiyah</option>
+<option value="783">QUINETRA : ath-Thawrah mantiqah</option>
+<option value="784">QUINETRA : al-Jerniyah nahiyah</option>
+<option value="785">QUINETRA : al-Mansourah nahiyah</option>
+<option value="786">QUINETRA : Ali Bajliyah</option>
+<option value="787">QUINETRA : Dabsi Afnan</option>
+<option value="788">QUINETRA : Hammam al-Turkman</option>
+<option value="789">QUINETRA : Kantari</option>
+<option value="790">QUINETRA : Mashrafiyah</option>
+<option value="791">QUINETRA : Shabedagh</option>
+<option value="792">SUWAYDA</option>
+<option value="793">SUWAYDA : Ariqah</option>
+<option value="794">SUWAYDA : Dama</option>
+<option value="795">SUWAYDA : al-Ghariyah</option>
+<option value="796">SUWAYDA : al-Hit</option>
+<option value="797">SUWAYDA : Hout</option>
+<option value="798">SUWAYDA : Imtan</option>
+<option value="799">SUWAYDA : Majadel</option>
+<option value="800">SUWAYDA : Malah</option>
+<option value="801">SUWAYDA : al-Mazraa</option>
+<option value="802">SUWAYDA : al-Mushannaf</option>
+<option value="803">SUWAYDA : Nimreh</option>
+<option value="804">SUWAYDA : al-Qurayya</option>
+<option value="805">SUWAYDA : Salkhid</option>
+<option value="807">SUWAYDA : Shaqqa</option>
+<option value="808">SUWAYDA : Surah as-Saghirah</option>
+<option value="809">SUWAYDA : Thaybin</option>
+<option value="810">TARTOUS</option>
+<option value="811">TARTOUS : Baniyas</option>
+<option value="812">TARTOUS : Bayda</option>
+<option value="813">TARTOUS : Duraykish</option>
+<option value="814">TARTOUS : Duweir Raslan</option>
+<option value="815">TARTOUS : Hmein</option>
+<option value="816">TARTOUS : Juneinat Raslan</option>
+<option value="817">TARTOUS : Mashta al-Helou</option>
+<option value="819">TARTOUS : Safita</option>
+<option value="1653">DAMASCUS : Ayn Tarma</option>
+<option value="1655">DAMASCUS : Hazzah</option>
+<option value="1656">DAMASCUS : Saqba</option>
+<option value="1657">DAMASCUS : zamalka</option>
+<option value="1658">DAMASCUS : Hammuriyah</option>
+<option value="1659">IDLIB : Tall Manissss</option>
+<option value="1660">DAMASCUS : Adra</option>
+<option value="1664">IDLIB : Jarjanaz</option>
+<option value="1665">ALEPPO : Harithan</option>
+<option value="1667">DAMASCUS : Mazzeh military airport</option>
+<option value="1668">ALEPPO : Front Al-Burayj</option>
+<option value="1670">HAMA : Alsayad</option>
+<option value="1671">DARAA : Athman</option>
+<option value="1672">ALEPPO : Sheikh Maqsoud</option>
+<option value="1673">IDLIB : Afes</option>
+<option value="1674">DAMASCUS : Khan al-Shih</option>
+<option value="1675">HOMS : Al-Ghantu</option>
+<option value="1676">DARAA : Eastern Al-Ghariyah</option>
+<option value="1677">DAMASCUS : Eastern Ghouta</option>
+<option value="1678">ALEPPO : Sarmada</option>
+<option value="1679">ALEPPO : Kafr hamrah</option>
+<option value="1680">HAMA : Kafr Nabudah</option>
+<option value="1681">ALEPPO : Anadan</option>
+<option value="1682">ALEPPO : Hayyan</option>
+<option value="1683">HOMS : Houla</option>
+<option value="1684">DAMASCUS : Misraba</option>
+<option value="1685">ALEPPO : Ahras</option>
+<option value="1686">ALEPPO : Al atarib</option>
+<option value="1687">DAMASCUS : Deir al-Asafir</option>
+<option value="1688">IDLIB : Hobait</option>
+<option value="1689">HAMA : Lahaya</option>
+<option value="1690">DARAA : Tal Alhara</option>
+<option value="1692">DAMASCUS : Marj al sultan</option>
+<option value="1693">IDLIB : Masaran</option>
+<option value="1694">DEIR EZZOR : Al Bukamal</option>
+<option value="1695">HAMA : Mar kbeh</option>
+<option value="1696">HOMS : Al Zafaraneh</option>
+<option value="1697">HOMS : Umm Sharshuh</option>
+<option value="1698">DARAA : Western Al-Ghariyah</option>
+<option value="1699">DARAA : Kafr Nasij</option>
+<option value="1700">IDLIB : Killi</option>
+<option value="1701">ALEPPO : Maarstah</option>
+<option value="1702">IDLIB : Maret Al nasan</option>
+<option value="1703">ALEPPO : Al Hader</option>
+<option value="1704">DARAA : Al soura</option>
+<option value="1705">ALEPPO : Aljzmate</option>
+<option value="1706">DARAA : Aqraba</option>
+<option value="1707">ALEPPO : Atshanah</option>
+<option value="1708">HOMS : Burj qai</option>
+<option value="1709">ALEPPO : Dayr Jamal</option>
+<option value="1710">DAMASCUS : Qalamoun</option>
+<option value="1711">ALEPPO : Sakhour</option>
+<option value="1712">HOMS : San Aswad</option>
+<option value="1713">ALEPPO : Zitan</option>
+<option value="1714">ALEPPO : Bab Qinnesrin</option>
+<option value="1715">HOMS : Aldar alkabera</option>
+<option value="1716">ALEPPO : Aljaser</option>
+<option value="1717">ALEPPO : Al eis</option>
+<option value="1718">HOMS : Al farhanyeh</option>
+<option value="1719">IDLIB : Al ghadfah</option>
+<option value="1720">IDLIB : Al hamidia</option>
+<option value="1721">ALEPPO : Al Hmera</option>
+<option value="1722">ALEPPO : Al Jubeilah</option>
+<option value="1723">DARAA : Al naymah</option>
+<option value="1724">HOMS : Al waer</option>
+<option value="1725">ALEPPO : Al zarba</option>
+<option value="1726">DAMASCUS : Al ashari</option>
+<option value="1727">HAMA : Aqrab</option>
+<option value="1728">ALEPPO : Ashrafieh</option>
+<option value="1729">ALEPPO : Asileh</option>
+<option value="1730">ALEPPO : Az Ziyarah</option>
+<option value="1732">ALEPPO : Bab al salamah</option>
+<option value="1733">ALEPPO : Bayanoun</option>
+<option value="1734">DARAA : Busra al-Harir</option>
+<option value="1735">ALEPPO : Bustan al-Qasr</option>
+<option value="1736">DARAA : Elma</option>
+<option value="1737">HOMS : Ghajar</option>
+<option value="1738">ALEPPO : hardetneen</option>
+<option value="1739">DAMASCUS : Hazrama</option>
+<option value="1740">HAMA : Hirbinafsah</option>
+<option value="1741">HOMS : Jawalak</option>
+<option value="1742">DAMASCUS : Jisrayn</option>
+<option value="1743">ALEPPO : Kafar Kalbin</option>
+<option value="1744">ALEPPO : Kafer Khasher</option>
+<option value="1745">IDLIB : Kafr aweed</option>
+<option value="1746">ALEPPO : Al-Nuzaha</option>
+<option value="1747">ALEPPO : Khalsah</option>
+<option value="1748">ALEPPO : Masaken Hanano</option>
+<option value="1749">HOMS : Mashroua</option>
+<option value="1750">IDLIB : Mdaya</option>
+<option value="1751">ALEPPO : Misqan</option>
+<option value="1752">ALEPPO : Qabtan al Jabal</option>
+<option value="1753">IDLIB : Ram hamdan</option>
+<option value="1754">ALEPPO : Rif al Mohandeseen</option>
+<option value="1755">DARAA : Saida</option>
+<option value="1757">ALEPPO : Sheikh Khider</option>
+<option value="1758">HOMS : Sneisel</option>
+<option value="1759">IDLIB : Talmenes</option>
+<option value="1760">IDLIB : Tell Sultan</option>
+<option value="1761">ALEPPO : Termaneen</option>
+<option value="1762">ALEPPO : Bshantara</option>
+<option value="1763">ALEPPO : Tal msebeen</option>
+<option value="1764">IDLIB : Al nerab</option>
+<option value="1765">HAMA : Al hawash</option>
+<option value="1766">DAMASCUS : Al-Qadam</option>
+<option value="1767">DARAA : Muzayrib</option>
+<option value="1768">DAMASCUS : Al-Bahariyah</option>
+<option value="1769">DAMASCUS : Al-Otaybah</option>
+<option value="1770">ALEPPO : Batbo</option>
+<option value="1771">ALEPPO : Al-Jinah</option>
+<option value="1772">HOMS :  Al Mukarramiyah </option>
+<option value="1773">ALEPPO : Anjara</option>
+<option value="1774">ALEPPO : Castillo</option>
+<option value="1775">ALEPPO : Jib Al-Qubeh</option>
+<option value="1776">ALEPPO : Asia</option>
+<option value="1777">ALEPPO : Babis</option>
+<option value="1778">ALEPPO : Bezzeh</option>
+<option value="1779">ALEPPO : Bab Al-Maqam</option>
+<option value="1780">ALEPPO : Al-Alamji</option>
+<option value="1781">ALEPPO : Qarlak</option>
+<option value="1782">ALEPPO : Dahret Awad</option>
+<option value="1783">ALEPPO : Karam Homad</option>
+<option value="1784">ALEPPO : Qabr Al-Englizi</option>
+<option value="1785">ALEPPO : Karam Al-Tahan</option>
+<option value="1786">ALEPPO : Yaqed Al Adas</option>
+<option value="1787">ALEPPO : Gaziantep road</option>
+<option value="1788">ALEPPO : Kalaseh</option>
+</select>
+        </div>
+        <div class="filterfield">
+          <div class="filterlabel">
+            From
+          </div>
+          <input class="datepicker" id="id_startDate" name="startDate" type="text" />
+        </div>
+        <div class="filterfield">
+          <div class="filterlabel">
+            To
+          </div>
+            <input class="datepicker" id="id_endDate" name="endDate" type="text" />
+        </div>
+
+
+        <input type="submit" class="call-to-action" value="Filter" />
+      </form>
+
+    </div>
+    <div class="profile col-md-9  databasecol">
+
+      <table id="database" class="table table-striped " cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Recording Date</th>
+          <th>Location</th>
+          <th>Type of Violation</th>
+        </tr>
+
+      <thead>
+
+      <tbody>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/37666" >CW_2f8e6</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   One family (4 children and their parents) have died as a result of suffocation caused by the chlorine barrel bomb attack
+                  </div>
+                </td>
+                <td>
+                  20/11/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/32685" >CL_1113</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Syrian and Russian airstrikes using cluster munitions in Kafrzita, Hamah
+                  </div>
+                </td>
+                <td>
+                  22/10/2016
+                </td>
+                <td>
+                  HAMA : KafrZita
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/32437" >CL_1112</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Airstrikes targeting Idlib&#39;s country side with cluster munitions
+                  </div>
+                </td>
+                <td>
+                  21/10/2016
+                </td>
+                <td>
+                  IDLIB : Marat Hermeh
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/32728" >CL_1109</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   The white helmet team is extinguishing fires in Duma as a result of incendiary bomb attack
+                  </div>
+                </td>
+                <td>
+                  10/10/2016
+                </td>
+                <td>
+                  DAMASCUS : Duma
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/29370" >CL_1106</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Airstrikes with phosphorus weapons targeting Duma
+                  </div>
+                </td>
+                <td>
+                  10/10/2016
+                </td>
+                <td>
+                  DAMASCUS : Duma
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/29371" >CL_1110</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Alleged Russian airstrike with incendiary bomb that targeted Khan Al-Shih
+                  </div>
+                </td>
+                <td>
+                  10/10/2016
+                </td>
+                <td>
+                  DAMASCUS : Khan al-Shih
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/29094" >CL_1105</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Remnants of the incendiary bomb that targeted a civilian area in Duma
+                  </div>
+                </td>
+                <td>
+                  10/10/2016
+                </td>
+                <td>
+                  DAMASCUS : Duma
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/29096" >CL_1108</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Car and building on fire in Duma as a result of the incendiary bomb attack
+                  </div>
+                </td>
+                <td>
+                  10/10/2016
+                </td>
+                <td>
+                  DAMASCUS : Duma
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/29093" >CL_1107</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Buildings and cars on fire as a result of the phosphorous weapon attack
+                  </div>
+                </td>
+                <td>
+                  10/10/2016
+                </td>
+                <td>
+                  DAMASCUS : Duma
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/28996" >CL_1111</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Alleged Russian airstrike with an incendiary bomb which targeted Khan Al-Shih
+                  </div>
+                </td>
+                <td>
+                  09/10/2016
+                </td>
+                <td>
+                  DAMASCUS : Khan al-Shih
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26873" >HO_1001</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   The destruction of Al-Sakhour hospital (M10) as a result of the airstrike attack
+                  </div>
+                </td>
+                <td>
+                  03/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Specifically protected persons and objects
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26686" >CL_1115</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian airstrike targeted Al-Rastan with incendiary bombs
+                  </div>
+                </td>
+                <td>
+                  02/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26758" >CL_1114</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Alleged Russian airstrikes with incendiary bombs in Rastan
+                  </div>
+                </td>
+                <td>
+                  02/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/30765" >CL_1121</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   The civilian defense team distinguishing the fire as a result of the incendiary bomb attack
+                  </div>
+                </td>
+                <td>
+                  02/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/30766" >CL_1120</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Civilian areas on fire as a result of the incendiary bomb attack
+                  </div>
+                </td>
+                <td>
+                  02/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/30763" >CL_1119</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   The civil defense team exploring the attacked site with incendiary bombs
+                  </div>
+                </td>
+                <td>
+                  02/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/28621" >CL_1101</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Three alleged Russian airstrikes with incendiary bombs
+                  </div>
+                </td>
+                <td>
+                  02/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/28075" >CL_1102</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian airstrikes with incendiary bombs
+                  </div>
+                </td>
+                <td>
+                  02/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/27262" >CL_1116</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   The moment of an incendiary attack on Al-Sakhour district in Aleppo
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/31194" >CL_1103</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian airstrikes targeting Al-Rastan with incendiary bombs 
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  HOMS : Rastan
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/28374" >HO_1004</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Alleged Russian airstrikes which targeted Al-Sakhour hospital
+
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26228" >CW_1445</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Testimony of one of the rescuers about the chlorine attack in Hamah
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  HAMA : KafrZita
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26226" >CW_1446</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Injured people in the hospital being treated as a result of the chlorine gas attack in Hamah
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  HAMA : KafrZita
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26227" >CW_1447</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   The testimony of Dr Abdullah who is the manager of the medical facility in Hamah about the chlorine gas attack
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  HAMA : KafrZita
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/27258" >HO_1002</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Destruction as a result of the airstrikes targeting Al-Sakhour hospital (M10)
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Specifically protected persons and objects
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/28616" >CL_1118</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Alleged Russian airstrike which targeted Al-Sakhour hospital
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26870" >CL_1117</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Interview with Al-Sakhour hospital workers about several airstrikes that targeted the hospital which resulted of four casualties and 15 injured. 
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26869" >HO_1003</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Casualties as a result of the airstrike attacks which targeted Al-Sakhour hospital (M10)
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Specifically protected persons and objects
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/28989" >CW_1448</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Civilians being treated as a result of chlorine gas attack in Hamah
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  HAMA : KafrZita
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/28612" >HO_1005</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Interview about the destruction in Al-Sakhour hospital as a result of the airstrikes
+                  </div>
+                </td>
+                <td>
+                  01/10/2016
+                </td>
+                <td>
+                  ALEPPO : Sakhour
+                </td>
+
+                <td>
+                  Specifically protected persons and objects
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26864" >CL_e4600</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Warplanes targeting Al-Shaar neighborhood with Incendiary bombs.
+                  </div>
+                </td>
+                <td>
+                  30/09/2016
+                </td>
+                <td>
+                  ALEPPO : Alshaar
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/27697" >CL_6039f</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Phosphorus bombs targeted the city neighborhoods in Aleppo.
+                  </div>
+                </td>
+                <td>
+                  26/09/2016
+                </td>
+                <td>
+                  ALEPPO
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26214" > RU_2564</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian airstrikes against civilians in Karm-Aljabal in Aleppo
+                  </div>
+                </td>
+                <td>
+                  18/09/2016
+                </td>
+                <td>
+                  ALEPPO : Karam al-Jabal
+                </td>
+
+                <td>
+                  Alleged civilian casualties from Russian attacks
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26184" >RU_2565</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian airstrikes in Homs suburbs with incendiary weapons
+                  </div>
+                </td>
+                <td>
+                  17/09/2016
+                </td>
+                <td>
+                  HOMS : Talbisah
+                </td>
+
+                <td>
+                  Alleged civilian casualties from Russian attacks
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26129" >RU_2566</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian airstrike in Idlib with cluster bombs
+                  </div>
+                </td>
+                <td>
+                  13/09/2016
+                </td>
+                <td>
+                  IDLIB
+                </td>
+
+                <td>
+                  Alleged civilian casualties from Russian attacks
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/20395" >CL_1097</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   The first moment of the cluster bombs attack in Duma
+                  </div>
+                </td>
+                <td>
+                  11/09/2016
+                </td>
+                <td>
+                  DAMASCUS : Duma
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26084" >RU_2567</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian airstrikes causing 4 causalities from the same family 
+                  </div>
+                </td>
+                <td>
+                  10/09/2016
+                </td>
+                <td>
+                  ALEPPO : Kafar Naha
+                </td>
+
+                <td>
+                  Alleged civilian casualties from Russian attacks
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/26083" >RU_2568</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   25 casualties as a result of Russian airstrikes that targeted a public market in Idlib
+                  </div>
+                </td>
+                <td>
+                  10/09/2016
+                </td>
+                <td>
+                  IDLIB
+                </td>
+
+                <td>
+                  Alleged civilian casualties from Russian attacks
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/23394" >CL_1082	</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   One family of 7 members got injured after midnight as a result of three Russian airstrikes
+                  </div>
+                </td>
+                <td>
+                  09/09/2016
+                </td>
+                <td>
+                  IDLIB : Binnish
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/14787" >AL_6da28d4</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Devastation caused by bombing on Babis town in the countryside of Aleppo.
+                  </div>
+                </td>
+                <td>
+                  08/09/2016
+                </td>
+                <td>
+                  ALEPPO : Babis
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/14786" >AL_5266fd0c</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Aerial bombardment in Maarath Alortiq town in Aleppo countryside.
+                  </div>
+                </td>
+                <td>
+                  08/09/2016
+                </td>
+                <td>
+                  ALEPPO : Maret Artiq
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/16650" >AL_46eef15</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Devastation by shelling on kafr Aleppo town western countryside of Aleppo which prompting civilians to flee
+                  </div>
+                </td>
+                <td>
+                  08/09/2016
+                </td>
+                <td>
+                  ALEPPO : Kafar Aleppo
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/23380" >CL_1083</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Five injured including four women as a result of the Russian airstrikes with cluster bombs
+                  </div>
+                </td>
+                <td>
+                  08/09/2016
+                </td>
+                <td>
+                  IDLIB : Binnish
+                </td>
+
+                <td>
+                  Use of illegal weapons
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/8553" >AL_5f859c8a</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Targeting Hraytan city with Rocket launchers.
+
+                  </div>
+                </td>
+                <td>
+                  07/09/2016
+                </td>
+                <td>
+                  ALEPPO : Harithan
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/23369" >RU_a68929</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Russian aircraft committed a massacre in Sukkari neighborhood in Aleppo causing casualties about 28 people
+                  </div>
+                </td>
+                <td>
+                  07/09/2016
+                </td>
+                <td>
+                  ALEPPO : Sukkari
+                </td>
+
+                <td>
+                  Alleged civilian casualties from Russian attacks
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/6138" >ALbcd61ba</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Scenes from the bombing with explosive barrels on the city&#39;s neighborhoods in Hraytan city.
+                  </div>
+                </td>
+                <td>
+                  07/09/2016
+                </td>
+                <td>
+                  ALEPPO : Harithan
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/8552" >AL_6e7132b0</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Massacre committed by Al Assad forces in Sukkari neighborhood in besieged Aleppo.
+                  </div>
+                </td>
+                <td>
+                  07/09/2016
+                </td>
+                <td>
+                  ALEPPO : Sukkari
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/20366" >AL_e61dedb</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Massive destruction caused by shelling by warplanes in Sukkari neighborhood in Aleppo.
+                  </div>
+                </td>
+                <td>
+                  07/09/2016
+                </td>
+                <td>
+                  ALEPPO : Sukkari
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/20367" >AL_93b3d8</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Damages caused by shelling Sukkari neighborhood in Aleppo.
+                  </div>
+                </td>
+                <td>
+                  07/09/2016
+                </td>
+                <td>
+                  ALEPPO : Sukkari
+                </td>
+
+                <td>
+                  Other
+               </td>
+
+
+          </tr>
+        
+
+
+          <tr>
+
+          <td>
+            <a href="/database/7593" >AL_2dfa06b</a>
+          </td>
+                <td >
+                  <div class="desc">
+                   Al Sukkari massacre.
+                  </div>
+                </td>
+                <td>
+                  07/09/2016
+                </td>
+                <td>
+                  ALEPPO : Sukkari
+                </td>
+
+                <td>
+                  Unlawful attacks
+               </td>
+
+
+          </tr>
+        
+      <tbody>
+      </table>
+
+    </div>
+  </div>
+
+    
+      <div class="row">
+        <div class="col-md-9">
+        </div>
+        <div class="col-md-3">
+          <div class="pagination">
+            <span class="step-links">
+              
+
+              <span class="current">
+                Page 1 of 55.
+              </span>
+
+              
+                <a title="next page" href="?page=2">next</a>
+              
+            </span>
+          </div>
+        </div>
+      </div>
+  
+
+
+
+</div>
+
+
+
+<div class="container">
+      <div class=" row footer">
+        <div class="col-md-12">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/p/page/terms" title="terms of use">Terms of Use</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/p/page/privacy" title="privacy policy">Privacy Policy</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/p/page/copyright" title="terms of use">Copyright</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/p/page/disclaimer" title="terms of use">Disclaimer</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/p/page/contact" title="terms of use">Contact</a>
+                </li>
+            </ul>
+
+             <ul class="nav navbar-nav">
+                <li>
+                    <a href="https://twitter.com/syrian_archive" title="twitter link"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/syrianarchive/ " title="facebook link"><i class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<style type="text/css">
+  input{
+    background-color: white;
+    color: black;
+  }
+</style>
+<link href="/static/components/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" media="screen">
+
+<script src="/static/components/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+(function($){
+    $(document).ready(function(){
+    $('.datepicker').datepicker({
+            format: 'dd/mm/yyyy',
+            autoclose : true,
+            todayBtn: true,
+            closeBtn: true,
+            weekStart: 1,
+            language: "en",
+            
+
+        });
+
+  });
+
+}(jQuery));
+</script>
+
+<style type="text/css">
+
+.datepicker.datepicker-rtl {
+    right: auto !important;
+}
+  .databasecol{
+    padding:0;
+    font-size:.8em;
+  }
+
+  .filterfield{
+    padding-top:1em;
+    padding-bottom:1em;
+  }
+
+  .call-to-action{
+    font-size:1.8em;
+    border-radius:1em;
+    border-style: solid;
+    padding-top: 1em
+    padding-bottom:1em;
+    text-align: center;
+  }
+
+input{
+    min-width:100%;
+    background-color:#ACB4AC;
+    color: white;
+    border:none;
+    font-weight: bold;
+    border-bottom:2px solid white;
+    background-color:rgba(255,255,255,.3);
+  }
+
+.select2-container{
+  width:100%;
+}
+
+
+
+  .select2-container .select2-choice, .select2-drop, .select2-search input {
+    color: white;
+    background-color:#ACB4AC;
+    background-image:none;
+    background-image:none;
+    font-weight: bold;
+}
+
+ .select2-container .select2-choice{
+  background-color:rgba(255,255,255,.3);
+
+ }
+
+ .filterlabel{
+  color:rgba(255,255,255,.8);
+  font-size:1.1em;
+ }
+
+ .desc{
+  max-width:30em;
+ }
+
+
+ .database-table, .filterrow{
+  background-color: #ACB4AC;
+ }
+
+ .databasecol{
+  background-color:#E7E5E4;
+ }
+
+</style>
+
+
+
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57419459-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
