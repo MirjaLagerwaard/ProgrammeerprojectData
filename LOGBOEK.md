@@ -30,8 +30,13 @@ Ook heb ik de data voorbereid voor mijn barchart en ik heb mijn menubalk aangepa
 
 Vandaag heb ik met mijn groepje mijn voortgang besproken en de planning voor deze week. Aan het einde van de week wil ik een timeslider hebben die gekoppeld is aan de calendar view en de barchart. Daarnaast wil ik de google API ingeladen hebben en de kaart ingezoomd hebben staan op Syrië. Als er tijd over is dan wil ik ook al stippen op de kaart hebben staan die de locatie van de incidenten aangeven.
 
-Vandaag is het me gelukt om de google API in te laten en deze in te zoomen op Syrië. Daarnaast heb ik de indeling van mijn pagina veranderd. Ook heb ik opnieuw de data moeten scrapen, want ik kwam erachter dat ik de latitude en longitude van een incident nodig heb om de stippen op de kaart te plaatsen, dus ik heb mijn code aangepast. Daarnaast ben ik begonnen om de data voor mijn barchart per jaar te selecteren uit de json file, zodat deze apart kunnen worden weergegeven. 
+Vandaag is het me gelukt om de google API in te laten en deze in te zoomen op Syrië. Daarnaast heb ik de indeling van mijn pagina veranderd. Ook heb ik opnieuw de data moeten scrapen, want ik kwam erachter dat ik de latitude en longitude van een incident nodig heb om de stippen op de kaart te plaatsen, dus ik heb mijn code aangepast. Daarnaast ben ik begonnen om de data voor mijn barchart per jaar te selecteren uit de json file, zodat deze apart kunnen worden weergegeven.
 
+*Dinsdag-donderdag 17-19 januari*
+- Scriptje geschreven om vanuit de gigantische database de json files te maken voor mijn barchart
+- Time buttons gekoppeld aan de barchart
+- Table gekoppeld aan de barchart
+- Barchart en table opmaak veranderd
 
 *TODO list voor afwerking:*
 * Positioneren van de titel van de site
