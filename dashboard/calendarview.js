@@ -1,8 +1,8 @@
 var width = 900,
     height = 105,
     cellSize = 12; // cell size
-    week_days = ['sun','mon','tue','wed','thu','fri','sat']
-    month = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+    week_days = ['SUN','MON','TUE','WED','THU','FRI','SAT']
+    month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
 
 var day = d3.time.format("%w"),
     week = d3.time.format("%U"),
@@ -10,7 +10,7 @@ var day = d3.time.format("%w"),
 	format = d3.time.format("%Y%m%d");
 	parseDate = d3.time.format("%Y%m%d").parse;
 
-var color = d3.scale.linear().range(["white", '#002b53'])
+var color = d3.scale.linear().range(["white", '#802200'])
     .domain([0, 1])
 
 var svg = d3.select(".calender-map").selectAll("svg")
@@ -68,7 +68,7 @@ svg.selectAll(".month")
     .attr("id", function(d,i){ return month[i] })
     .attr("d", monthPath);
 
-d3.csv("data.csv", function(error, csv) {
+d3.csv("testdatacalendar.csv", function(error, csv) {
 
   csv.forEach(function(d) {
     d.Comparison_Type = parseInt(d.Comparison_Type);

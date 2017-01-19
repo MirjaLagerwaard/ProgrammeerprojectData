@@ -6,12 +6,12 @@ import csv
 import json
 
 # open the needed files
-csvfile = open('hoi.csv', 'r')
-jsonfile = open('hoi.json', 'w')
+csvfile = open('testdatacalendar.csv', 'r')
+jsonfile = open('testdatacalendar.json', 'w')
 
 # define fieldnames
 fieldnames = (
-        "typeofviolation",
+        "date",
         "amount")
 
 reader = csv.DictReader(csvfile, fieldnames)

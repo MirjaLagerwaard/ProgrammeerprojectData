@@ -68,7 +68,7 @@ function load_data_chart() {
   d3.selectAll("svg.chart > *").remove();
 
   //set the margin
-  var margin = {top: 100, right: 25, bottom: 100, left: 100},
+  var margin = {top: 10, right: 25, bottom: 180, left: 100},
     width = 1160 - margin.left - margin.right,
     height = 650 - margin.top - margin.bottom;
 
@@ -112,16 +112,17 @@ function load_data_chart() {
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis)
       .selectAll("text")
-        .attr("y", 9)
-        .attr("x", 6)
-        .attr("dy", ".35em")
-        .attr("transform", "rotate(45)")
-        .style("text-anchor", "start")
+          .attr("y", 9)
+          .attr("x", 6)
+          .attr("dy", ".35em")
+          .attr("transform", "rotate(45)")
+          .style("text-anchor", "start")
       .append("text")
-        .attr("x", width / 2)
-        .attr("y", 42)
-        .style("text-anchor", "end")
-        .text("type of violation");
+          .attr("x", width / 1.5)
+          .attr("y", 120)
+          .style("text-anchor", "end")
+          .text("TYPE OF VIOLATION");
+
 
     // create the y-axis
     chart.append("g")
