@@ -1,8 +1,8 @@
 var width = 900,
     height = 105,
     cellSize = 12; // cell size
-    week_days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
-    month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    week_days = ['sun','mon','tue','wed','thu','fri','sat']
+    month = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
 
 var day = d3.time.format("%w"),
     week = d3.time.format("%U"),

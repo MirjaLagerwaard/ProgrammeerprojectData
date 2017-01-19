@@ -30,16 +30,18 @@ translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
                     'Other':'Other',
                     'None':'None'}
 
+result = []
+
 for row in reader:
     if row["date"][-2:] == '12':
         typeViolation = row["typeofviolation"]
         short = translateDict[typeViolation]
         amountofviolation[short] += 1
 
-for key, value in amountofviolation.iteritems():
-    amountofviolation[key] = str(value)
 
+for key, value in amountofviolation.iteritems():
+    result.append({"typeofviolation":key, "amount":str(value)})
 # make dictionary for the json
-points_dict = {'data' : amountofviolation}
+points_dict = {'data': result}
 # make the json file
 json.dump(points_dict, jsonfile)

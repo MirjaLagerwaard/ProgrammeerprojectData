@@ -6,7 +6,7 @@
     {"typeofviolation":"ACCFRA", "amount": "0"},
     {"typeofviolation":"UA", "amount": "0"},
     {"typeofviolation":"SPPAO", "amount": "0"},
-    {"typeofviolation":"None", "amount": "0"},
-    {"typeofviolation":"Other", "amount": "0"},
-    {"typeofviolation":"Total", "amount": "391"}]
+    {"typeofviolation":"NONE", "amount": "0"},
+    {"typeofviolation":"OTHER", "amount": "0"},
+    {"typeofviolation":"TOTAL", "amount": "391"}]
 }

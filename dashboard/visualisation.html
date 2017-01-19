@@ -21,10 +21,10 @@
 
 </head>
 
-<body>
-    <div class="totaldiv" style="border:2px solid black;">
+<body background="bgimage.jpg">
+    <div class="totaldiv">
 
-      <div class="merge" style="border:2px solid black; width: 2000px;">
+      <div class="merge" style="width: 2000px;">
             <script src="//code.jquery.com/jquery-1.10.2.js"></script>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 
@@ -40,16 +40,16 @@
             <button id="data2016" onclick="loadChartData2016();">2016</button>
             </div>
 
-            <div class="calender-map" style="border:2px solid black; width: 2000px; height: 250px;"></div>
+            <div class="calender-map" style="width: 2000px; height: 250px;"></div>
             <script src="calendarview.js"></script>
 
-            <div id="map" class="map" style="border:2px solid black; width: 2000px; height: 600px"></div>
+            <div id="map" class="map" style="width: 2000px; height: 650px"></div>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ6Gxnrd-qizH2GJ6V-ehpBbWBTgUyfIg&callback=initMap" async defer></script>
             <script src="map.js"></script>
       </div>
 
-        <div class="merge" style="border:2px solid black; width: 2000px;">
-            <div class="barchart" style="border:2px solid black;">
+        <div class="merge" style="width: 2000px;">
+            <div class="barchart">
                 <svg class="chart"></svg>
             </div>
 
@@ -57,40 +57,54 @@
             <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
             <script src="barchart.js"></script>
 
-            <div class="abbreviation" id="table-location" style="border:2px solid black; width: 650px; height: 650px">
-                <table style="width:100%">
+            <div class="abbreviation" id="table-location" style="width: 835px; height: 650px">
+                <table style="width:100%; text-align: left; border-collapse: collapse">
+                  <col width="150">
+                  <col width="300">
                      <tr>
-                       <th>Abbreviation</th>
-                       <th>Type of Incident</th>
-
+                       <th>abbreviation</th>
+                       <th>type of incident</th>
                      </tr>
                      <tr>
                        <td>ACCFRA</td>
-                       <td>Alleged civilian casualties from Russian attacks</td>
+                       <td id="type">alleged civilian casualties from russian attacks</td>
                      </tr>
                      <tr>
                        <td>UOIW</td>
-                       <td>Use of illegal weapons</td>
+                       <td id="type">use of illegal weapons</td>
                      </tr>
                      <tr>
                        <td>UA</td>
-                       <td>Unlawfull attacks</td>
+                       <td id="type">unlawful attacks</td>
                      </tr>
                      <tr>
                        <td>SPPAO</td>
-                       <td>Specifically protected persons and objects</td>
+                       <td id="type">specifically protected persons and objects</td>
                      </tr>
                      <tr>
                        <td>SAESCR</td>
-                       <td>Sieges and economic, social and/or cultural rights</td>
+                       <td id="type">sieges and economic, social and cultural rights</td>
                      </tr>
                      <tr>
                         <td>VOCR</td>
-                        <td>Violation of children's rights</td>
+                        <td id="type">violation of children's rights</td>
                     </tr>
                     <tr>
                         <td>AAFD</td>
-                        <td>Abitrary and forcible displacement</td>
+                        <td id="type">arbitrary and forcible displacement</td>
+                    </tr>
+                    <tr>
+                        <td>NONE</td>
+                        <td id="type">none</td>
+                    </tr>
+                    <tr>
+                        <td>OTHER</td>
+                        <td id="type">other</td>
+
+                    </tr>
+                    <tr>
+                        <td>TOTAL</td>
+                        <td id="type">total</td>
                     </tr>
                 </table>
             </div>

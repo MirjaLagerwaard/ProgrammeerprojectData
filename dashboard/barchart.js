@@ -56,12 +56,20 @@ function loadChartData2016() {
   load_data_chart();
 };
 
+// create the d3-tip
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<span style='color:#ff7f50'>" + d.amount + "</span>";
+  })
+
 function load_data_chart() {
-  d3.selectAll("svg > *").remove();
+  d3.selectAll("svg.chart > *").remove();
 
   //set the margin
-  var margin = {top: 100, right: 100, bottom: 80, left: 100},
-    width = 1325 - margin.left - margin.right,
+  var margin = {top: 100, right: 25, bottom: 100, left: 100},
+    width = 1160 - margin.left - margin.right,
     height = 650 - margin.top - margin.bottom;
 
   // set scale for x
@@ -95,13 +103,7 @@ function load_data_chart() {
     x.domain(data.data.map(function(d) { return d.typeofviolation; }));
     y.domain([0, 2000]);
 
-    // create the d3-tip
-    var tip = d3.tip()
-      .attr('class', 'd3-tip')
-      .offset([-10, 0])
-      .html(function(d) {
-        return "<span style='color:#ff7f50'>" + d.amount + "</span>";
-      })
+
     chart.call(tip);
 
     // create the x-axis
@@ -114,7 +116,12 @@ function load_data_chart() {
         .attr("x", 6)
         .attr("dy", ".35em")
         .attr("transform", "rotate(45)")
-        .style("text-anchor", "start");
+        .style("text-anchor", "start")
+      .append("text")
+        .attr("x", width / 2)
+        .attr("y", 42)
+        .style("text-anchor", "end")
+        .text("type of violation");
 
     // create the y-axis
     chart.append("g")
@@ -122,10 +129,10 @@ function load_data_chart() {
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", -42)
-      .attr("x", -height / 2.5)
+      .attr("y", -75)
+      .attr("x", -height / 4)
       .style("text-anchor", "end")
-      .text("Amount of incidents");
+      .text("AMOUNT OF INCIDENTS");
 
     // make the bars of the chart by using the data values
     var bar = chart.selectAll(".bar")
@@ -141,14 +148,25 @@ function load_data_chart() {
       .on("mouseover", function(d){
         d3.select(this)
           .style("fill", "#ff7f50");
-        tip.show(d)
+        tip.show(d, this)
+        var t = d
+        d3.selectAll("tr").filter(function() {
+          console.log(this.innerText)
+          return this.innerText.startsWith(t.typeofviolation)
+        })
+          .style("background-color", "#ff7f50")
       })
       // change the color back on mouse out and hide the d3-tip
       .on("mouseout", function(){
         d3.select(this)
           .style("fill", "#333");
+        d3.selectAll("tr")
+          .style("background-color", "white")
         tip.hide()
       });
+
+      d3.selectAll("tr").attr("onmouseover","myScript(this)")
+        .attr("onmouseout","myScript2()")
 
   });
 
@@ -156,4 +174,24 @@ function load_data_chart() {
     d.amount = +d.amount;
     return d;
   }
+}
+
+function myScript(x) {
+  x.style = "background-color: #ff7f50"
+  d3.selectAll(".bar").filter(function(d) {
+    if (d.typeofviolation == x.innerText.split("\t")[0]) {
+      tip.show(d,this)
+      return true
+    }
+    return false
+  })
+    .style("fill", "#ff7f50")
+}
+
+function myScript2() {
+  d3.selectAll(".bar")
+    .style("fill", "#404040")
+  d3.selectAll("tr")
+    .style("background-color", "white")
+  tip.hide()
 }

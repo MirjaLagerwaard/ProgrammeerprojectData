@@ -11,34 +11,39 @@
 .image {
   height: 175px;
   background-image: url(https://syrianarchive.org/static/img/belowimage.jpg);
+  text-align: center;
 }
 
 #title {
   color: white;
-  font-family:Georgia,serif;
-  font-size: 75px;
-  letter-spacing:2px;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-size: 100px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 700;
  }
 
  .menubuttons {
      text-align: center;
-     background-color: #333;
+     background-color: #404040;
  }
 
  #home,
  #visualisation,
  #aboutme,
  #gotosyrianarchive {
-   background-color: #333;
+   background-color: #404040;
    border: none;
    padding: 15px 75px;
    text-align: center;
 
    color: white;
-   font-family: Gill Sans, Verdana;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
    font-size: 17px;
-   font-weight: bold;
- }
+   font-style: normal;
+   font-variant: small-caps;
+   font-weight: 700;
+}
 
  #home:hover,
  #visualisation:hover,
@@ -53,16 +58,18 @@
  #data2014,
  #data2015,
  #data2016 {
-   background-color: #333;
+   background-color: #404040;
    border: none;
    padding: 15px 75px;
    text-align: center;
    border-radius: 25px 25px 25px 25px;
 
    color: white;
-   font-family: Gill Sans, Verdana;
-   font-size: 17px;
-   font-weight: bold;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 20px;
+   font-style: normal;
+   font-variant: small-caps;
+   font-weight: 700;
  }
 
  #data2012:hover,
@@ -80,11 +87,12 @@
  }
 
 .chart rect {
-  fill: #333;
+  fill: #404040;
 }
 
 .chart text {
   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  color: #404040;
   font-size: 22px;
   font-style: normal;
   font-variant: small-caps;
@@ -105,6 +113,7 @@
 	font-variant: small-caps;
 	font-weight: 400;
 	line-height: 6.5px;
+  color: #404040;
 }
 
 .d3-tip {
@@ -116,8 +125,8 @@
 	font-weight: 400;
 	line-height: 6.5px;
   padding: 12px;
-  background: black;
-  color: #fff;
+  background: #404040;
+  color: #404040;
   border-radius: 2px;
 }
 
@@ -149,30 +158,43 @@
   display: inline-block;
 }
 
+.abbreviation {
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 400;
+  color: #404040;
+}
+
 .merge {
   width: 50%;
   margin: 0 auto;
-
-  color: black;
-  font-family: Gill Sans, Verdana;
-  font-size: 15px;
-
 }
 
 .calender-map,
 .map {
-  font: 10px sans-serif;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  color: #404040;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
   shape-rendering: crispEdges;
   width: 50%;
 }
 
+.map{
+ margin: 75px 0;
+}
+
 .day {
-  stroke: #666;
+  stroke: #404040;
 }
 
 .month {
   fill: none;
-  stroke: #000;
+  stroke: #404040;
   stroke-width: 2px;
 }
 
@@ -197,4 +219,18 @@
  .horizontal {
      display: inline-block;
      width: 100px;
+ }
+
+ tr {
+  height: 55px;
+  text-align: center;
+ }
+
+ th {
+   background-color: #ff7f50;
+   text-align: center;
+ }
+
+ #type {
+   text-align: left;
  }
