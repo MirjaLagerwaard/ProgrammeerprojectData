@@ -77,6 +77,7 @@ function load_data_map() {
             .attr("cx", padding)
             .attr("cy", padding)
             .attr("fill", "#ff7f50")
+            .attr("stroke", "black")
 
         function transform(d) {
           d = new google.maps.LatLng(d.value[2], d.value[3]);
