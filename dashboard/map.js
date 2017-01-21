@@ -4,14 +4,60 @@
 */
 
 
-function initMap () {
+function initMap() {
   var syria = {lat: 34.75139, lng: 38.26806}
-
   map = new google.maps.Map(d3.select("#map").node(), {
    zoom: 7,
    center: syria,
    scrollwheel: false
   });
+  document.getElementById("zoomout").disabled = true;
+  document.getElementById("zoomaleppo").disabled = false;
+  document.getElementById("zoomhoms").disabled = false;
+  document.getElementById("zoomdamascus").disabled = false;
+  load_data_map();
+}
+
+function zoomAleppo() {
+  var aleppo = {lat: 36.216667, lng: 37.166667}
+  map = new google.maps.Map(d3.select("#map").node(), {
+   zoom: 11,
+   center: aleppo,
+   scrollwheel: false
+  });
+  document.getElementById("zoomout").disabled = false;
+  document.getElementById("zoomaleppo").disabled = true;
+  document.getElementById("zoomhoms").disabled = false;
+  document.getElementById("zoomdamascus").disabled = false;
+  load_data_map();
+}
+
+function zoomHoms() {
+  var homs = {lat: 34.73083, lng: 36.70944}
+  map = new google.maps.Map(d3.select("#map").node(), {
+   zoom: 10,
+   center: homs,
+   scrollwheel: false
+  });
+  document.getElementById("zoomout").disabled = false;
+  document.getElementById("zoomaleppo").disabled = false;
+  document.getElementById("zoomhoms").disabled = true;
+  document.getElementById("zoomdamascus").disabled = false;
+  load_data_map();
+}
+
+function zoomDamascus() {
+  var damascus = {lat: 33.51306, lng: 36.29194}
+  map = new google.maps.Map(d3.select("#map").node(), {
+   zoom: 11,
+   center: damascus,
+   scrollwheel: false
+  });
+  document.getElementById("zoomout").disabled = false;
+  document.getElementById("zoomaleppo").disabled = false;
+  document.getElementById("zoomhoms").disabled = false;
+  document.getElementById("zoomdamascus").disabled = true;
+  load_data_map();
 }
 
 window.onload = loadMapData2016()
@@ -80,6 +126,10 @@ function load_data_map() {
             .attr("stroke", "black")
 
         function transform(d) {
+          console.log(d.value[2])
+          if (d.value[2] == "None" || d.value[3] == "None") {
+            return
+          }
           d = new google.maps.LatLng(d.value[2], d.value[3]);
           d = projection.fromLatLngToDivPixel(d);
           return d3.select(this)

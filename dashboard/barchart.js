@@ -68,7 +68,7 @@ function load_data_chart() {
   d3.selectAll("svg.chart > *").remove();
 
   //set the margin
-  var margin = {top: 10, right: 25, bottom: 100, left: 100},
+  var margin = {top: 10, right: 25, bottom: 110, left: 100},
     width = 1160 - margin.left - margin.right,
     height = 650 - margin.top - margin.bottom;
 
@@ -111,17 +111,18 @@ function load_data_chart() {
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis)
-      .selectAll("text")
-          .attr("y", 9)
-          .attr("x", 6)
-          .attr("dy", ".35em")
-          .attr("transform", "rotate(45)")
-          .style("text-anchor", "start")
-      .append("text")
-          .attr("x", width / 1.5)
-          .attr("y", 120)
-          .style("text-anchor", "end")
-          .text("TYPE OF VIOLATION");
+        .selectAll("text")
+            .attr("y", 15)
+            .attr("x", -10)
+            .attr("transform", "rotate(30)")
+            .style("text-anchor", "start");
+
+    chart.select("g")
+        .append("text")
+            .attr("x", width / 1.75)
+            .attr("y", 110)
+            .style("text-anchor", "end")
+            .text("TYPE OF VIOLATION");
 
 
     // create the y-axis
@@ -142,7 +143,7 @@ function load_data_chart() {
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.typeofviolation); })
       .attr("y", function(d) { return y(d.amount); })
-      .attr("height", function(d) { return height - y(d.amount); })
+      .attr("height", function(d) { return height - y(d.amount) + 1; })
       .attr("width", x.rangeBand())
       .attr("id", function(d) { return d.typeofviolation.replace(/\s/g, ''); })
       // change color of the bars on mouse hover and show the data value by using the d3-tip

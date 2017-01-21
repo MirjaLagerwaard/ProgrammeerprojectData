@@ -61,7 +61,11 @@
  #data2013,
  #data2014,
  #data2015,
- #data2016 {
+ #data2016,
+ #zoomaleppo,
+ #zoomhoms,
+ #zoomdamascus,
+ #zoomout {
    background-color: #404040;
    border: none;
    padding: 15px 75px;
@@ -81,11 +85,19 @@
  #data2014:hover,
  #data2015:hover,
  #data2016:hover,
+ #zoomaleppo:hover,
+ #zoomhoms:hover,
+ #zoomdamascus:hover,
+ #zoomout:hover,
  #data2012:disabled,
  #data2013:disabled,
  #data2014:disabled,
  #data2015:disabled,
- #data2016:disabled {
+ #data2016:disabled,
+ #zoomaleppo:disabled,
+ #zoomhoms:disabled,
+ #zoomdamascus:disabled,
+ #zoomout:disabled {
      background-color: #ff7f50;
      color: white;
  }
@@ -188,10 +200,6 @@
   width: 50%;
 }
 
-.map{
- margin: 75px 0;
-}
-
 .day {
   stroke: #404040;
 }
@@ -201,18 +209,6 @@
   stroke: #404040;
   stroke-width: 2px;
 }
-
-.RdYlGn .q0-11{fill:rgb(165,0,38)}
-.RdYlGn .q1-{fill:rgb(215,48,39)}
-.RdYlGn .q2-11{fill:rgb(244,109,67)}
-.RdYlGn .q3-11{fill:rgb(253,174,97)}
-.RdYlGn .q4-11{fill:rgb(254,224,139)}
-.RdYlGn .q5-11{fill:rgb(255,255,191)}
-.RdYlGn .q6-11{fill:rgb(217,239,139)}
-.RdYlGn .q7-11{fill:rgb(166,217,106)}
-.RdYlGn .q8-11{fill:rgb(102,189,99)}
-.RdYlGn .q9-11{fill:rgb(26,152,80)}
-.RdYlGn .q10-11{fill:rgb(0,104,55)}
 
 #map {
    width: 100%;
@@ -237,4 +233,8 @@
 
  #type {
    text-align: left;
+ }
+
+ .zoombuttons {
+   text-align: center;
  }

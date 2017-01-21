@@ -43,6 +43,14 @@
             <div class="calender-map" style="width: 2000px; height: 250px;"></div>
             <script src="calendarview.js"></script>
 
+            <div class="zoombuttons">
+                <button id="zoomaleppo" onclick="zoomAleppo();">zoom in > aleppo</button>
+                <button id="zoomhoms" onclick="zoomHoms();">zoom in > homs</button>
+                <button id="zoomdamascus" onclick="zoomDamascus();">zoom in > damascus</button>
+                <button id="zoomout" onclick="initMap();">zoom out</button>
+            </div>
+
+
             <div id="map" class="map" style="width: 2000px; height: 650px"></div>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ6Gxnrd-qizH2GJ6V-ehpBbWBTgUyfIg&callback=initMap" async defer></script>
             <script src="map.js"></script>

@@ -1,3 +1,6 @@
+// FROM: https://bl.ocks.org/mbostock/4063318
+// AND: https://www.crowdanalytix.com/communityBlog/10-steps-to-create-calendar-view-heatmap-in-d3-js
+
 var width = 900,
     height = 105,
     cellSize = 12; // cell size
@@ -10,7 +13,7 @@ var day = d3.time.format("%w"),
 	format = d3.time.format("%Y%m%d");
 	parseDate = d3.time.format("%Y%m%d").parse;
 
-var color = d3.scale.linear().range(["white", '#802200'])
+var color = d3.scale.linear().range(["white", '#cc3600'])
     .domain([0, 1])
 
 var svg = d3.select(".calender-map").selectAll("svg")
@@ -84,7 +87,6 @@ d3.csv("testdatacalendar.csv", function(error, csv) {
   rect.filter(function(d) { return d in data; })
       .attr("fill", function(d) { return color(data[d]); })
 	  .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
-	$("rect").tooltip({container: 'body', html: true, placement:'top'});
 });
 
 function numberWithCommas(x) {
