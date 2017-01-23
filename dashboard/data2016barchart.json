@@ -1,12 +1,11 @@
-{"data":
-  [{"amount": "18", "typeofviolation": "AAFD"},
-    {"amount": "21", "typeofviolation": "VOCR"},
-    {"amount": "338", "typeofviolation": "UOIW"},
-    {"amount": "19", "typeofviolation": "SAESCR"},
-    {"amount": "601", "typeofviolation": "ACCFRA"},
-    {"amount": "748", "typeofviolation": "UA"},
-    {"amount": "119", "typeofviolation": "SPPAO"},
-    {"amount": "20", "typeofviolation": "NONE"},
-    {"amount": "539", "typeofviolation": "OTHER"},
-    {"amount": "2423", "typeofviolation": "TOTAL"}]
+{"data": [{"amount": "18", "typeofviolation": "AAFD"},
+  {"amount": "21", "typeofviolation": "VOCR"},
+  {"amount": "338", "typeofviolation": "UOIW"},
+  {"amount": "19", "typeofviolation": "SAESCR"},
+  {"amount": "601", "typeofviolation": "ACCFRA"},
+  {"amount": "748", "typeofviolation": "UA"},
+  {"amount": "119", "typeofviolation": "SPPAO"},
+  {"amount": "20", "typeofviolation": "NONE"},
+  {"amount": "539", "typeofviolation": "OTHER"},
+  {"amount": "2423", "typeofviolation": "TOTAL"}]
 }

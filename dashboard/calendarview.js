@@ -1,9 +1,53 @@
 // FROM: https://bl.ocks.org/mbostock/4063318
 // AND: https://www.crowdanalytix.com/communityBlog/10-steps-to-create-calendar-view-heatmap-in-d3-js
 
+window.onload = loadCalendarData2016();
+var data_csv_calendar;
+var range_year1;
+var range_year2;
+
+function loadCalendarData2012() {
+  data_csv_calendar = "calendardata2012.csv";
+  range_year1 = 2012
+  range_year2 = 2013
+  load_data_calendar();
+};
+
+function loadCalendarData2013() {
+  data_csv_calendar = "calendardata2013.csv";
+  range_year1 = 2013
+  range_year2 = 2014
+  load_data_calendar();
+};
+
+function loadCalendarData2014() {
+  data_csv_calendar = "calendardata2014.csv";
+  range_year1 = 2014
+  range_year2 = 2015
+  load_data_calendar();
+};
+
+function loadCalendarData2015() {
+  data_csv_calendar = "calendardata2015.csv";
+  range_year1 = 2015
+  range_year2 = 2016
+  load_data_calendar();
+};
+
+function loadCalendarData2016() {
+  data_csv_calendar = "calendardata2016.csv";
+  range_year1 = 2016
+  range_year2 = 2017
+  load_data_calendar();
+};
+
+function load_data_calendar() {
+
+d3.selectAll("svg.calendar-map > *").remove();
+
 var width = 900,
     height = 105,
-    cellSize = 12; // cell size
+    cellSize = 12;
     week_days = ['SUN','MON','TUE','WED','THU','FRI','SAT']
     month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
 
@@ -17,7 +61,7 @@ var color = d3.scale.linear().range(["white", '#cc3600'])
     .domain([0, 1])
 
 var svg = d3.select(".calender-map").selectAll("svg")
-    .data(d3.range(2016, 2017))
+    .data(d3.range(range_year1, range_year2))
   .enter().append("svg")
     .attr("width", '100%')
     .attr("data-height", '0.5678')
@@ -71,7 +115,7 @@ svg.selectAll(".month")
     .attr("id", function(d,i){ return month[i] })
     .attr("d", monthPath);
 
-d3.csv("testdatacalendar.csv", function(error, csv) {
+d3.csv(data_csv_calendar, function(error, csv) {
 
   csv.forEach(function(d) {
     d.Comparison_Type = parseInt(d.Comparison_Type);
@@ -106,4 +150,5 @@ function monthPath(t0) {
       + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
       + "H" + (w1 + 1) * cellSize + "V" + 0
       + "H" + (w0 + 1) * cellSize + "Z";
+}
 }

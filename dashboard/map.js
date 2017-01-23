@@ -126,16 +126,11 @@ function load_data_map() {
             .attr("stroke", "black")
 
         function transform(d) {
-          console.log(d.value[2])
-          if (d.value[2] == "None" || d.value[3] == "None") {
-            return
-          }
           d = new google.maps.LatLng(d.value[2], d.value[3]);
           d = projection.fromLatLngToDivPixel(d);
           return d3.select(this)
               .style("margin-left", (d.x) + "px")
               .style("margin-top", (d.y) + "px");
-
         }
       };
     };
@@ -146,5 +141,5 @@ function load_data_map() {
 }
 
 function removeOldMap() {
-  d3.select(".syriamap").remove()
+  d3.selectAll(".syriamap").remove()
 }

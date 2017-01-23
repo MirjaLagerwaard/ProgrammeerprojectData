@@ -65,3 +65,24 @@ Mijn alfa versie gepresenteerd aan de werkgroep. Tips die ik heb gekregen:
 * Buttons maken dat als je daarop klikt dat de kaart automatisch inzoomt op Aleppo/Homs/Damascus, omdat daar de meeste incidenten hebben plaatsgevonden
 
 * De stippen die geen exacte coördinaten hebben een andere kleur geven en duidelijk aangeven dat dit dus niet de exacte positie is
+
+*Zaterdag en zondag 21-22 januari*
+
+* Zoom buttons gemaakt, en een zoom out button
+
+* Ik ben erachter gekomen dat er nog een bug in mijn map zit... Ze hebben in de database van meerdere notaties gebruik gemaakt om coördinaten aan te geven. Ik heb dit weekend dus tijd besteed om mijn python script (makedatamap.py) aan te passen, zodat deze coördinaten omgezet worden naar de juiste notatie. Daarbij is deze bug opgelost.
+
+* Ik heb daarnaast de bug in de barchart opgelost. Als je nu hovert over type incidenten die 0 keer voorkomen verschijnt de tooltip op de juiste plek. Ik heb dit opgelost door een bar te laten tekenen van 1px groot, waardoor de code weet waar de tooltip moet verschijnen.
+
+* x-as label toegevoegd aan de barchart
+
+* Met testdata heb ik voor elkaar gekregen dat ik de hokjes van de calendarview op de juiste manier kan inkleuren
+
+*Maandag 23 januari*
+
+Tijdens de stand-up meeting hebben we de planning voor deze week besproken. Mijn planning:
+Maandag: python script schrijven die de data van de calendar view maakt en deze inladen. Calendar view koppelen met de time buttons.
+Dinsdag: De map en calendar view afmaken en daarbij de overige bugs oplossen die nog aanwezig zijn in de map en calendar.
+Woensdag en donderdag: alle visualisaties aan elkaar linken en code opschonen.
+
+ 

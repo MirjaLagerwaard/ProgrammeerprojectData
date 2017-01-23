@@ -1,0 +1,25 @@
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
+.calender-map {
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  color: #404040;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  shape-rendering: crispEdges;
+  width: 50%;
+}
+
+.day {
+  stroke: #404040;
+}
+
+.month {
+  fill: none;
+  stroke: #404040;
+  stroke-width: 2px;
+}
