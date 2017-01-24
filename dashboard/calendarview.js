@@ -6,10 +6,12 @@ var data_csv_calendar;
 var range_year1;
 var range_year2;
 
+
 function loadCalendarData2012() {
   data_csv_calendar = "calendardata2012.csv";
-  range_year1 = 2012
-  range_year2 = 2013
+  range_year1 = 2012;
+  range_year2 = 2013;
+  removeOldCalendar();
   load_data_calendar();
 };
 
@@ -17,6 +19,7 @@ function loadCalendarData2013() {
   data_csv_calendar = "calendardata2013.csv";
   range_year1 = 2013
   range_year2 = 2014
+  removeOldCalendar();
   load_data_calendar();
 };
 
@@ -24,6 +27,7 @@ function loadCalendarData2014() {
   data_csv_calendar = "calendardata2014.csv";
   range_year1 = 2014
   range_year2 = 2015
+  removeOldCalendar();
   load_data_calendar();
 };
 
@@ -31,6 +35,7 @@ function loadCalendarData2015() {
   data_csv_calendar = "calendardata2015.csv";
   range_year1 = 2015
   range_year2 = 2016
+  removeOldCalendar();
   load_data_calendar();
 };
 
@@ -38,117 +43,127 @@ function loadCalendarData2016() {
   data_csv_calendar = "calendardata2016.csv";
   range_year1 = 2016
   range_year2 = 2017
+  removeOldCalendar();
   load_data_calendar();
 };
 
 function load_data_calendar() {
+  var width = 900,
+      height = 105,
+      cellSize = 12;
+      week_days = ['SUN','MON','TUE','WED','THU','FRI','SAT']
+      month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
 
-d3.selectAll("svg.calendar-map > *").remove();
+  var day = d3.time.format("%w"),
+      week = d3.time.format("%U"),
+      percent = d3.format(".1%"),
+  	format = d3.time.format("%Y%m%d");
+  	parseDate = d3.time.format("%Y%m%d").parse;
 
-var width = 900,
-    height = 105,
-    cellSize = 12;
-    week_days = ['SUN','MON','TUE','WED','THU','FRI','SAT']
-    month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
+  var color = d3.scale.linear().range(["white", '#cc3600'])
+      .domain([0, 1])
 
-var day = d3.time.format("%w"),
-    week = d3.time.format("%U"),
-    percent = d3.format(".1%"),
-	format = d3.time.format("%Y%m%d");
-	parseDate = d3.time.format("%Y%m%d").parse;
+  var svg = d3.select(".calender-map").selectAll("svg")
+      .data(d3.range(range_year1, range_year2))
+    .enter().append("svg")
+      .attr("width", '100%')
+      .attr("data-height", '0.5678')
+      .attr("viewBox",'0 0 900 105')
+      .attr("class", "RdYlGn")
+    .append("g")
+      .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
 
-var color = d3.scale.linear().range(["white", '#cc3600'])
-    .domain([0, 1])
+  svg.append("text")
+      .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d; });
 
-var svg = d3.select(".calender-map").selectAll("svg")
-    .data(d3.range(range_year1, range_year2))
-  .enter().append("svg")
-    .attr("width", '100%')
-    .attr("data-height", '0.5678')
-    .attr("viewBox",'0 0 900 105')
-    .attr("class", "RdYlGn")
-  .append("g")
-    .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+  for (var i=0; i<7; i++)
+  {
+  svg.append("text")
+      .attr("transform", "translate(-5," + cellSize*(i+1) + ")")
+      .style("text-anchor", "end")
+      .attr("dy", "-.25em")
+      .text(function(d) { return week_days[i]; });
+   }
 
-svg.append("text")
-    .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
-    .style("text-anchor", "middle")
-    .text(function(d) { return d; });
+  var rect = svg.selectAll(".day")
+      .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+    .enter()
+  	.append("rect")
+      .attr("class", "day")
+      .attr("width", cellSize)
+      .attr("height", cellSize)
+      .attr("x", function(d) { return week(d) * cellSize; })
+      .attr("y", function(d) { return day(d) * cellSize; })
+      .attr("fill",'#fff')
+      .datum(format);
 
-for (var i=0; i<7; i++)
-{
-svg.append("text")
-    .attr("transform", "translate(-5," + cellSize*(i+1) + ")")
-    .style("text-anchor", "end")
-    .attr("dy", "-.25em")
-    .text(function(d) { return week_days[i]; });
- }
+  var legend = svg.selectAll(".legend")
+        .data(month)
+      .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", function(d, i) { return "translate(" + (((i+1) * 50)+8) + ",0)"; });
 
-var rect = svg.selectAll(".day")
-    .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-  .enter()
-	.append("rect")
-    .attr("class", "day")
-    .attr("width", cellSize)
-    .attr("height", cellSize)
-    .attr("x", function(d) { return week(d) * cellSize; })
-    .attr("y", function(d) { return day(d) * cellSize; })
-    .attr("fill",'#fff')
-    .datum(format);
+  legend.append("text")
+     .attr("class", function(d,i){ return month[i] })
+     .style("text-anchor", "end")
+     .attr("dy", "-.25em")
+     .text(function(d,i){ return month[i] });
 
-var legend = svg.selectAll(".legend")
-      .data(month)
-    .enter().append("g")
-      .attr("class", "legend")
-      .attr("transform", function(d, i) { return "translate(" + (((i+1) * 50)+8) + ",0)"; });
+  svg.selectAll(".month")
+      .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+    .enter().append("path")
+      .attr("class", "month")
+      .attr("id", function(d,i){ return month[i] })
+      .attr("d", monthPath);
 
-legend.append("text")
-   .attr("class", function(d,i){ return month[i] })
-   .style("text-anchor", "end")
-   .attr("dy", "-.25em")
-   .text(function(d,i){ return month[i] });
+  d3.csv(data_csv_calendar, function(error, csv) {
 
-svg.selectAll(".month")
-    .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-  .enter().append("path")
-    .attr("class", "month")
-    .attr("id", function(d,i){ return month[i] })
-    .attr("d", monthPath);
+    csv.forEach(function(d) {
+      d.Total = parseInt(d.Total);
+    });
 
-d3.csv(data_csv_calendar, function(error, csv) {
+   var Total_Max = d3.max(csv, function(d) { return d.Total; });
 
-  csv.forEach(function(d) {
-    d.Comparison_Type = parseInt(d.Comparison_Type);
+    var data = d3.nest()
+      .key(function(d) { return d.Date; })
+      .rollup(function(d) { return  Math.sqrt(d[0].Total / Total_Max); })
+      .map(csv);
+
+    rect.filter(function(d) { return d in data; })
+        .attr("fill", function(d) { return color(data[d]); })
+  	  .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
+
+      var tooltip = d3.select("body")
+        .append("div").attr("id", "tooltip")
+        .style("position", "absolute")
+        .style("z-index", "10")
+        .style("visibility", "hidden")
+        .text("a simple tooltip");
+
   });
 
- var Comparison_Type_Max = d3.max(csv, function(d) { return d.Comparison_Type; });
+  function numberWithCommas(x) {
+      x = x.toString();
+      var pattern = /(-?\d+)(\d{3})/;
+      while (pattern.test(x))
+          x = x.replace(pattern, "$1,$2");
+      return x;
+  }
 
-  var data = d3.nest()
-    .key(function(d) { return d.Date; })
-    .rollup(function(d) { return  Math.sqrt(d[0].Comparison_Type / Comparison_Type_Max); })
-    .map(csv);
-
-  rect.filter(function(d) { return d in data; })
-      .attr("fill", function(d) { return color(data[d]); })
-	  .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
-});
-
-function numberWithCommas(x) {
-    x = x.toString();
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(x))
-        x = x.replace(pattern, "$1,$2");
-    return x;
+  function monthPath(t0) {
+    var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+        d0 = +day(t0), w0 = +week(t0),
+        d1 = +day(t1), w1 = +week(t1);
+    return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+        + "H" + w0 * cellSize + "V" + 7 * cellSize
+        + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+        + "H" + (w1 + 1) * cellSize + "V" + 0
+        + "H" + (w0 + 1) * cellSize + "Z";
+  }
 }
 
-function monthPath(t0) {
-  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
-      d0 = +day(t0), w0 = +week(t0),
-      d1 = +day(t1), w1 = +week(t1);
-  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
-      + "H" + w0 * cellSize + "V" + 7 * cellSize
-      + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
-      + "H" + (w1 + 1) * cellSize + "V" + 0
-      + "H" + (w0 + 1) * cellSize + "Z";
-}
+function removeOldCalendar() {
+  d3.selectAll(".calender-map > *").remove()
 }

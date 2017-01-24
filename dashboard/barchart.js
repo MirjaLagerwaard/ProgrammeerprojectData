@@ -153,7 +153,6 @@ function load_data_chart() {
         tip.show(d, this)
         var t = d
         d3.selectAll("tr").filter(function() {
-          console.log(this.innerText)
           return this.innerText.startsWith(t.typeofviolation)
         })
           .style("background-color", "#ff7f50")

@@ -117,8 +117,7 @@ function load_data_map() {
             .each(transform)
             .attr("class", "marker");
 
-        // Add a circle.
-        marker.append("circle")
+        marker.filter(d => {return d.value[2] != 0 && d.value[3] != 0}).append("circle")
             .attr("r", 7)
             .attr("cx", padding)
             .attr("cy", padding)
@@ -126,11 +125,15 @@ function load_data_map() {
             .attr("stroke", "black")
 
         function transform(d) {
+          if(d.value[2] == "None" || d.value[3] == "None") {
+            d.value[2] = 0
+            d.value[3] = 0
+          }
           d = new google.maps.LatLng(d.value[2], d.value[3]);
           d = projection.fromLatLngToDivPixel(d);
           return d3.select(this)
-              .style("margin-left", (d.x) + "px")
-              .style("margin-top", (d.y) + "px");
+              .style("margin-left", (d.x + (Math.random() - 0.5) * 14) + "px")
+              .style("margin-top", (d.y + (Math.random() - 0.5) * 14) + "px");
         }
       };
     };

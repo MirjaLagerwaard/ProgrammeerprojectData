@@ -1,9 +1,9 @@
 import csv
 import json
+import copy
 
 # open the needed files
 csvfiletotal = open('syrianarchive.csv', 'r')
-jsonfile = open('data2016calendar.csv', 'w')
 
 # define fieldnames
 fieldnames = (
@@ -30,23 +30,30 @@ translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
                     'Other':'Other',
                     'None':'None'}
 
-result = []
+result = {}
 
 for row in reader:
-    if row["date"][-2:] == '16':
+    if row["date"][-2:] == '12':
         date = row["date"]
         typeViolation = row["typeofviolation"]
         short = translateDict[typeViolation]
-        amountofviolation[short] += 1
-        new_dict = {}
-        new_dict = date[short]
-        print new_dict
 
-print amountofviolation
-#
-# for key, value in amountofviolation.iteritems():
-#     result.append({"date":key, "typeViolation":str(value)})
-# # make dictionary for the json
-# points_dict = {'data': result}
-# # make the json file
-# json.dump(points_dict, jsonfile)
+        if date in result:
+            result[date][short] += 1
+        else:
+            result[date] = copy.deepcopy(amountofviolation)
+            result[date][short] += 1
+
+for date, amounts in result.iteritems():
+    amounts["Total"] = sum([value for key, value in amounts.iteritems()])
+
+with open('calendardata2012.csv', 'wb') as f:
+    total = ['date']
+    total.extend(result.values()[0].keys())
+
+    w = csv.DictWriter(f, total)
+
+    w.writeheader()
+    for date, amounts in result.iteritems():
+        amounts["date"] = date[-4:] + date[3:5] + date[:2]
+        w.writerow(amounts)

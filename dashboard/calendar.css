@@ -23,3 +23,9 @@
   stroke: #404040;
   stroke-width: 2px;
 }
+
+#tooltip {
+        background-color: #fff;
+        border: 2px solid #ccc;
+        padding: 10px;
+      }
