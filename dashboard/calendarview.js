@@ -1,11 +1,11 @@
 // FROM: https://bl.ocks.org/mbostock/4063318
 // AND: https://www.crowdanalytix.com/communityBlog/10-steps-to-create-calendar-view-heatmap-in-d3-js
+// AND: http://bl.ocks.org/d3noob/a22c42db65eb00d4e369
 
 window.onload = loadCalendarData2016();
 var data_csv_calendar;
 var range_year1;
 var range_year2;
-
 
 function loadCalendarData2012() {
   data_csv_calendar = "calendardata2012.csv";
@@ -60,7 +60,7 @@ function load_data_calendar() {
   	format = d3.time.format("%Y%m%d");
   	parseDate = d3.time.format("%Y%m%d").parse;
 
-  var color = d3.scale.linear().range(["white", '#cc3600'])
+  var color = d3.scale.linear().range(["white", '#ff4400'])
       .domain([0, 1])
 
   var svg = d3.select(".calender-map").selectAll("svg")
@@ -118,6 +118,13 @@ function load_data_calendar() {
       .attr("id", function(d,i){ return month[i] })
       .attr("d", monthPath);
 
+      var tooltip = d3.select("body")
+           .append("div").attr("id", "tooltip")
+           .style("position", "absolute")
+           .style("z-index", "10")
+           .style("visibility", "hidden")
+           .text("a simple tooltip");
+
   d3.csv(data_csv_calendar, function(error, csv) {
 
     csv.forEach(function(d) {
@@ -128,20 +135,35 @@ function load_data_calendar() {
 
     var data = d3.nest()
       .key(function(d) { return d.Date; })
-      .rollup(function(d) { return  Math.sqrt(d[0].Total / Total_Max); })
+      .rollup(function(d) { return d[0].Total })
       .map(csv);
 
-    rect.filter(function(d) { return d in data; })
-        .attr("fill", function(d) { return color(data[d]); })
-  	  .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
+      rect.filter(function(d) { return d in data; })
+          .attr("fill", function(d) { return color(Math.sqrt(data[d] / Total_Max)); })
+    	    .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
 
-      var tooltip = d3.select("body")
-        .append("div").attr("id", "tooltip")
-        .style("position", "absolute")
-        .style("z-index", "10")
-        .style("visibility", "hidden")
-        .text("a simple tooltip");
+      rect.on("mouseover", mouseover);
+      rect.on("mouseout", mouseout);
 
+      function mouseover(d) {
+        tooltip.style("visibility", "visible");
+        var percent_data = (data[d] !== undefined) ? data[d] : 0;
+        var purchase_text = d.substring(6,8) + "-" + d.substring(4,6) + "-" + d.substring(0,4) + ": " + percent_data + " incidents";
+
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", 1.0);
+        tooltip.html(purchase_text)
+          .style("left", (d3.event.pageX) + 30 + "px")
+          .style("top", (d3.event.pageY) + "px");
+      }
+      function mouseout(d) {
+        tooltip.transition()
+          .duration(0)
+          .style("opacity", 0);
+        var $tooltip = $("#tooltip");
+        $tooltip.empty();
+      }
   });
 
   function numberWithCommas(x) {

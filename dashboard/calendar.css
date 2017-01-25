@@ -25,7 +25,14 @@
 }
 
 #tooltip {
-        background-color: #fff;
-        border: 2px solid #ccc;
-        padding: 10px;
-      }
+  line-height: 1;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 6.5px;
+  padding: 12px;
+  background: #404040;
+  color: #ff7f50;
+  border-radius: 2px;
+}

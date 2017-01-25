@@ -103,7 +103,6 @@ function load_data_chart() {
     x.domain(data.data.map(function(d) { return d.typeofviolation; }));
     y.domain([0, 2600]);
 
-
     chart.call(tip);
 
     // create the x-axis
@@ -123,7 +122,6 @@ function load_data_chart() {
             .attr("y", 110)
             .style("text-anchor", "end")
             .text("TYPE OF VIOLATION");
-
 
     // create the y-axis
     chart.append("g")
