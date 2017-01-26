@@ -53,13 +53,17 @@
 
          .tooltip {
            position: absolute;
-           line-height: .7;
-           font-weight: bold;
-           padding: 8px;
-           background: rgba(0, 0, 0, 0.8);
-           color: #fff;
-           font-weight: bold;
-           font: 11.5px sans-serif;
+           /*line-height: 0.1px;*/
+           font-weight: 400;
+           padding: 12px;
+           background: #404040;
+           color: #ff7f50;
+           font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
            border-radius: 2px;
            pointer-events: none;
+           font-size: 20px;
+           font-style: normal;
+
+
+
          }

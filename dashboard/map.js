@@ -149,10 +149,6 @@ function load_data_map() {
                      .style("opacity", 0);
                  });
 
-
-
-
-
         function transform(d) {
           if(d.value[2] == "None" || d.value[3] == "None") {
             d.value[2] = 0
@@ -164,12 +160,6 @@ function load_data_map() {
               .style("margin-left", (d.x + (Math.random() - 0.5) * 14) + "px")
               .style("margin-top", (d.y + (Math.random() - 0.5) * 14) + "px");
         }
-
-        function showDetails() {
-
-          };
-
-
 
       };
     };
