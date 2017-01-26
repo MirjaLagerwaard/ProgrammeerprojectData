@@ -110,7 +110,7 @@ function load_data_map() {
 
       overlay.draw = function() {
         var projection = overlay.getProjection(),
-            padding = 10;
+            padding = 7;
 
             var tooltip = d3.select("body")
               .append("div")
@@ -122,32 +122,39 @@ function load_data_map() {
         .each(transform) // update existing markers
           .enter().append("svg:svg")
             .each(transform)
-            .attr("class", "marker");
+            .attr("class", "marker")
+            .style("width", padding * 2 + "px")
+            .style("height", padding * 2 + "px");
 
         marker.filter(d => {return d.value[2] != 0 && d.value[3] != 0}).append("svg:circle")
-            .attr("r", 6)
+            .attr("r", padding - 1)
             .attr("cx", padding)
             .attr("cy", padding)
             .attr("fill", "#ff7f50")
             .attr("stroke", "black")
+            .on("mouseover", function(d) {
+              d3.select(this).style("fill", "grey")
+                .style("cursor", "pointer")
+            })
             .on("click", function(d) {
-                     tooltip.transition()
-                       .duration(0)
-                       .style("opacity", 1);
-                     tooltip.html('Link: ' + d.value[0] + '<br>'
-                                  + 'Location: '+ d.value[1] + '<br>'
-                                  + 'Date: ' + d.value[4] + '<br>'
-                                  + 'Type of violation: ' + d.value[5] + '<br>'
-                                  + 'Used weapon(s): ' + d.value[6] + '<br>'
-                                  + 'Description: ' + d.value[7] + '<br>')
-                       .style("left", (d3.event.pageX + 5) + "px")
-                       .style("top", (d3.event.pageY - 28) + "px");
-                 	})
-                	.on("mouseout", function(d) {
-                     tooltip.transition()
-                     .duration(200)
-                     .style("opacity", 0);
-                 });
+               tooltip.transition()
+                 .duration(0)
+                 .style("opacity", 1);
+               tooltip.html('Link: ' + d.value[0] + '<br>'
+                            + 'Location: '+ d.value[1] + '<br>'
+                            + 'Date: ' + d.value[4] + '<br>'
+                            + 'Type of violation: ' + d.value[5] + '<br>'
+                            + 'Used weapon(s): ' + d.value[6] + '<br>'
+                            + 'Description: ' + d.value[7] + '<br>')
+                 .style("left", (d3.event.pageX + 5) + "px")
+                 .style("top", (d3.event.pageY - 28) + "px");
+           	})
+          	.on("mouseout", function(d) {
+               d3.select(this).style("fill", "#ff7f50")
+               tooltip.transition()
+               .duration(200)
+               .style("opacity", 0);
+           });
 
         function transform(d) {
           if(d.value[2] == "None" || d.value[3] == "None") {
@@ -157,8 +164,8 @@ function load_data_map() {
           d = new google.maps.LatLng(d.value[2], d.value[3]);
           d = projection.fromLatLngToDivPixel(d);
           return d3.select(this)
-              .style("margin-left", (d.x + (Math.random() - 0.5) * 14) + "px")
-              .style("margin-top", (d.y + (Math.random() - 0.5) * 14) + "px");
+              .style("left", (d.x + (Math.random() - 0.5) * 14) + "px")
+              .style("top", (d.y + (Math.random() - 0.5) * 14) + "px");
         }
 
       };

@@ -47,23 +47,20 @@
    background-color: grey;
  }
 
- .syriamap circle:hover {
+ /*.syriamap circle:hover {
          fill: grey;
-         cursor: pointer; }
+         cursor: pointer; }*/
 
-         .tooltip {
-           position: absolute;
-           /*line-height: 0.1px;*/
-           font-weight: 400;
-           padding: 12px;
-           background: #404040;
-           color: #ff7f50;
-           font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-           border-radius: 2px;
-           pointer-events: none;
-           font-size: 20px;
-           font-style: normal;
-
-
-
-         }
+ .tooltip {
+   position: absolute;
+   /*line-height: 0.1px;*/
+   font-weight: 400;
+   padding: 12px;
+   background: #404040;
+   color: #ff7f50;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   border-radius: 2px;
+   pointer-events: none;
+   font-size: 20px;
+   font-style: normal;
+ }
