@@ -1,6 +1,9 @@
 /*
 # Name: Mirja Lagerwaard
 # Student number: 10363149
+
+# Sources:
+# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 */
 
 
@@ -101,28 +104,54 @@ function load_data_map() {
 
     // Add the container when the overlay is added to the map.
     overlay.onAdd = function() {
-      var layer = d3.select(this.getPanes().overlayLayer).append("div")
-          .attr("class", "syriamap");
+      var layer = d3.select(this.getPanes().overlayMouseTarget)
+        .append("div")
+        .attr("class", "syriamap");
 
-      // Draw each marker as a separate SVG element.
-      // We could use a single SVG, but what size would it have?
       overlay.draw = function() {
         var projection = overlay.getProjection(),
             padding = 10;
 
+            var tooltip = d3.select("body")
+              .append("div")
+          	.attr("class", "tooltip")
+          	.style("opacity", 0);
+
         var marker = layer.selectAll("svg")
-            .data(d3.entries(data))
-            .each(transform) // update existing markers
-          .enter().append("svg")
+        .data(d3.entries(data))
+        .each(transform) // update existing markers
+          .enter().append("svg:svg")
             .each(transform)
             .attr("class", "marker");
 
-        marker.filter(d => {return d.value[2] != 0 && d.value[3] != 0}).append("circle")
-            .attr("r", 7)
+        marker.filter(d => {return d.value[2] != 0 && d.value[3] != 0}).append("svg:circle")
+            .attr("r", 6)
             .attr("cx", padding)
             .attr("cy", padding)
             .attr("fill", "#ff7f50")
             .attr("stroke", "black")
+            .on("click", function(d) {
+                     tooltip.transition()
+                       .duration(0)
+                       .style("opacity", 1);
+                     tooltip.html('Link: ' + d.value[0] + '<br>'
+                                  + 'Location: '+ d.value[1] + '<br>'
+                                  + 'Date: ' + d.value[4] + '<br>'
+                                  + 'Type of violation: ' + d.value[5] + '<br>'
+                                  + 'Used weapon(s): ' + d.value[6] + '<br>'
+                                  + 'Description: ' + d.value[7] + '<br>')
+                       .style("left", (d3.event.pageX + 5) + "px")
+                       .style("top", (d3.event.pageY - 28) + "px");
+                 	})
+                	.on("mouseout", function(d) {
+                     tooltip.transition()
+                     .duration(200)
+                     .style("opacity", 0);
+                 });
+
+
+
+
 
         function transform(d) {
           if(d.value[2] == "None" || d.value[3] == "None") {
@@ -135,6 +164,13 @@ function load_data_map() {
               .style("margin-left", (d.x + (Math.random() - 0.5) * 14) + "px")
               .style("margin-top", (d.y + (Math.random() - 0.5) * 14) + "px");
         }
+
+        function showDetails() {
+
+          };
+
+
+
       };
     };
 
