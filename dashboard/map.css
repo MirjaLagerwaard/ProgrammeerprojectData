@@ -47,13 +47,8 @@
    background-color: grey;
  }
 
- /*.syriamap circle:hover {
-         fill: grey;
-         cursor: pointer; }*/
-
  .tooltip {
    position: absolute;
-   /*line-height: 0.1px;*/
    font-weight: 400;
    padding: 12px;
    background: #404040;

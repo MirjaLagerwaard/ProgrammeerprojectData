@@ -12,7 +12,7 @@ function loadCalendarData2012() {
   range_year1 = 2012;
   range_year2 = 2013;
   removeOldCalendar();
-  load_data_calendar();
+  loadNewCalendar();
 };
 
 function loadCalendarData2013() {
@@ -20,7 +20,7 @@ function loadCalendarData2013() {
   range_year1 = 2013
   range_year2 = 2014
   removeOldCalendar();
-  load_data_calendar();
+  loadNewCalendar();
 };
 
 function loadCalendarData2014() {
@@ -28,7 +28,7 @@ function loadCalendarData2014() {
   range_year1 = 2014
   range_year2 = 2015
   removeOldCalendar();
-  load_data_calendar();
+  loadNewCalendar();
 };
 
 function loadCalendarData2015() {
@@ -36,7 +36,7 @@ function loadCalendarData2015() {
   range_year1 = 2015
   range_year2 = 2016
   removeOldCalendar();
-  load_data_calendar();
+  loadNewCalendar();
 };
 
 function loadCalendarData2016() {
@@ -44,10 +44,10 @@ function loadCalendarData2016() {
   range_year1 = 2016
   range_year2 = 2017
   removeOldCalendar();
-  load_data_calendar();
+  loadNewCalendar();
 };
 
-function load_data_calendar() {
+function loadNewCalendar() {
   var width = 900,
       height = 105,
       cellSize = 12;
@@ -57,14 +57,14 @@ function load_data_calendar() {
   var day = d3.time.format("%w"),
       week = d3.time.format("%U"),
       percent = d3.format(".1%"),
-  	format = d3.time.format("%Y%m%d");
-  	parseDate = d3.time.format("%Y%m%d").parse;
+  	  format = d3.time.format("%Y%m%d");
+  	  parseDate = d3.time.format("%Y%m%d").parse;
 
   var color = d3.scale.linear().range(["white", '#ff4400'])
       .domain([0, 1])
 
   var svg = d3.select(".calender-map").selectAll("svg")
-      .data(d3.range(range_year1, range_year2))
+    .data(d3.range(range_year1, range_year2))
     .enter().append("svg")
       .attr("width", '100%')
       .attr("data-height", '0.5678')
@@ -73,24 +73,22 @@ function load_data_calendar() {
     .append("g")
       .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
 
-  svg.append("text")
+    svg.append("text")
       .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
       .style("text-anchor", "middle")
       .text(function(d) { return d; });
 
-  for (var i=0; i<7; i++)
-  {
-  svg.append("text")
-      .attr("transform", "translate(-5," + cellSize*(i+1) + ")")
-      .style("text-anchor", "end")
-      .attr("dy", "-.25em")
-      .text(function(d) { return week_days[i]; });
-   }
+    for (var i = 0; i < 7; i++) {
+        svg.append("text")
+          .attr("transform", "translate(-5," + cellSize * (i + 1) + ")")
+          .style("text-anchor", "end")
+          .attr("dy", "-.25em")
+          .text(function(d) { return week_days[i]; });
+    }
 
   var rect = svg.selectAll(".day")
-      .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-    .enter()
-  	.append("rect")
+    .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+    .enter().append("rect")
       .attr("class", "day")
       .attr("width", cellSize)
       .attr("height", cellSize)
@@ -100,30 +98,30 @@ function load_data_calendar() {
       .datum(format);
 
   var legend = svg.selectAll(".legend")
-        .data(month)
-      .enter().append("g")
-        .attr("class", "legend")
-        .attr("transform", function(d, i) { return "translate(" + (((i+1) * 50)+8) + ",0)"; });
+    .data(month)
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(" + (((i + 1) * 50) + 8) + ",0)"; });
 
-  legend.append("text")
+    legend.append("text")
      .attr("class", function(d,i){ return month[i] })
      .style("text-anchor", "end")
      .attr("dy", "-.25em")
      .text(function(d,i){ return month[i] });
 
-  svg.selectAll(".month")
-      .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+    svg.selectAll(".month")
+    .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
     .enter().append("path")
       .attr("class", "month")
       .attr("id", function(d,i){ return month[i] })
       .attr("d", monthPath);
 
-      var tooltip = d3.select("body")
-           .append("div").attr("id", "tooltip")
-           .style("position", "absolute")
-           .style("z-index", "10")
-           .style("visibility", "hidden")
-           .text("a simple tooltip");
+  var tooltip = d3.select("body")
+     .append("div").attr("id", "tooltip")
+       .style("position", "absolute")
+          .style("z-index", "10")
+          .style("visibility", "hidden")
+          .text("a simple tooltip");
 
   d3.csv(data_csv_calendar, function(error, csv) {
 
@@ -131,61 +129,79 @@ function load_data_calendar() {
       d.Total = parseInt(d.Total);
     });
 
-   var Total_Max = d3.max(csv, function(d) { return d.Total; });
+    var Total_Max = d3.max(csv, function(d) { return d.Total; });
 
     var data = d3.nest()
       .key(function(d) { return d.Date; })
       .rollup(function(d) { return d[0].Total })
       .map(csv);
 
-      rect.filter(function(d) { return d in data; })
-          .attr("fill", function(d) { return color(Math.sqrt(data[d] / Total_Max)); })
-    	    .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
+    rect.filter(function(d) { return d in data; })
+      .attr("fill", function(d) { return color(Math.sqrt(data[d] / Total_Max)); })
+      .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
 
-      rect.on("mouseover", mouseover);
-      rect.on("mouseout", mouseout);
+    rect.on("mouseover", mouseover);
+    rect.on("mouseout", mouseout);
 
-      function mouseover(d) {
-        tooltip.style("visibility", "visible");
-        var percent_data = (data[d] !== undefined) ? data[d] : 0;
-        var purchase_text = d.substring(6,8) + "-" + d.substring(4,6) + "-" + d.substring(0,4) + ": " + percent_data + " incidents";
+    function mouseover(d) {
+      d3.select(this).style("stroke-width", "2px")
 
-        tooltip.transition()
-          .duration(200)
-          .style("opacity", 1.0);
-        tooltip.html(purchase_text)
-          .style("left", (d3.event.pageX) + 30 + "px")
-          .style("top", (d3.event.pageY) + "px");
-      }
-      function mouseout(d) {
-        tooltip.transition()
-          .duration(0)
-          .style("opacity", 0);
-        var $tooltip = $("#tooltip");
-        $tooltip.empty();
-      }
+      tooltip.style("visibility", "visible");
+      var data_per_day = (data[d] !== undefined) ? data[d] : 0;
+      var purchase_text = d.substring(6,8) + "-" + d.substring(4,6) + "-" + d.substring(0,4) + ": " + data_per_day + " incidents";
+
+      tooltip.transition()
+        .duration(200)
+        .style("opacity", 1.0);
+      tooltip.html(purchase_text)
+        .style("left", (d3.event.pageX) + 30 + "px")
+        .style("top", (d3.event.pageY) + "px");
+
+      d3.selectAll("circle").filter(function(d) {
+        if (d.value[4] == this) {
+          return true
+        }
+        return false
+      })
+      .style("fill", "#404040")
+    }
+
+    function mouseout(d) {
+      d3.select(this).style("stroke-width", "1px").style("stroke", "#404040")
+      tooltip.transition()
+        .duration(0)
+        .style("opacity", 0);
+      var $tooltip = $("#tooltip");
+      $tooltip.empty();
+
+      d3.selectAll("circle").style("fill", "#ff7f50")
+    }
   });
 
   function numberWithCommas(x) {
-      x = x.toString();
-      var pattern = /(-?\d+)(\d{3})/;
-      while (pattern.test(x))
-          x = x.replace(pattern, "$1,$2");
-      return x;
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+    x = x.replace(pattern, "$1,$2");
+    return x;
   }
 
   function monthPath(t0) {
     var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
-        d0 = +day(t0), w0 = +week(t0),
-        d1 = +day(t1), w1 = +week(t1);
+      d0 = +day(t0), w0 = +week(t0),
+      d1 = +day(t1), w1 = +week(t1);
     return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
-        + "H" + w0 * cellSize + "V" + 7 * cellSize
-        + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
-        + "H" + (w1 + 1) * cellSize + "V" + 0
-        + "H" + (w0 + 1) * cellSize + "Z";
+      + "H" + w0 * cellSize + "V" + 7 * cellSize
+      + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+      + "H" + (w1 + 1) * cellSize + "V" + 0
+      + "H" + (w0 + 1) * cellSize + "Z";
   }
 }
 
 function removeOldCalendar() {
   d3.selectAll(".calender-map > *").remove()
+}
+
+function returnUpdateMap() {
+  d3.selectAll(".marker").style("fill", "orange")
 }

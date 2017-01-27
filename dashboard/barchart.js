@@ -8,51 +8,61 @@ var data_json;
 
 function loadChartData2012() {
   data_json = "data2012barchart.json";
+
   document.getElementById("data2012").disabled = true;
   document.getElementById("data2013").disabled = false;
   document.getElementById("data2014").disabled = false;
   document.getElementById("data2015").disabled = false;
   document.getElementById("data2016").disabled = false;
+
   load_data_chart();
 };
 
 function loadChartData2013() {
   data_json = "data2013barchart.json";
+
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = true;
   document.getElementById("data2014").disabled = false;
   document.getElementById("data2015").disabled = false;
   document.getElementById("data2016").disabled = false;
+
   load_data_chart();
 };
 
 function loadChartData2014() {
   data_json = "data2014barchart.json";
+
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = false;
   document.getElementById("data2014").disabled = true;
   document.getElementById("data2015").disabled = false;
   document.getElementById("data2016").disabled = false;
+
   load_data_chart();
 };
 
 function loadChartData2015() {
   data_json = "data2015barchart.json";
+
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = false;
   document.getElementById("data2014").disabled = false;
   document.getElementById("data2015").disabled = true;
   document.getElementById("data2016").disabled = false;
+
   load_data_chart();
 };
 
 function loadChartData2016() {
   data_json = "data2016barchart.json";
+
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = false;
   document.getElementById("data2014").disabled = false;
   document.getElementById("data2015").disabled = false;
   document.getElementById("data2016").disabled = true;
+
   load_data_chart();
 };
 

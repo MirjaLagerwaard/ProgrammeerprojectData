@@ -86,10 +86,13 @@ Dinsdag: De map en calendar view afmaken en daarbij de overige bugs oplossen die
 Woensdag en donderdag: alle visualisaties aan elkaar linken en code opschonen.
 
  *Dinsdag 24 januari*
+
  De 2 bugs die in de map zaten opgelost: random getal wordt opgetelt bij de lat long to pixel, zodat de stippen die exact over elkaar vallen kleine random geplaatst wordt. Plus ik laat de stippen niet meer zien die of geen latitude/longitude hebben. Daarnaast heb ik de calendar ingekleurd met de daadwerkelijke data en deze gelinkt aan de timebuttons.
 
  *Woensdag 24 januari*
+
  Tooltip gemaakt voor de calendar view
 
 *Donderdag 25 januari*
-Tooltip gemaakt voor de stippen op de map. Hier heel veel problemen mee gehad, omdat Google vervelend doet. Daarnaast de about me page gemaakt. 
+
+Tooltip gemaakt voor de stippen op de map. Hier heel veel problemen mee gehad, omdat Google vervelend doet. Daarnaast de about me page gemaakt.
