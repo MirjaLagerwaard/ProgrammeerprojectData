@@ -48,6 +48,15 @@ function loadCalendarData2016() {
 };
 
 function loadNewCalendar() {
+
+  // create the d3-tip
+  var cal_tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+      return "<span style='color:#ff7f50'>" + d + "</span>";
+    })
+
   var width = 900,
       height = 105,
       cellSize = 12;
@@ -73,18 +82,18 @@ function loadNewCalendar() {
     .append("g")
       .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
 
-    svg.append("text")
-      .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d; });
+  svg.append("text")
+    .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
+    .style("text-anchor", "middle")
+    .text(function(d) { return d; });
 
-    for (var i = 0; i < 7; i++) {
-        svg.append("text")
-          .attr("transform", "translate(-5," + cellSize * (i + 1) + ")")
-          .style("text-anchor", "end")
-          .attr("dy", "-.25em")
-          .text(function(d) { return week_days[i]; });
-    }
+  for (var i = 0; i < 7; i++) {
+      svg.append("text")
+        .attr("transform", "translate(-5," + cellSize * (i + 1) + ")")
+        .style("text-anchor", "end")
+        .attr("dy", "-.25em")
+        .text(function(d) { return week_days[i]; });
+  }
 
   var rect = svg.selectAll(".day")
     .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
@@ -97,6 +106,8 @@ function loadNewCalendar() {
       .attr("fill",'#fff')
       .datum(format);
 
+  rect.call(cal_tip);
+
   var legend = svg.selectAll(".legend")
     .data(month)
     .enter().append("g")
@@ -104,10 +115,10 @@ function loadNewCalendar() {
       .attr("transform", function(d, i) { return "translate(" + (((i + 1) * 50) + 8) + ",0)"; });
 
     legend.append("text")
-     .attr("class", function(d,i){ return month[i] })
+     .attr("class", function(d, i) { return month[i] })
      .style("text-anchor", "end")
      .attr("dy", "-.25em")
-     .text(function(d,i){ return month[i] });
+     .text(function(d, i) { return month[i] });
 
     svg.selectAll(".month")
     .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
@@ -115,13 +126,6 @@ function loadNewCalendar() {
       .attr("class", "month")
       .attr("id", function(d,i){ return month[i] })
       .attr("d", monthPath);
-
-  var tooltip = d3.select("body")
-     .append("div").attr("id", "tooltip")
-       .style("position", "absolute")
-          .style("z-index", "10")
-          .style("visibility", "hidden")
-          .text("a simple tooltip");
 
   d3.csv(data_csv_calendar, function(error, csv) {
 
@@ -138,7 +142,9 @@ function loadNewCalendar() {
 
     rect.filter(function(d) { return d in data; })
       .attr("fill", function(d) { return color(Math.sqrt(data[d] / Total_Max)); })
-      .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)});
+      .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)})
+      .attr("id", function(d) { return d.substring(6,8) + "-" + d.substring(4,6) + "-" + d.substring(0,4) + ": " + ((data[d] !== undefined) ? data[d] : 0) + " incidents"})
+
 
     rect.on("mouseover", mouseover);
     rect.on("mouseout", mouseout);
@@ -146,35 +152,28 @@ function loadNewCalendar() {
     function mouseover(d) {
       d3.select(this).style("stroke-width", "2px")
 
-      tooltip.style("visibility", "visible");
+      var datecalendar = d
       var data_per_day = (data[d] !== undefined) ? data[d] : 0;
       var purchase_text = d.substring(6,8) + "-" + d.substring(4,6) + "-" + d.substring(0,4) + ": " + data_per_day + " incidents";
 
-      tooltip.transition()
-        .duration(200)
-        .style("opacity", 1.0);
-      tooltip.html(purchase_text)
-        .style("left", (d3.event.pageX) + 30 + "px")
-        .style("top", (d3.event.pageY) + "px");
+      cal_tip.show(purchase_text, this)
 
       d3.selectAll("circle").filter(function(d) {
-        if (d.value[4] == this) {
+        var datecircle = d.value[4].substring(6,10) + d.value[4].substring(3,5) + d.value[4].substring(0,2)
+        if (datecircle != datecalendar) {
           return true
         }
         return false
       })
-      .style("fill", "#404040")
+        .style("opacity", 0.0)
     }
 
     function mouseout(d) {
       d3.select(this).style("stroke-width", "1px").style("stroke", "#404040")
-      tooltip.transition()
-        .duration(0)
-        .style("opacity", 0);
-      var $tooltip = $("#tooltip");
-      $tooltip.empty();
 
-      d3.selectAll("circle").style("fill", "#ff7f50")
+      cal_tip.hide()
+
+      d3.selectAll("circle").style("opacity", 1.0)
     }
   });
 

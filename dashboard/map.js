@@ -5,9 +5,19 @@
 # Source:
 # https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 */
+var syria = {lat: 34.75139, lng: 38.26806}
 
 function initMap() {
-  var syria = {lat: 34.75139, lng: 38.26806}
+  map = new google.maps.Map(d3.select("#map").node(), {
+    zoom: 7,
+    center: syria,
+    scrollwheel: false
+  });
+
+  loadMapData2016()
+}
+
+function resetSize() {
   map = new google.maps.Map(d3.select("#map").node(), {
     zoom: 7,
     center: syria,
@@ -70,7 +80,6 @@ function zoomDamascus() {
   loadNewMap();
 }
 
-window.onload = loadMapData2016()
 var data_json_map;
 var map;
 
@@ -104,6 +113,14 @@ function loadMapData2016() {
   loadNewMap();
 };
 
+// create the d3-tip
+var cal_tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<span style='color:#ff7f50'>" + d + "</span>";
+  })
+
 function loadNewMap() {
 
   d3.json(data_json_map, function(error, data) {
@@ -132,6 +149,8 @@ function loadNewMap() {
           .attr("class", "marker")
           .style("width", padding * 2 + "px")
           .style("height", padding * 2 + "px");
+
+      marker.call(cal_tip)
 
         marker.filter(d => {return d.value[2] != 0 && d.value[3] != 0}).append("svg:circle")
           .attr("r", padding - 1)
@@ -188,8 +207,6 @@ function loadNewMap() {
         }
       };
     };
-
-    // Bind our overlay to the map…
     overlay.setMap(map);
   });
 }
@@ -201,6 +218,8 @@ function removeOldMap() {
 function updateCalendar(x) {
   d3.selectAll(".day").filter(function(d) {
     if (d == x.id) {
+      console.log(this)
+      cal_tip.show(this.id, this)
       return true
     }
     return false
@@ -209,5 +228,6 @@ function updateCalendar(x) {
 }
 
 function returnUpdateCalendar() {
+  cal_tip.hide()
   d3.selectAll(".day").style("stroke-width", "1px")
 }

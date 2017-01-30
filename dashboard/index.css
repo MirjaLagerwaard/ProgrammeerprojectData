@@ -1,104 +1,146 @@
-/*
-# Name: Mirja Lagerwaard
-# Student number: 10363149
-*/
-
 #title {
   color: white;
   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-	font-size: 80px;
-	font-style: normal;
+	font-size: 100px;
 	font-variant: small-caps;
-	font-weight: 700;
-  position: relative;
-  top: 25%;
-
- }
+  font-weight: bold;
+}
 
 .orangebar {
-  height: 15px;
+  height: 40px;
   background-color: #ff7f50;
+  color: #404040;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
 .image {
-  height: 175px;
-  background-image: url(https://syrianarchive.org/static/img/belowimage.jpg);
+  height: 1110px;
+  background-image: url(http://sirismm.si.edu/sackler/photo/Parker-Photographs-of-Islamic-Monuments-A2002.6.004.jpg);
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .menubuttons {
      text-align: center;
      background-color: #404040;
- }
+}
 
- #home,
- #visualisation,
- #aboutme,
- #gotosyrianarchive {
+#home,
+#visualisation,
+#aboutme,
+#gotosyrianarchive {
    background-color: #404040;
    border: none;
    padding: 15px 75px;
    text-align: center;
+   height: 60px;
 
    color: white;
    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
    font-size: 17px;
-   font-style: normal;
    font-variant: small-caps;
    font-weight: 700;
 }
 
- #home:hover,
- #visualisation:hover,
- #aboutme:hover,
- #gotosyrianarchive:hover {
+#home:hover,
+#visualisation:hover,
+#aboutme:hover,
+#gotosyrianarchive:hover {
      background-color: #ff7f50;
-     color: white;
- }
+}
 
- .timebuttons {
-   text-align: center;
- }
-
-  .horizontal {
-      display: inline-block;
-      width: 100px;
-  }
-
- #data2012,
- #data2013,
- #data2014,
- #data2015,
- #data2016 {
-   background-color: #404040;
-   border: none;
-   padding: 15px 75px;
-   text-align: center;
-   border-radius: 25px 25px 25px 25px;
-
+#h1white {
    color: white;
    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 20px;
-   font-style: normal;
+   font-size: 50px;
    font-variant: small-caps;
    font-weight: 700;
- }
+}
 
- #data2012:hover,
- #data2013:hover,
- #data2014:hover,
- #data2015:hover,
- #data2016:hover,
- #data2012:disabled,
- #data2013:disabled,
- #data2014:disabled,
- #data2015:disabled,
- #data2016:disabled {
-     background-color: #ff7f50;
-     color: white;
- }
+#h2white {
+   color: white;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 35px;
+   font-variant: small-caps;
+   font-weight: 700;
+}
 
- .merge {
-   width: 50%;
-   margin: 0 auto;
- }
+#h3white {
+   color: white;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 30px;
+}
+
+#h1grey {
+   color: #404040;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 50px;
+   font-variant: small-caps;
+   font-weight: 700;
+}
+
+#h2grey {
+   color: #404040;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 35px;
+   font-variant: small-caps;
+   font-weight: 700;
+}
+
+#h3grey {
+   color: #404040;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 30px;
+}
+
+#h4grey {
+   color: #404040;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 30px;
+   font-variant: small-caps;
+}
+
+.whole {
+   text-align: center;
+}
+
+div.transbox {
+    background-color: #333333;
+    opacity: 0.9;
+    position: relative;
+    top: 25%;
+    border: 5px solid #333333;
+}
+
+p {
+    margin: 2%;
+    text-align: center;
+}
+
+.amountofviolation {
+  text-align: justify;
+  width: 1217px;
+  margin: 0 auto;
+}
+
+.syrianarchiveinfo {
+  width: 35%;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.visualisationinfo {
+  width: 35%;
+  height: 900px;
+  position: absolute;
+  right: 0;
+  margin-right: 10%;
+  margin-top: 50px;
+  text-align: justify;
+}

@@ -1,0 +1,51 @@
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
+ .timebuttons {
+   text-align: center;
+ }
+
+.horizontal {
+      display: inline-block;
+      width: 100px;
+}
+
+ #data2012,
+ #data2013,
+ #data2014,
+ #data2015,
+ #data2016 {
+   background-color: #404040;
+   border: none;
+   padding: 15px 75px;
+   text-align: center;
+   border-radius: 25px 25px 25px 25px;
+
+   color: white;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   font-size: 20px;
+   font-style: normal;
+   font-variant: small-caps;
+   font-weight: 700;
+ }
+
+ #data2012:hover,
+ #data2013:hover,
+ #data2014:hover,
+ #data2015:hover,
+ #data2016:hover,
+ #data2012:disabled,
+ #data2013:disabled,
+ #data2014:disabled,
+ #data2015:disabled,
+ #data2016:disabled {
+     background-color: #ff7f50;
+     color: white;
+ }
+
+ .merge {
+   width: 50%;
+   margin: 0 auto;
+ }

@@ -9,7 +9,8 @@
         background-repeat: no-repeat;
         background-position: center;
         display: inline-block;
-        margin-bottom: 20px;
+        margin-top: 75px;
+        margin-bottom: 45px;
 }
 
 .total {
@@ -24,34 +25,9 @@
   margin-bottom: 30px;
 }
 
-#h1 {
-  color: #404040;
-  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-  font-size: 65px;
-  font-style: normal;
-  font-variant: small-caps;
-  font-weight: 700;
-}
-
-#h2 {
-  color: #404040;
-  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-  font-size: 35px;
-  font-style: normal;
-  font-variant: small-caps;
-  font-weight: 700;
-}
-
 #mail {
   color: #404040;
   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
   font-size: 35px;
-  font-style: normal;
-}
-
-#h3 {
-  color: #404040;
-  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-  font-size: 30px;
   font-style: normal;
 }

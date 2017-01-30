@@ -174,9 +174,9 @@ function load_data_chart() {
         tip.hide()
       });
 
-      d3.selectAll("tr").attr("onmouseover","myScript(this)")
+      d3.selectAll("tr")
+        .attr("onmouseover","myScript(this)")
         .attr("onmouseout","myScript2()")
-
   });
 
   function type(d) {
@@ -189,7 +189,7 @@ function myScript(x) {
   x.style = "background-color: #ff7f50"
   d3.selectAll(".bar").filter(function(d) {
     if (d.typeofviolation == x.innerText.split("\t")[0]) {
-      tip.show(d,this)
+      tip.show(d, this)
       return true
     }
     return false
