@@ -20,99 +20,115 @@
 </head>
 
 <body>
-    <div class="totaldiv">
-
-      <div class="merge" style="width: 2000px;">
             <script src="//code.jquery.com/jquery-1.10.2.js"></script>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-            <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+            <!-- <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> -->
+            <script src="d3tip.js"></script>
 
+            <div class="totaldiv">
+              <div class="merge" style="width: 1850px; background-color: rgba(33,33,33,0.9); border: 1px solid #404040">
+                <div class="timebuttons" style="width: 1850px; margin-top: 20px">
+                  <button id="data2012" onclick="loadChartData2012(); loadMapData2012(); loadCalendarData2012()">2012</button>
+                  <hr class="horizontal"/>
+                  <button id="data2013" onclick="loadChartData2013(); loadMapData2013(); loadCalendarData2013()">2013</button>
+                  <hr class="horizontal"/>
+                  <button id="data2014" onclick="loadChartData2014(); loadMapData2014(); loadCalendarData2014()">2014</button>
+                  <hr class="horizontal"/>
+                  <button id="data2015" onclick="loadChartData2015(); loadMapData2015(); loadCalendarData2015()">2015</button>
+                  <hr class="horizontal"/>
+                  <button id="data2016" onclick="loadChartData2016(); loadMapData2016(); loadCalendarData2016()">2016</button>
+                </div>
 
-            <div class="timebuttons" style="margin: 50px">
-            <button id="data2012" onclick="loadChartData2012(); loadMapData2012(); loadCalendarData2012()">2012</button>
-            <hr class="horizontal"/>
-            <button id="data2013" onclick="loadChartData2013(); loadMapData2013(); loadCalendarData2013()">2013</button>
-            <hr class="horizontal"/>
-            <button id="data2014" onclick="loadChartData2014(); loadMapData2014(); loadCalendarData2014()">2014</button>
-            <hr class="horizontal"/>
-            <button id="data2015" onclick="loadChartData2015(); loadMapData2015(); loadCalendarData2015()">2015</button>
-            <hr class="horizontal"/>
-            <button id="data2016" onclick="loadChartData2016(); loadMapData2016(); loadCalendarData2016()">2016</button>
+                <div class="visualisationtitle" style="height: 75px; margin-top: 30px;"><text id="h1white">amount of preserved incidents over time</text></div>
+
+                <div class="calender-map" style="width: 1950px; height: 225px; color: white;"></div>
+                <script src="calendarview.js"></script>
+
+                <div class="visualisationtitle" style="margin-top: 20px; margin-bottom: 20px"><text id="h1white">location of preserved incidents</text></div>
+
+                <div class="zoombuttons">
+                  <button id="zoomaleppo" onclick="zoomAleppo();">zoom in > aleppo</button>
+                  <button id="zoomhoms" onclick="zoomHoms();">zoom in > homs</button>
+                  <button id="zoomdamascus" onclick="zoomDamascus();">zoom in > damascus</button>
+                  <button id="zoomout" onclick="resetSize();">zoom out</button>
+                </div>
+
+                <div class="aroundmap" style="width: 1850px; text-align: center;">
+                  <div id="map" class="map" style="width: 1600px; height: 585px; display: inline-block;"></div>
+                </div>
+                <script src="map.js"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ6Gxnrd-qizH2GJ6V-ehpBbWBTgUyfIg&callback=initMap" async defer></script>
+
+                <div class="visualisationtitle" style="margin-top: 20px; margin-bottom: 20px;"><text id="h1white">amount of preserved incidents per type of violation</text></div>
+
+                <div class="aroundbarchart" style="width: 1850px; text-align: center; margin-bottom: 40px;">
+                  <div class="barchart" style="display: inline-block;">
+                    <svg class="chart"></svg>
+                  </div>
+                  <script src="barchart.js"></script>
+
+                  <div class="abbreviation" id="table-location" style="width: 650x; height: 591px; display: inline-block;">
+                  <table style="width:100%; text-align: center; border-collapse: collapse;">
+                    <col width="175">
+                    <col width="475">
+                       <tr>
+                         <th>ABBREVIATION</th>
+                         <th id="type">TYPE OF VIOLATION</th>
+                       </tr>
+                       <tr>
+                           <td>AAFD</td>
+                           <td id="type">arbitrary and forcible displacement</td>
+                       </tr>
+                       <tr>
+                          <td>VOCR</td>
+                          <td id="type">violation of children's rights</td>
+                      </tr>
+                      <tr>
+                        <td>UOIW</td>
+                        <td id="type">use of illegal weapons</td>
+                      </tr>
+                      <tr>
+                        <td>SAESCR</td>
+                        <td id="type">sieges and economic, social and cultural rights</td>
+                      </tr>
+                       <tr>
+                         <td>ACCFRA</td>
+                         <td id="type">alleged civilian casualties from russian attacks</td>
+                       </tr>
+
+                       <tr>
+                         <td>UA</td>
+                         <td id="type">unlawful attacks</td>
+                       </tr>
+                       <tr>
+                         <td>SPPAO</td>
+                         <td id="type">specifically protected persons and objects</td>
+                       </tr>
+                      <tr>
+                          <td>NONE</td>
+                          <td id="type">none</td>
+                      </tr>
+                      <tr>
+                          <td>OTHER</td>
+                          <td id="type">other</td>
+
+                      </tr>
+                      <tr>
+                          <td>TOTAL</td>
+                          <td id="type">total</td>
+                      </tr>
+                  </table>
+                </div>
+              </div>
             </div>
-
-            <div class="calender-map" style="width: 2000px; height: 250px;"></div>
-            <script src="calendarview.js"></script>
-
-            <div class="zoombuttons">
-                <button id="zoomaleppo" onclick="zoomAleppo();">zoom in > aleppo</button>
-                <button id="zoomhoms" onclick="zoomHoms();">zoom in > homs</button>
-                <button id="zoomdamascus" onclick="zoomDamascus();">zoom in > damascus</button>
-                <button id="zoomout" onclick="resetSize();">zoom out</button>
+          </div>
+          <div class="orangebar"></div>
+          <div class="walkthrough"><text id="h1grey">WALKTHROUGH</text></div>
+          <div class="totalinfo">
+            <div class="calendarinfo">
             </div>
-
-            <div id="map" class="map" style="width: 2000px; height: 650px"></div>
-            <script src="map.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ6Gxnrd-qizH2GJ6V-ehpBbWBTgUyfIg&callback=initMap" async defer></script>
-      </div>
-
-        <div class="merge" style="width: 2000px;">
-            <div class="barchart">
-                <svg class="chart"></svg>
+            <div class="mapinfo">
             </div>
-            <script src="barchart.js"></script>
-
-            <div class="abbreviation" id="table-location" style="width: 835px; height: 650px">
-                <table style="width:100%; text-align: left; border-collapse: collapse">
-                  <col width="285">
-                  <col width="550">
-                     <tr>
-                       <th>ABBREVIATION</th>
-                       <th>TYPE OF VIOLATION</th>
-                     </tr>
-                     <tr>
-                         <td>AAFD</td>
-                         <td id="type">arbitrary and forcible displacement</td>
-                     </tr>
-                     <tr>
-                        <td>VOCR</td>
-                        <td id="type">violation of children's rights</td>
-                    </tr>
-                    <tr>
-                      <td>UOIW</td>
-                      <td id="type">use of illegal weapons</td>
-                    </tr>
-                    <tr>
-                      <td>SAESCR</td>
-                      <td id="type">sieges and economic, social and cultural rights</td>
-                    </tr>
-                     <tr>
-                       <td>ACCFRA</td>
-                       <td id="type">alleged civilian casualties from russian attacks</td>
-                     </tr>
-
-                     <tr>
-                       <td>UA</td>
-                       <td id="type">unlawful attacks</td>
-                     </tr>
-                     <tr>
-                       <td>SPPAO</td>
-                       <td id="type">specifically protected persons and objects</td>
-                     </tr>
-                    <tr>
-                        <td>NONE</td>
-                        <td id="type">none</td>
-                    </tr>
-                    <tr>
-                        <td>OTHER</td>
-                        <td id="type">other</td>
-
-                    </tr>
-                    <tr>
-                        <td>TOTAL</td>
-                        <td id="type">total</td>
-                    </tr>
-                </table>
+            <div class="barchartinfo">
             </div>
-        </div>
-    </div>
 </html>

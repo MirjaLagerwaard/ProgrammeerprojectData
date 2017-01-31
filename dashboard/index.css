@@ -7,17 +7,17 @@
 }
 
 .orangebar {
-  height: 40px;
+  height: 30px;
   background-color: #ff7f50;
   color: #404040;
   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   font-variant: small-caps;
 }
 
 .image {
-  height: 1110px;
+  height: 1130px;
   background-image: url(http://sirismm.si.edu/sackler/photo/Parker-Photographs-of-Islamic-Monuments-A2002.6.004.jpg);
   text-align: center;
   background-repeat: no-repeat;
@@ -100,8 +100,9 @@
 #h4grey {
    color: #404040;
    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 30px;
+   font-size: 28px;
    font-variant: small-caps;
+   font-weight: bold;
 }
 
 .whole {
@@ -121,12 +122,6 @@ p {
     text-align: center;
 }
 
-.amountofviolation {
-  text-align: justify;
-  width: 1217px;
-  margin: 0 auto;
-}
-
 .syrianarchiveinfo {
   width: 35%;
   position: absolute;
@@ -137,7 +132,7 @@ p {
 
 .visualisationinfo {
   width: 35%;
-  height: 900px;
+  height: 950px;
   position: absolute;
   right: 0;
   margin-right: 10%;

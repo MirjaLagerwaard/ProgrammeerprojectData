@@ -9,7 +9,7 @@
 
 .horizontal {
       display: inline-block;
-      width: 100px;
+      width: 50px;
 }
 
  #data2012,
@@ -46,6 +46,34 @@
  }
 
  .merge {
-   width: 50%;
    margin: 0 auto;
  }
+
+ .totaldiv {
+   text-align: center;
+   background-image: url("http://sirismm.si.edu/sackler/photo/Parker-Photographs-of-Islamic-Monuments-A2002.6.004.jpg");
+   background-size: 100%;
+   background-repeat: no-repeat;
+ }
+
+.walkthrough {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.totalinfo {
+  margin: 0 auto;
+  text-align: center;
+}
+.calendarinfo,
+.mapinfo,
+.barchartinfo {
+  display: inline-block;
+  width: 750px;
+  height: 500px;
+  border: 2px solid black;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+}

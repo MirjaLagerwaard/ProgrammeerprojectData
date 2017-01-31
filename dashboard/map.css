@@ -9,6 +9,7 @@
 
 .zoombuttons {
   text-align: center;
+  width: 1850px;
 }
 
 #zoomaleppo,
@@ -20,6 +21,7 @@
   padding: 15px 75px;
   text-align: center;
   height: 60px;
+  border-radius: 10px 10px 10px 10px;
 
   color: white;
   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
@@ -43,8 +45,9 @@
 
 #map {
    width: 100%;
-   height: 400px;
-   background-color: grey;
+   background-color: black;
+   opacity: 1.0;
+
  }
 
  .tooltip {

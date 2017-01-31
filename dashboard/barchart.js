@@ -78,9 +78,9 @@ function load_data_chart() {
   d3.selectAll("svg.chart > *").remove();
 
   //set the margin
-  var margin = {top: 10, right: 25, bottom: 110, left: 100},
-    width = 1160 - margin.left - margin.right,
-    height = 650 - margin.top - margin.bottom;
+  var margin = {top: 30, right: 25, bottom: 130, left: 100},
+    width = 1000 - margin.left - margin.right,
+    height = 590 - margin.top - margin.bottom;
 
   // set scale for x
   var x = d3.scale.ordinal()
@@ -124,24 +124,28 @@ function load_data_chart() {
             .attr("y", 15)
             .attr("x", -10)
             .attr("transform", "rotate(30)")
-            .style("text-anchor", "start");
+            .style("text-anchor", "start")
+            .style("fill", "white");
 
     chart.select("g")
         .append("text")
             .attr("x", width / 1.75)
             .attr("y", 110)
             .style("text-anchor", "end")
+            .style("fill", "white")
             .text("TYPE OF VIOLATION");
 
     // create the y-axis
     chart.append("g")
       .attr("class", "y axis")
       .call(yAxis)
+      .style("fill", "white")
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", -75)
       .attr("x", -height / 4)
       .style("text-anchor", "end")
+      .style("fill", "white")
       .text("AMOUNT OF INCIDENTS");
 
     // make the bars of the chart by using the data values
@@ -168,9 +172,9 @@ function load_data_chart() {
       // change the color back on mouse out and hide the d3-tip
       .on("mouseout", function(){
         d3.select(this)
-          .style("fill", "#333");
+          .style("fill", "white");
         d3.selectAll("tr")
-          .style("background-color", "white")
+          .style("background-color", "transparent")
         tip.hide()
       });
 
@@ -199,8 +203,8 @@ function myScript(x) {
 
 function myScript2() {
   d3.selectAll(".bar")
-    .style("fill", "#404040")
+    .style("fill", "white")
   d3.selectAll("tr")
-    .style("background-color", "white")
+    .style("background-color", "transparent")
   tip.hide()
 }

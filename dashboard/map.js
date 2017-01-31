@@ -14,7 +14,10 @@ function initMap() {
     scrollwheel: false
   });
 
+  document.getElementById("zoomout").disabled = true;
+
   loadMapData2016()
+
 }
 
 function resetSize() {

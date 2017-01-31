@@ -85,12 +85,14 @@ function loadNewCalendar() {
   svg.append("text")
     .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
     .style("text-anchor", "middle")
+    .style("fill", "white")
     .text(function(d) { return d; });
 
   for (var i = 0; i < 7; i++) {
       svg.append("text")
         .attr("transform", "translate(-5," + cellSize * (i + 1) + ")")
         .style("text-anchor", "end")
+        .style("fill", "white")
         .attr("dy", "-.25em")
         .text(function(d) { return week_days[i]; });
   }
@@ -112,6 +114,7 @@ function loadNewCalendar() {
     .data(month)
     .enter().append("g")
       .attr("class", "legend")
+      .style("fill", "white")
       .attr("transform", function(d, i) { return "translate(" + (((i + 1) * 50) + 8) + ",0)"; });
 
     legend.append("text")
@@ -150,7 +153,7 @@ function loadNewCalendar() {
     rect.on("mouseout", mouseout);
 
     function mouseover(d) {
-      d3.select(this).style("stroke-width", "2px")
+      d3.select(this).style("stroke-width", "2.5px")
 
       var datecalendar = d
       var data_per_day = (data[d] !== undefined) ? data[d] : 0;
@@ -169,7 +172,8 @@ function loadNewCalendar() {
     }
 
     function mouseout(d) {
-      d3.select(this).style("stroke-width", "1px").style("stroke", "#404040")
+      d3.select(this)
+        .style("stroke-width", "1px")
 
       cal_tip.hide()
 
