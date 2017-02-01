@@ -123,7 +123,7 @@ Wat ik heb gedaan:
 van de map hovert, maar deze kwam niet op de goede locatie van het scherm omdat de tooltip keek naar de locatie van mijn muis. Ik heb veranderd dat de tooltip kijkt naar de locatie van het vakje wat overeenkomt met de dag. Nu is het dus gelukt om mijn calendar view te linken met de map (alle stippen die niet overeenkomende datum hebben verdwijnen), plus de map te linken aan de calendar view (de border van de corresponderende dag wordt dikker plus de tooltip van de calendar verschijnt)
 * Homepage mooi gemaakt
 
-*Dinsdag 30 januari*
+*Dinsdag 31 januari*
 
 De dag begonnen met een stand-up meeting met mijn vergadergroepje. Ik kreeg een aantal tips:
 * In plaats van in de tekst aan te geven hoeveel stippen per jaar niet worden weergeven op de kaart is het mooi als je dit in de tooltip van de calendar per dag kunt laten zien. Dit is inderdaad een mooi idee, maar hier ga ik geen tijd meer voor hebben. Dit zal ik meenemen voor in mijn verslag voor dingen die ik nog had willen doen.
@@ -132,8 +132,33 @@ De dag begonnen met een stand-up meeting met mijn vergadergroepje. Ik kreeg een 
 * Ik zou het vet vinden om de functionaliteit van de barchart nog af kunnen krijgen (dat als je op een bar klikt van een bepaald incident dat je in de kaart en in de calendar alleen nog de incidenten van dat type incident ziet), maar ik weet niet of dit realistisch is. Ik kreeg als tip eerst mijn pagina af te maken qua tekst en opmaak, het verslag te schrijven en als ik dan nog tijd over heb kan ik altijd nog naar die filter kijken.
 
 Wat ik allemaal heb gedaan vandaag:
-* Ik heb op mijn homepagina alleen nog de tekst: 3864 TOTAL INCIDENTS PRESERVED laten staan, omdat de rest van de informatie te zien is in de visualisaties. Dus ik heb besloten dit weg te laten. 
+* Ik heb op mijn homepagina alleen nog de tekst: 3864 TOTAL INCIDENTS PRESERVED laten staan, omdat de rest van de informatie te zien is in de visualisaties. Dus ik heb besloten dit weg te laten.
 * Vandaag heb ik de lay-out van mijn homepage veranderd. Ook heb ik het informatiestukje op mijn homepage en over mijn visualisatie geschreven.
 * Ik heb de lay-out van mijn menubalk veranderd.
 * Ik heb mijn visualisation pagina opnieuw ingedeeld, titels voor de visualisaties toegevoegd en de opmaak verbeterd.
 * Ik heb op mijn visualisation pagina onderaan een kopje toegevoegd met walkthrough, hier zal per visualisatie meer informatie over de visualisatie komen te staan.
+
+* Woensdag 1 februari*
+
+Na de stand-up meeting heb ik nog een aantal tips gekregen:
+* Bug in mijn map: als je met de + en - knoppen inzoomt dan kan je niet meer slepen met het handje. Ook gebeuren er dan gekke dingen met mijn kaart.
+* Break toevoegen in de tooltip van mijn calendar view + tooltip doorzichtig maken
+* Het is niet duidelijk waar de maanden stoppen in mijn calendar. Kijken of deze lijnen dikker kunnen worden/andere kleur?
+* Lettertype in mijn table is te klein
+* Jelle is niet overtuigd van een volledig witte barchart.
+
+TODO:
+* Kijken naar bug in mijn map
+* Opacity van tooltip calendar aanpassen
+* Readme een copyright toevoegen
+* Report schrijven: vergeet niet te vermelden in welke webbrowser en % inzoomen je je website hebt gestyled.
+* Walktrough schrijven (visualisatie pagina)
+* Visualisation information op homepage afmaken
+* Filteren van barchart
+* Code opschonen
+* Lettertype tabel aanpassen
+* None verwijderen uit de database
+
+Dingen die ik graag had willen doen:
+* Vaste menubar
+*

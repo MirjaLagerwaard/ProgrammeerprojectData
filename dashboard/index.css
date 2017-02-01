@@ -41,7 +41,7 @@
 
    color: white;
    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 17px;
+   font-size: 18px;
    font-variant: small-caps;
    font-weight: 700;
 }
@@ -132,7 +132,7 @@ p {
 
 .visualisationinfo {
   width: 35%;
-  height: 950px;
+  height: 1050px;
   position: absolute;
   right: 0;
   margin-right: 10%;

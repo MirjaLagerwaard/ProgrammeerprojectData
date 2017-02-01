@@ -7,7 +7,7 @@ window.onload = loadChartData2016()
 var data_json;
 
 function loadChartData2012() {
-  data_json = "data2012barchart.json";
+  data_json = "data/data2012barchart.json";
 
   document.getElementById("data2012").disabled = true;
   document.getElementById("data2013").disabled = false;
@@ -19,7 +19,7 @@ function loadChartData2012() {
 };
 
 function loadChartData2013() {
-  data_json = "data2013barchart.json";
+  data_json = "data/data2013barchart.json";
 
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = true;
@@ -31,7 +31,7 @@ function loadChartData2013() {
 };
 
 function loadChartData2014() {
-  data_json = "data2014barchart.json";
+  data_json = "data/data2014barchart.json";
 
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = false;
@@ -43,7 +43,7 @@ function loadChartData2014() {
 };
 
 function loadChartData2015() {
-  data_json = "data2015barchart.json";
+  data_json = "data/data2015barchart.json";
 
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = false;
@@ -55,7 +55,7 @@ function loadChartData2015() {
 };
 
 function loadChartData2016() {
-  data_json = "data2016barchart.json";
+  data_json = "data/data2016barchart.json";
 
   document.getElementById("data2012").disabled = false;
   document.getElementById("data2013").disabled = false;
@@ -158,6 +158,7 @@ function load_data_chart() {
       .attr("height", function(d) { return height - y(d.amount) + 1; })
       .attr("width", x.rangeBand())
       .attr("id", function(d) { return d.typeofviolation.replace(/\s/g, ''); })
+      .style("fill", "#595959")
       // change color of the bars on mouse hover and show the data value by using the d3-tip
       .on("mouseover", function(d){
         d3.select(this)
@@ -172,7 +173,7 @@ function load_data_chart() {
       // change the color back on mouse out and hide the d3-tip
       .on("mouseout", function(){
         d3.select(this)
-          .style("fill", "white");
+          .style("fill", "#595959");
         d3.selectAll("tr")
           .style("background-color", "transparent")
         tip.hide()
@@ -203,7 +204,7 @@ function myScript(x) {
 
 function myScript2() {
   d3.selectAll(".bar")
-    .style("fill", "white")
+    .style("fill", "#595959")
   d3.selectAll("tr")
     .style("background-color", "transparent")
   tip.hide()

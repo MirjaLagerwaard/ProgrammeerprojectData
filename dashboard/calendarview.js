@@ -8,7 +8,7 @@ var range_year1;
 var range_year2;
 
 function loadCalendarData2012() {
-  data_csv_calendar = "calendardata2012.csv";
+  data_csv_calendar = "data/calendardata2012.csv";
   range_year1 = 2012;
   range_year2 = 2013;
   removeOldCalendar();
@@ -16,7 +16,7 @@ function loadCalendarData2012() {
 };
 
 function loadCalendarData2013() {
-  data_csv_calendar = "calendardata2013.csv";
+  data_csv_calendar = "data/calendardata2013.csv";
   range_year1 = 2013
   range_year2 = 2014
   removeOldCalendar();
@@ -24,7 +24,7 @@ function loadCalendarData2013() {
 };
 
 function loadCalendarData2014() {
-  data_csv_calendar = "calendardata2014.csv";
+  data_csv_calendar = "data/calendardata2014.csv";
   range_year1 = 2014
   range_year2 = 2015
   removeOldCalendar();
@@ -32,7 +32,7 @@ function loadCalendarData2014() {
 };
 
 function loadCalendarData2015() {
-  data_csv_calendar = "calendardata2015.csv";
+  data_csv_calendar = "data/calendardata2015.csv";
   range_year1 = 2015
   range_year2 = 2016
   removeOldCalendar();
@@ -40,7 +40,7 @@ function loadCalendarData2015() {
 };
 
 function loadCalendarData2016() {
-  data_csv_calendar = "calendardata2016.csv";
+  data_csv_calendar = "data/calendardata2016.csv";
   range_year1 = 2016
   range_year2 = 2017
   removeOldCalendar();
@@ -157,7 +157,7 @@ function loadNewCalendar() {
 
       var datecalendar = d
       var data_per_day = (data[d] !== undefined) ? data[d] : 0;
-      var purchase_text = d.substring(6,8) + "-" + d.substring(4,6) + "-" + d.substring(0,4) + ": " + data_per_day + " incidents";
+      var purchase_text = "<strong>" + d.substring(6,8) + "-" + d.substring(4,6) + "-" + d.substring(0,4) + "</strong>"+ ": " + data_per_day + " incident(s)";
 
       cal_tip.show(purchase_text, this)
 

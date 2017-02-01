@@ -66,6 +66,7 @@
   margin: 0 auto;
   text-align: center;
 }
+
 .calendarinfo,
 .mapinfo,
 .barchartinfo {
@@ -77,3 +78,188 @@
   margin-right: 20px;
   text-align: justify;
 }
+
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
+.chart rect {
+  fill: white;
+}
+
+.chart text {
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  color: white;
+  font-size: 22px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 6.5px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: none;
+}
+
+.axis text {
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 400;
+	line-height: 6.5px;
+  color: white;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 6.5px;
+  padding: 12px;
+  background: #404040;
+  color: #404040;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.barchart,
+.abbreviation {
+  display: inline-block;
+}
+
+.abbreviation {
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  text-align: center;
+	font-style: normal;
+	font-weight: 400;
+  color: white;
+}
+
+tr {
+ height: 60px;
+ text-align: center;
+ color: white;
+ font-size: 26px;
+}
+
+th {
+  background-color: #ff7f50;
+  text-align: center;
+  font-size: 24px;
+}
+
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
+.calender-map {
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  color: white;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  shape-rendering: crispEdges;
+  width: 50%;
+}
+
+.day {
+  stroke: #404040;
+  stroke-width: 1px;
+}
+
+.month {
+  fill: none;
+  stroke: #404040;
+  stroke-width: 3px;
+}
+
+
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
+.syriamap, .syriamap svg {
+  position: absolute;
+}
+
+.zoombuttons {
+  text-align: center;
+  width: 1850px;
+}
+
+#zoomaleppo,
+#zoomhoms,
+#zoomdamascus,
+#zoomout {
+  background-color: #404040;
+  border: none;
+  padding: 15px 75px;
+  text-align: center;
+  height: 60px;
+  border-radius: 10px 10px 10px 10px;
+
+  color: white;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 700;
+}
+
+#zoomaleppo:hover,
+#zoomhoms:hover,
+#zoomdamascus:hover,
+#zoomout:hover,
+#zoomaleppo:disabled,
+#zoomhoms:disabled,
+#zoomdamascus:disabled,
+#zoomout:disabled {
+    background-color: #ff7f50;
+    color: white;
+}
+
+#map {
+   width: 100%;
+   background-color: black;
+   opacity: 1.0;
+
+ }
+
+ .tooltip {
+   position: absolute;
+   font-weight: 400;
+   padding: 12px;
+   background: #404040;
+   color: #ff7f50;
+   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+   border-radius: 2px;
+   pointer-events: none;
+   font-size: 20px;
+   font-style: normal;
+ }

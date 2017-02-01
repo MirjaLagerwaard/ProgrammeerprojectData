@@ -1,12 +1,11 @@
 {"data":
   [{"amount": "0", "typeofviolation": "AAFD"},
     {"amount": "0", "typeofviolation": "VOCR"},
-    {"amount": "164", "typeofviolation": "UOIW"},
+    {"amount": "134", "typeofviolation": "UOIW"},
     {"amount": "0", "typeofviolation": "SAESCR"},
     {"amount": "0", "typeofviolation": "ACCFRA"},
     {"amount": "0", "typeofviolation": "UA"},
     {"amount": "0", "typeofviolation": "SPPAO"},
-    {"amount": "0", "typeofviolation": "NONE"},
     {"amount": "0", "typeofviolation": "OTHER"},
-    {"amount": "164", "typeofviolation": "TOTAL"}]
+    {"amount": "134", "typeofviolation": "TOTAL"}]
 }

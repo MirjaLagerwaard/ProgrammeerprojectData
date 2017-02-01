@@ -5,7 +5,6 @@
   {"amount": "601", "typeofviolation": "ACCFRA"},
   {"amount": "748", "typeofviolation": "UA"},
   {"amount": "119", "typeofviolation": "SPPAO"},
-  {"amount": "20", "typeofviolation": "NONE"},
   {"amount": "539", "typeofviolation": "OTHER"},
-  {"amount": "2423", "typeofviolation": "TOTAL"}]
+  {"amount": "2403", "typeofviolation": "TOTAL"}]
 }

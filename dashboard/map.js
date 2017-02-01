@@ -16,7 +16,7 @@ function initMap() {
 
   document.getElementById("zoomout").disabled = true;
 
-  loadMapData2016()
+  loadMapData2016();
 
 }
 
@@ -87,31 +87,31 @@ var data_json_map;
 var map;
 
 function loadMapData2012() {
-  data_json_map = "mapdata2012.json";
+  data_json_map = "data/mapdata2012.json";
   removeOldMap();
   loadNewMap();
 };
 
 function loadMapData2013() {
-  data_json_map = "mapdata2013.json";
+  data_json_map = "data/mapdata2013.json";
   removeOldMap();
   loadNewMap();
 };
 
 function loadMapData2014() {
-  data_json_map = "mapdata2014.json";
+  data_json_map = "data/mapdata2014.json";
   removeOldMap();
   loadNewMap();
 };
 
 function loadMapData2015() {
-  data_json_map = "mapdata2015.json";
+  data_json_map = "data/mapdata2015.json";
   removeOldMap();
   loadNewMap();
 };
 
 function loadMapData2016() {
-  data_json_map = "mapdata2016.json";
+  data_json_map = "data/mapdata2016.json";
   removeOldMap();
   loadNewMap();
 };
@@ -176,12 +176,12 @@ function loadNewMap() {
               .duration(0)
               .style("opacity", 0.9);
 
-            tooltip.html('Link: ' + d.value[0] + '<br>'
-                            + 'Location: '+ d.value[1] + '<br>'
-                            + 'Date: ' + d.value[4] + '<br>'
-                            + 'Type of violation: ' + d.value[5] + '<br>'
-                            + 'Used weapon(s): ' + d.value[6] + '<br>'
-                            + 'Description: ' + d.value[7] + '<br>')
+            tooltip.html("<strong>" + 'Link: ' + "</strong>" + d.value[0] + '<br>'
+                            + "<strong>" + 'Location: ' + "</strong>" + d.value[1] + '<br>'
+                            + "<strong>" + 'Date: ' + "</strong>" + d.value[4] + '<br>'
+                            + "<strong>" + 'Type of violation: ' + "</strong>" + d.value[5] + '<br>'
+                            + "<strong>" + 'Used weapon(s): ' + "</strong>" + d.value[6] + '<br>'
+                            + "<strong>" + 'Description: ' + "</strong>" + d.value[7] + '<br>')
               .style("left", (d3.event.pageX + 5) + "px")
               .style("top", (d3.event.pageY - 28) + "px")
            })
