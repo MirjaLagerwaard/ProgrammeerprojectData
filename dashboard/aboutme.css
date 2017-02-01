@@ -1,28 +1,25 @@
-.photo {
-        text-align: center;
-        width: 450px;
-        height: 600px;
-        border-radius: 50px 50px 50px 50px;
-        border-color: black;
-        /*background-color: orange;*/
-        background-image: url("photoofme.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        display: inline-block;
-        margin-top: 75px;
-        margin-bottom: 45px;
-        display: inline-block;
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
 
-}
-
+/*Style for page layout*/
 .total {
   text-align: center;
-  width: 100%;
   margin: 0 auto;
-  text-align: center;
   background-image: url("http://sirismm.si.edu/sackler/photo/Parker-Photographs-of-Islamic-Monuments-A2002.6.004.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  height: 1130px;
+  width: 100%;
+}
+
+.merge {
+  width: 1250px;
+  height: 100%;
+  background-color: rgba(33,33,33,0.9);
+  border: 1px solid #404040;
+  display: inline-block; 
 }
 
 .name {
@@ -41,9 +38,23 @@
     background-size: 100%;
 }
 
+/*Style for photo*/
+.photo {
+  text-align: center;
+  width: 450px;
+  height: 600px;
+  border-radius: 50px 50px 50px 50px;
+  background-image: url("images/photoofme.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  margin-top: 75px;
+  margin-bottom: 45px;
+}
+
+/*Style for mail icon*/
 #mail {
   color: white;
   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
   font-size: 35px;
-  font-style: normal;
 }

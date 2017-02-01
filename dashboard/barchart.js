@@ -125,28 +125,24 @@ function load_data_chart() {
             .attr("x", -10)
             .attr("transform", "rotate(30)")
             .style("text-anchor", "start")
-            .style("fill", "white");
 
     chart.select("g")
         .append("text")
             .attr("x", width / 1.75)
             .attr("y", 110)
             .style("text-anchor", "end")
-            .style("fill", "white")
             .text("TYPE OF VIOLATION");
 
     // create the y-axis
     chart.append("g")
       .attr("class", "y axis")
       .call(yAxis)
-      .style("fill", "white")
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", -75)
-      .attr("x", -height / 13)
+      .attr("x", -height / 5)
       .style("text-anchor", "end")
-      .style("fill", "white")
-      .text("AMOUNT OF PRESERVED INCIDENTS");
+      .text("AMOUNT OF INCIDENTS");
 
     // make the bars of the chart by using the data values
     var bar = chart.selectAll(".bar")
@@ -158,7 +154,6 @@ function load_data_chart() {
       .attr("height", function(d) { return height - y(d.amount) + 1; })
       .attr("width", x.rangeBand())
       .attr("id", function(d) { return d.typeofviolation.replace(/\s/g, ''); })
-      .style("fill", "#595959")
       // change color of the bars on mouse hover and show the data value by using the d3-tip
       .on("mouseover", function(d){
         d3.select(this)

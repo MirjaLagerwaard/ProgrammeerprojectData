@@ -1,11 +1,9 @@
-#title {
-  color: white;
-  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-	font-size: 100px;
-	font-variant: small-caps;
-  font-weight: bold;
-}
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
 
+/*Style for page layout*/
 .orangebar {
   height: 30px;
   background-color: #ff7f50;
@@ -25,10 +23,44 @@
 }
 
 .menubuttons {
-     text-align: center;
-     background-color: #404040;
+  text-align: center;
+  background-color: #404040;
 }
 
+.whole {
+  text-align: center;
+}
+
+div.transbox {
+  background-color: #333333;
+  opacity: 0.9;
+  position: relative;
+  top: 25%;
+  border: 5px solid #333333;
+}
+
+
+.syrianarchiveinfo {
+  width: 35%;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 50px;
+  text-align: justify;
+  height: 1150px;
+}
+
+.visualisationinfo {
+  width: 35%;
+  height: 1050px;
+  position: absolute;
+  right: 0;
+  margin-right: 10%;
+  margin-top: 50px;
+  text-align: justify;
+  height: 1150px;
+}
+
+/*Style for menubar*/
 #home,
 #visualisation,
 #aboutme,
@@ -53,42 +85,51 @@
      background-color: #ff7f50;
 }
 
+/*Style for text*/
+#title {
+  color: white;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-size: 100px;
+	font-variant: small-caps;
+  font-weight: bold;
+}
+
 #h1white {
-   color: white;
-   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 50px;
-   font-variant: small-caps;
-   font-weight: 700;
+  color: white;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 50px;
+  font-variant: small-caps;
+  font-weight: 700;
 }
 
 #h2white {
-   color: white;
-   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 35px;
-   font-variant: small-caps;
-   font-weight: 700;
+  color: white;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 35px;
+  font-variant: small-caps;
+  font-weight: 700;
 }
 
 #h3white {
-   color: white;
-   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 30px;
+  color: white;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 30px;
 }
 
 #h1grey {
-   color: #404040;
-   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 50px;
-   font-variant: small-caps;
-   font-weight: 700;
+  color: #404040;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 50px;
+  font-variant: small-caps;
+  font-weight: 700;
 }
 
 #h2grey {
-   color: #404040;
-   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 35px;
-   font-variant: small-caps;
-   font-weight: 700;
+  color: #404040;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 35px;
+  font-variant: small-caps;
+  font-weight: 700;
 }
 
 #h3grey {
@@ -110,42 +151,9 @@
   font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
   font-size: 28px;
   font-variant: small-caps;
-
-}
-
-.whole {
-   text-align: center;
-}
-
-div.transbox {
-    background-color: #333333;
-    opacity: 0.9;
-    position: relative;
-    top: 25%;
-    border: 5px solid #333333;
 }
 
 p {
     margin: 2%;
     text-align: center;
-}
-
-.syrianarchiveinfo {
-  width: 35%;
-  position: absolute;
-  margin-left: 10%;
-  margin-top: 50px;
-  text-align: justify;
-  height: 1150px;
-}
-
-.visualisationinfo {
-  width: 35%;
-  height: 1050px;
-  position: absolute;
-  right: 0;
-  margin-right: 10%;
-  margin-top: 50px;
-  text-align: justify;
-  height: 1150px;
 }
