@@ -143,10 +143,10 @@ function load_data_chart() {
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", -75)
-      .attr("x", -height / 4)
+      .attr("x", -height / 13)
       .style("text-anchor", "end")
       .style("fill", "white")
-      .text("AMOUNT OF INCIDENTS");
+      .text("AMOUNT OF PRESERVED INCIDENTS");
 
     // make the bars of the chart by using the data values
     var bar = chart.selectAll(".bar")
