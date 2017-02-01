@@ -56,27 +56,37 @@
    background-repeat: no-repeat;
  }
 
-.walkthrough {
+.walkthrough,
+.timelineinfo {
   text-align: center;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .totalinfo {
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   text-align: center;
+  margin-bottom: 50px;
+
 }
 
 .calendarinfo,
 .mapinfo,
 .barchartinfo {
-  display: inline-block;
-  width: 750px;
-  height: 500px;
-  border: 2px solid black;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
   text-align: justify;
+  position: relative;
+  display: inline-table;;
+}
+
+.calendarinfo,
+.barchartinfo {
+  width: 15%;
+}
+
+.mapinfo {
+  width: 25%;
 }
 
 /*

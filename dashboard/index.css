@@ -41,7 +41,7 @@
 
    color: white;
    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-   font-size: 18px;
+   font-size: 17px;
    font-variant: small-caps;
    font-weight: 700;
 }
@@ -105,6 +105,14 @@
    font-weight: bold;
 }
 
+#h5grey {
+  color: #404040;
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+  font-size: 28px;
+  font-variant: small-caps;
+
+}
+
 .whole {
    text-align: center;
 }
@@ -128,6 +136,7 @@ p {
   margin-left: 10%;
   margin-top: 50px;
   text-align: justify;
+  height: 1150px;
 }
 
 .visualisationinfo {
@@ -138,4 +147,5 @@ p {
   margin-right: 10%;
   margin-top: 50px;
   text-align: justify;
+  height: 1150px;
 }

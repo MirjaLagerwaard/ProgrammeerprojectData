@@ -39,12 +39,12 @@
                   <button id="data2016" onclick="loadChartData2016(); loadMapData2016(); loadCalendarData2016()">2016</button>
                 </div>
 
-                <div class="visualisationtitle" style="height: 75px; margin-top: 30px;"><text id="h1white">amount of preserved incidents over time</text></div>
+                <div class="visualisationtitle" style="height: 75px; margin-top: 30px;"><text id="h1white">amount of incidents over time</text></div>
 
                 <div class="calender-map" style="width: 1950px; height: 225px; color: white;"></div>
                 <script src="calendarview.js"></script>
 
-                <div class="visualisationtitle" style="margin-top: 20px; margin-bottom: 20px"><text id="h1white">location of preserved incidents</text></div>
+                <div class="visualisationtitle" style="margin-top: 20px; margin-bottom: 20px"><text id="h1white">location of incidents</text></div>
 
                 <div class="zoombuttons">
                   <button id="zoomaleppo" onclick="zoomAleppo();">zoom in > aleppo</button>
@@ -59,7 +59,7 @@
                 <script src="map.js"></script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ6Gxnrd-qizH2GJ6V-ehpBbWBTgUyfIg&callback=initMap" async defer></script>
 
-                <div class="visualisationtitle" style="margin-top: 20px; margin-bottom: 20px;"><text id="h1white">amount of preserved incidents per type of violation</text></div>
+                <div class="visualisationtitle" style="margin-top: 20px; margin-bottom: 20px;"><text id="h1white">amount of incidents per type of violation</text></div>
 
                 <div class="aroundbarchart" style="width: 1850px; text-align: center; margin-bottom: 40px;">
                   <div class="barchart" style="display: inline-block;">
@@ -120,15 +120,77 @@
           </div>
           <div class="orangebar"></div>
           <div class="walkthrough"><text id="h1grey">WALKTHROUGH</text></div>
+          <div class="timelineinfo" style="text-align: center;">
+            <text id="h2grey">timeline</text><br>
+            <text id="h3grey">
+              Click on the buttons of the timeline to explore the data over different years.
+            </text>
+          </div>
           <div class="totalinfo">
             <div class="calendarinfo">
 
               <p><text id="h2grey">calendar heatmap</text></p>
+              <text id="h3grey">
+                The Calendar Heatmap can be utilised to see the amount of
+                incidents over time. How many incidents took place on one
+                day? How did the amount of incidents develop over time? <br><br>
+
+              The darkness of a day indicates the amount of incidents that
+              occured on that particular day. <br><br>
+
+              Hover over the days to see the exact amount of incidents on that
+              day. The Map of Syria will now only show the incidents that took place
+              on that specific day.
+            </text>
             </div>
             <div class="mapinfo">
                 <p><text id="h2grey">map</text></p>
+                <text id="h3grey">
+                  The Map of Syria gives more insight into where the incidents
+                  took place. This visualisation is also useful when more information about
+                  only one incident is demanded. When did that particular incident take place?
+                  What is the type of violation? What happened? <br><br>
+
+                  Click on a circle on the Map of Syria to see more details about a
+                  specific incident. <br><br>
+
+                  Click on the zoom buttons to explore more details about incidents
+                  which took place in a specific city. <br><br>
+
+                  Hover over the circles on the Map of Syria to see in the Calendar
+                  Heatmap on which day the incident took place. <br><br>
+
+                  The incidents where no latitude and/or longitude were available
+                  are not shown on the Map of Syria. <br><br>
+
+                  <div style="text-align: center; margin: 0 auto;">
+                  <div style="text-align: justify; width: 400px; display: inline-block;">
+
+                  <text id="h5grey">
+                  <text id="h4grey">2016:</text> 894 incidents not shown<br>
+                    <text id="h4grey">2015:</text> 29 incidents not shown<br>
+                    <text id="h4grey">2014:</text> 13 incidents not shown<br>
+                    <text id="h4grey">2013:</text> 2 incidents not shown<br>
+                    <text id="h4grey">2012:</text> 0 incidents not shown<br>
+                </text>
+              </div>
+            </div>
+
+                </text>
             </div>
             <div class="barchartinfo">
                 <p><text id="h2grey">barchart and table</text></p>
+                <text id="h3grey">
+                  The Barchart displays the amount of incidents per type of violation.
+                  What is the most common type of violation? Does the amount of
+                  incidents per type of violation change over the years?<br><br>
+
+                Hover over the bars of the barchart or hover over the rows of the table to
+                see the exact amount of incidents per type of violation.<br><br>
+
+                Read in the table what the abbreviations on the x-axis of the barchart means.
+              </text>
             </div>
+          </div>
+
 </html>

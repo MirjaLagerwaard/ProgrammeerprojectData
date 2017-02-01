@@ -153,7 +153,7 @@ function loadNewMap() {
           .style("width", padding * 2 + "px")
           .style("height", padding * 2 + "px");
 
-      marker.call(cal_tip)
+      layer.select("svg").call(cal_tip)
 
         marker.filter(d => {return d.value[2] != 0 && d.value[3] != 0}).append("svg:circle")
           .attr("r", padding - 1)
@@ -197,17 +197,17 @@ function loadNewMap() {
 
           function transform(d) {
             if(d.value[2] == "None" || d.value[3] == "None") {
-            d.value[2] = 0
-            d.value[3] = 0
-          }
+              d.value[2] = 0
+              d.value[3] = 0
+            }
 
-          d = new google.maps.LatLng(d.value[2], d.value[3]);
-          d = projection.fromLatLngToDivPixel(d);
+            d = new google.maps.LatLng(d.value[2], d.value[3]);
+            d = projection.fromLatLngToDivPixel(d);
 
-          return d3.select(this)
+            return d3.select(this)
               .style("left", (d.x + (Math.random() - 0.5) * 14) + "px")
               .style("top", (d.y + (Math.random() - 0.5) * 14) + "px");
-        }
+          }
       };
     };
     overlay.setMap(map);
@@ -221,8 +221,7 @@ function removeOldMap() {
 function updateCalendar(x) {
   d3.selectAll(".day").filter(function(d) {
     if (d == x.id) {
-      console.log(this)
-      cal_tip.show(this.id, this)
+      cal_tip.show(this.id, document.getElementById(this.id))
       return true
     }
     return false

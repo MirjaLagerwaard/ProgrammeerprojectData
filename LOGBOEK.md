@@ -149,15 +149,12 @@ Na de stand-up meeting heb ik nog een aantal tips gekregen:
 
 TODO:
 * Kijken naar bug in mijn map
-* Opacity van tooltip calendar aanpassen
-* Readme een copyright toevoegen
+* Readme een copyright toevoegen (wat mogen mensen met mijn visualisatie doen)
 * Report schrijven: vergeet niet te vermelden in welke webbrowser en % inzoomen je je website hebt gestyled.
-* Walktrough schrijven (visualisatie pagina)
 * Visualisation information op homepage afmaken
 * Filteren van barchart
 * Code opschonen
-* Lettertype tabel aanpassen
-* None verwijderen uit de database
+* None verwijderen uit de data van de map
 
 Dingen die ik graag had willen doen:
 * Vaste menubar
