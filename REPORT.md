@@ -45,13 +45,36 @@ Hover over the bars of the barchart or hover over the rows of the table to see t
 
 ###Detail
 
+#FOLDERS
+* dashboard
+
+In this folder you can find al the python script, data, javascript files, css files and html files for the visualisation.
+
+* dashboard > data
+
+In this folder you can find all the .json and .csv files which contains the data of the calendar heatmap, map of Syria and the barchart.  
+
+* dashboard > images
+
+In this folder you can find all the images which are used for the website / design document / report.
+
+* dashboard > pythonscripts
+
+In this folder you can find all the python scripts which are used to scrape the data of the website of the syrian archive and to convert the data in the correct format.
+
+#FILES
 * calendar.js
+
+In this file you can find all the javascript code for the calendar heatmap. The code for the link between the calendar heatmap and the map of Syria can also be found in this file.
 
 * map.js
 
+In this file you can find all the javascript code for the calendar heatmap. The code for the link between the calendar heatmap and the map of Syria can also be found in this file.
+
 * barchart.js
 
-Second, go into detail, and describe the modules/classes and how they relate.
+
+
 
 ##CHALLENGES
 
@@ -71,7 +94,7 @@ During the process of linking the map of Syria with the calendar heatmap I found
 
 * Map
 
-1. In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the map of Syria, because you need the coördinates of an incident to place a circle on the map of Syria. For this reason I was forced to not display these incidents on the map.
+1. In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the map of Syria, because you need the coordinates of an incident to place a circle on the map of Syria. For this reason I was forced to not display these incidents on the map.
 2. Another problem with the map of Syria was that there were incidents with exactly the same coordinates, which will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to reached the circle which is on top of the other. To solve this problem I add a random generated number to the pixel values where the circles are placed. This random number is not greater than the diameter of the circle itself, so the deviation is minimal. This solution is called jitter/jittering.
 3. I found out that the Syrian Archive uses multiple formats to display the coordinates of an incident. I had to make an python script which transforms all these multiple formats to the format which was needed to place the circles on the map.
 4. Two days before the deadline one of my group members found another bug in my map. After using + or - buttons you could not drag the map anymore. This bug was caused due to the link between the map of Syria and the calendar heatmap. After linking the tooltip to the correct HTML element the bug was solved.
@@ -105,4 +128,4 @@ When I had more time to make this visualisation, I would like to do the followin
 
 3. I would like to link the barchart with the map and calendar heatmap. I wanted to filter the data of the map and calendar view when you clicked on a bar in the barchart, so only the data of one type of violation would be shown.
 
-4. In the current visualisation I inform the user in the walkthrough how many incidents are not shown in the map of Syria. I would like to implement this in the tooltip of the calendar heatmap, so you can see per day how many incidents are not shown. 
+4. In the current visualisation I inform the user in the walkthrough how many incidents are not shown in the map of Syria. I would like to implement this in the tooltip of the calendar heatmap, so you can see per day how many incidents are not shown.
