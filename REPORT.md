@@ -72,20 +72,25 @@ During the process of linking the map of Syria with the calendar heatmap I found
 * Map
 
 1. In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the map of Syria, because you need the coördinates of an incident to place a circle on the map of Syria. For this reason I was forced to not display these incidents on the map.
-2. Another problem with the map of Syria was that there were incidents with exactly the same coordinates, which will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to reached the circle which is on top of the other. To solve this problem I add a random generated number to the pixel values where the circles are placed. This random number is not greater than the diameter of the circle itself, so the deviation is minimal.
+2. Another problem with the map of Syria was that there were incidents with exactly the same coordinates, which will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to reached the circle which is on top of the other. To solve this problem I add a random generated number to the pixel values where the circles are placed. This random number is not greater than the diameter of the circle itself, so the deviation is minimal. This solution is called jitter/jittering.
 3. I found out that the Syrian Archive uses multiple formats to display the coordinates of an incident. I had to make an python script which transforms all these multiple formats to the format which was needed to place the circles on the map.
 4. Two days before the deadline one of my group members found another bug in my map. After using + or - buttons you could not drag the map anymore. This bug was caused due to the link between the map of Syria and the calendar heatmap. After linking the tooltip to the correct HTML element the bug was solved.
 
 * Barchart and Table
+
 After I linked the barchart with the table I found out that when hovering over a table row of a type of violation where the data value was 0, the tooltip of the barchart occured in the left upper corner. When I gave the bars in the barchart of the corresponding type of violation a size of 1px, this bug was solved.
 
 ##DECISIONS
- Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
+Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
 
 
 Defend your decisions by writing an argument of a most a single paragraph. Why was it good to do it different than you thought before? Are there trade-offs for your current solution? In an ideal world, given much more time, would you choose another solution?
 
 ##IN AN IDEAL WORLD...
+When I had more time to make this visualisation, I would like to do the following things:
+
+1. I would like to change the on hover link between the calendar heatmap and map of Syria to an on click link. So when you click on a day in the calendar heatmap the corresponding circles appear in the map. 
+
 Daarnaast is het jammer dat zodra je weer van de calendar af hovert alle stippen weer verschijnen. Je kunt nu dus niet de tooltip bekijken van een incident op een specifieke datum. Dit kun je wel doen door niet een on hover te maken maar een on click. Het probleem is dan echter dat de stippen die ik onzichtbaar maak niet verdwenen zijn van de kaart, dus als je dan op een stip wilt klikken dan kun je ook (per ongeluk) op een onzichtbare stip klikken en dan krijg je de verkeerde tooltip te zien. Je kunt de stippen die moeten verdwijnen ook daadwerkelijk van de kaart afhalen, maar dit is zo'n gedoe dat ik hier helaas geen tijd meer voor heb. Dit zal ik meenemen voor mijn verslag voor dingen die ik nog had willen doen.
 
 In plaats van in de tekst aan te geven hoeveel stippen per jaar niet worden weergeven op de kaart is het mooi als je dit in de tooltip van de calendar per dag kunt laten zien. Dit is inderdaad een mooi idee, maar hier ga ik geen tijd meer voor hebben. Dit zal ik meenemen voor in mijn verslag voor dingen die ik nog had willen doen.
