@@ -23,7 +23,7 @@ The **Barchart** displays the amount of incidents per type of violation. What is
 ##TECHNICAL DESIGN
 
 ###High level overview
-My visualisation is styled in the webbrowser **Firefox** zoomed at **60%**. 
+My visualisation is styled in the webbrowser **Firefox** zoomed at **60%**.
 
 * Timeline
 
@@ -54,6 +54,9 @@ Hover over the bars of the barchart or hover over the rows of the table to see t
 Second, go into detail, and describe the modules/classes and how they relate.
 
 ##CHALLENGES
+
+Scrapen van data (meerdere pagina's, opnieuw omdat ik lat en long ook nodig had, opnieuw ivm bug)
+timeslider werden timebuttons
 
 During the development of my visualisation, I have met some challenges:
 

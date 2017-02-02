@@ -33,37 +33,30 @@
 
 ##WEEK 2
 
-*Maandag 16 januari*
+###Maandag 16 januari
 
-Vandaag heb ik met mijn groepje mijn voortgang besproken en de planning voor deze week. Aan het einde van de week wil ik een timeslider hebben die gekoppeld is aan de calendar view en de barchart. Daarnaast wil ik de google API ingeladen hebben en de kaart ingezoomd hebben staan op Syrië. Als er tijd over is dan wil ik ook al stippen op de kaart hebben staan die de locatie van de incidenten aangeven.
+* Voortgang en planning voor deze week besproken met mijn vergadergroepje. Aan het einde van de week wil ik een timeslider hebben die gekoppeld is aan de Calendar Heatmap en de barchart. Daarnaast wil ik de google API ingeladen hebben en de kaart ingezoomd hebben staan op Syrië. Als er tijd over is dan wil ik ook al stippen op de kaart hebben staan die de locatie van de incidenten aangeven.
+* Google API in te laten en deze in te zoomen op Syrië
+* Indeling van pagina veranderd
+* Data opnieuw moeten scrapen: ik kwam erachter dat ik de latitude en longitude van een incident nodig heb om de stippen op de kaart te plaatsen, dus ik heb mijn code aangepast.
+* Begonnen om de data voor mijn barchart per jaar te selecteren uit de json file, zodat deze apart kunnen worden weergegeven.
 
-Vandaag is het me gelukt om de google API in te laten en deze in te zoomen op Syrië. Daarnaast heb ik de indeling van mijn pagina veranderd. Ook heb ik opnieuw de data moeten scrapen, want ik kwam erachter dat ik de latitude en longitude van een incident nodig heb om de stippen op de kaart te plaatsen, dus ik heb mijn code aangepast. Daarnaast ben ik begonnen om de data voor mijn barchart per jaar te selecteren uit de json file, zodat deze apart kunnen worden weergegeven.
+###Dinsdag t/m donderdag 17 - 19 januari
 
-*Dinsdag-donderdag 17-19 januari*
+* Ik heb besloten geen timeslider meer te maken, omdat ik enorme problemen had om dit te implementeren. Ik ga dit oplossen door timebuttons te maken en daar een streepje tussen te trekken, zodat het als nog op een tijdlijn lijkt. Deze buttons wil ik dan koppelen met de data, zodat de user kan kiezen van welk jaar hij de data kan zien.
+* Python scriptje geschreven om vanuit de gigantische database de json files te maken voor mijn barchart.
+* Time buttons gekoppeld aan de barchart.
+* Table gekoppeld aan de barchart (dubbel gelinkt, dus als je op de tabel gaat staan dan ligt de bijbehorende bar op en andersom).
+* Barchart en table opmaak veranderd.
 
-Ik heb besloten geen timeslider meer te maken, omdat ik enorme problemen had om dit te implementeren. Ik ga dit oplossen door timebuttons te maken en daar een streepje tussen te trekken, zodat het als nog op een tijdlijn lijkt. Deze buttons wil ik dan koppelen met de data, zodat de user kan kiezen van welk jaar hij de data kan zien.
+###Donderdag 19 januari
 
-Verder heb ik deze dagen gedaan:
+* Bezig gegaan om stippen te plaatsen op de kaart van Syrië die de locatie weergeven van het incident. Hiervoor heb ik een Python scriptje geschreven die alle benodigde informatie haalt uit syrianarchive.csv en deze als jsonfile opslaat.
+* Toen het me lukte om de stippen te weergeven op de kaart kwam ik erachter dat er iets mis gegaan is met het scrapen van de website, want er waren enkele incidenten die meerdere malen in het csv bestand voorkwamen. Ik ben vervolgens bijna de hele avond bezig geweest om deze bug in scraper.py op te lossen. Het is heel gek, want ik ben er uiteindelijk niet precies achter gekomen wat er nou mis ging, maar toen ik de site nogmaals had gescraped toen was het wel goed gelukt. Vervolgens heb ik dus de json files die ik in mijn barchart in had geladen en de json files die ik in mijn map had ingeladen opnieuw moeten runnen/maken, omdat deze hiervoor niet klopten. Toen ik daarmee klaar was heb ik nog de map kunnen koppelen met de timebuttons.
+* Er zijn nog een aantal bugs die ik moet oplossen:
 
-- Scriptje geschreven om vanuit de gigantische database de json files te maken voor mijn barchart
-
-- Time buttons gekoppeld aan de barchart
-
-- Table gekoppeld aan de barchart (dubbel gelinkt, dus als je op de tabel gaat staan dan ligt de bijbehorende bar op en andersom)
-
-- Barchart en table opmaak veranderd
-
-*Donderdag 19 januari*
-
-In de avond ben ik bezig gegaan om stippen te plaatsen op de kaart van Syrië die de locatie weergeven van het incident. Hiervoor heb ik een scriptje geschreven die alle benodigde informatie haalt uit syrianarchive.csv en deze als jsonfile opslaat.
-
-Toen het me lukte om de stippen te weergeven op de kaart kwam ik erachter dat er iets mis gegaan is met het scrapen van de website, want er waren enkele incidenten die meerdere malen in het csv bestand voorkwamen. Ik ben vervolgens bijna de hele avond bezig geweest om deze bug in scraper.py op te lossen. Het is heel gek, want ik ben er uiteindelijk niet precies achter gekomen wat er nou mis ging, maar toen ik de site nogmaals had gescraped toen was het wel goed gelukt. Vervolgens heb ik dus de json files die ik in mijn barchart in had geladen en de json files die ik in mijn map had ingeladen opnieuw moeten runnen/maken, omdat deze hiervoor niet klopten. Toen ik daarmee klaar was heb ik nog de map kunnen koppelen met de timebuttons.
-
-Er zijn nog een aantal bugs die ik moet oplossen:
-
-* Niet van alle incidenten zijn de coordinaten beschikbaar, waardoor deze stippen nu linksbovenin de hoek worden geplaatst. Wel zijn van deze incidenten de locatie/stad. Ik wil van deze incidenten de coordinaten opzoeken van de bijbehorende stad en deze toekennen. Een probleem is echter wel dat ze niet allemaal dezelfde coordinaten kunnen krijgen, omdat de stippen dan allemaal over elkaar komen te liggen. Misschien moet ik ze allemaal net een ander coordinaat geven die wel nog behoort tot de stad.
-
-* Wanneer je op de tabel op een type incident gaat staan waar de data 0 is, dan verschijnt de tooltip links bovenin de hoek. Dit komt omdat er geen bar getekend is, waardoor de code niet weet waar het gepositioneerd moet worden. Ik ga kijken of het lukt om deze tooltip toch op de goede plek te krijgen. Lukt dit niet dan wil ik ervoor zorgen dat hij geen tooltip laat zien als de data 0 is.
+- Niet van alle incidenten zijn de coordinaten beschikbaar, waardoor deze stippen nu linksbovenin de hoek worden geplaatst. Wel zijn van deze incidenten de locatie/stad. Ik wil van deze incidenten de coordinaten opzoeken van de bijbehorende stad en deze toekennen. Een probleem is echter wel dat ze niet allemaal dezelfde coordinaten kunnen krijgen, omdat de stippen dan allemaal over elkaar komen te liggen. Misschien moet ik ze allemaal net een ander coordinaat geven die wel nog behoort tot de stad.
+- Wanneer je op de tabel op een type incident gaat staan waar de data 0 is, dan verschijnt de tooltip links bovenin de hoek. Dit komt omdat er geen bar getekend is, waardoor de code niet weet waar het gepositioneerd moet worden. Ik ga kijken of het lukt om deze tooltip toch op de goede plek te krijgen. Lukt dit niet dan wil ik ervoor zorgen dat hij geen tooltip laat zien als de data 0 is.
 
 *Vrijdag 20 januari*
 
