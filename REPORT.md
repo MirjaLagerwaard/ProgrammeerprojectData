@@ -73,21 +73,14 @@ During the process of linking the map of Syria with the calendar heatmap I found
 
 1. In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the map of Syria, because you need the coördinates of an incident to place a circle on the map of Syria. For this reason I was forced to not display these incidents on the map.
 2. Another problem with the map of Syria was that there were incidents with exactly the same coordinates, which will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to reached the circle which is on top of the other. To solve this problem I add a random generated number to the pixel values where the circles are placed. This random number is not greater than the diameter of the circle itself, so the deviation is minimal.
-3. I found out that the Syrian Archive uses multiple formats do display the coordinates of an incident. I had to make an python script which transforms all these multiple formats to the format which was needed to place the circles on the map.
-4. Two days before the deadline one of my group members found another bug in my map. After using + or - buttons you could not drag the map anymore. This bug was caused due to the link between the map of Syria and the calendar heatmap.
-
-
- Problemen gehad met de tooltip omdat google kut is
-
- Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
+3. I found out that the Syrian Archive uses multiple formats to display the coordinates of an incident. I had to make an python script which transforms all these multiple formats to the format which was needed to place the circles on the map.
+4. Two days before the deadline one of my group members found another bug in my map. After using + or - buttons you could not drag the map anymore. This bug was caused due to the link between the map of Syria and the calendar heatmap. After linking the tooltip to the correct HTML element the bug was solved.
 
 * Barchart and Table
-
-Barchart en table: als je op de tabel gaat staan verscheen de tooltip rechts bovenin de hoek
-
+After I linked the barchart with the table I found out that when hovering over a table row of a type of violation where the data value was 0, the tooltip of the barchart occured in the left upper corner. When I gave the bars in the barchart of the corresponding type of violation a size of 1px, this bug was solved.
 
 ##DECISIONS
-
+ Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
 
 
 Defend your decisions by writing an argument of a most a single paragraph. Why was it good to do it different than you thought before? Are there trade-offs for your current solution? In an ideal world, given much more time, would you choose another solution?
