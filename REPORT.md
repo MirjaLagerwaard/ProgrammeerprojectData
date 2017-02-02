@@ -81,6 +81,16 @@ During the process of linking the map of Syria with the calendar heatmap I found
 After I linked the barchart with the table I found out that when hovering over a table row of a type of violation where the data value was 0, the tooltip of the barchart occured in the left upper corner. When I gave the bars in the barchart of the corresponding type of violation a size of 1px, this bug was solved.
 
 ##DECISIONS
+
+* Color scheme
+
+* Calendar Heatmap
+
+* Map
+
+* Barchart and Table
+
+
 Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
 
 
@@ -89,14 +99,10 @@ Defend your decisions by writing an argument of a most a single paragraph. Why w
 ##IN AN IDEAL WORLD...
 When I had more time to make this visualisation, I would like to do the following things:
 
-1. I would like to change the on hover link between the calendar heatmap and map of Syria to an on click link. So when you click on a day in the calendar heatmap the corresponding circles appear in the map. 
+1. I would like to use bootstrap for the page layout and create a fixed menu bar.
 
-Daarnaast is het jammer dat zodra je weer van de calendar af hovert alle stippen weer verschijnen. Je kunt nu dus niet de tooltip bekijken van een incident op een specifieke datum. Dit kun je wel doen door niet een on hover te maken maar een on click. Het probleem is dan echter dat de stippen die ik onzichtbaar maak niet verdwenen zijn van de kaart, dus als je dan op een stip wilt klikken dan kun je ook (per ongeluk) op een onzichtbare stip klikken en dan krijg je de verkeerde tooltip te zien. Je kunt de stippen die moeten verdwijnen ook daadwerkelijk van de kaart afhalen, maar dit is zo'n gedoe dat ik hier helaas geen tijd meer voor heb. Dit zal ik meenemen voor mijn verslag voor dingen die ik nog had willen doen.
+2. I would like to change the on hover link between the calendar heatmap and map of Syria to an on click link. So when you click on a day in the calendar heatmap only the corresponding circles are shown in the map. This way you can hover to the map to see details about the incidents without the other circles appear again. This was harder to implement than you think, because when you change the opacity of the circles to 0.0 the circles will still be there. When you hover over the map it was possible to click on a circle which was transparent. So you have to remove the circle from the map to make this happen and I did not have enough time to fix this.
 
-In plaats van in de tekst aan te geven hoeveel stippen per jaar niet worden weergeven op de kaart is het mooi als je dit in de tooltip van de calendar per dag kunt laten zien. Dit is inderdaad een mooi idee, maar hier ga ik geen tijd meer voor hebben. Dit zal ik meenemen voor in mijn verslag voor dingen die ik nog had willen doen.
+3. I would like to link the barchart with the map and calendar heatmap. I wanted to filter the data of the map and calendar view when you clicked on a bar in the barchart, so only the data of one type of violation would be shown.
 
-Ik zou het vet vinden om de functionaliteit van de barchart nog af kunnen krijgen (dat als je op een bar klikt van een bepaald incident dat je in de kaart en in de calendar alleen nog de incidenten van dat type incident ziet), maar ik weet niet of dit realistisch is. Ik kreeg als tip eerst mijn pagina af te maken qua tekst en opmaak, het verslag te schrijven en als ik dan nog tijd over heb kan ik altijd nog naar die filter kijken.
-
-Dingen die ik graag had willen doen:
-* Vaste menubar
-* Filteren van barchart
+4. In the current visualisation I inform the user in the walkthrough how many incidents are not shown in the map of Syria. I would like to implement this in the tooltip of the calendar heatmap, so you can see per day how many incidents are not shown. 
