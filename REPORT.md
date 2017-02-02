@@ -69,12 +69,11 @@ In this file you can find all the javascript code for the calendar heatmap. The 
 
 * map.js
 
-In this file you can find all the javascript code for the calendar heatmap. The code for the link between the calendar heatmap and the map of Syria can also be found in this file.
+In this file you can find all the javascript code for the map of Syria. The code for the link between the map of Syria and the calendar view can also be found in this file.
 
 * barchart.js
 
-
-
+In this file you can find all the javascript code for the barchart. The code for the link between the barchart and the table can also be found in this file. 
 
 ##CHALLENGES
 
