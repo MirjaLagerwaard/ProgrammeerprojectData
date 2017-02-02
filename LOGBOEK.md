@@ -148,7 +148,7 @@ Wat ik vandaag heb gedaan:
 
 ###Donderdag 2 februari
 
-* Code opgeschoond
+* De rest van de code opgeschoond
 * LICENSE.md gemaakt
 * Layout van logboek aangepast
 * Report geschreven

@@ -55,21 +55,28 @@ Second, go into detail, and describe the modules/classes and how they relate.
 
 ##CHALLENGES
 
-Scrapen van data (meerdere pagina's, opnieuw omdat ik lat en long ook nodig had, opnieuw ivm bug)
-timeslider werden timebuttons
-Map: stippen die geen latitude en/of longitude hebben + stippen met exact dezelfde coordinaten,  Ik ben erachter gekomen dat er nog een bug in mijn map zit... Ze hebben in de database van meerdere notaties gebruik gemaakt om coördinaten aan te geven. Ik heb dit weekend dus tijd besteed om mijn python script (makedatamap.py) aan te passen, zodat deze coördinaten omgezet worden naar de juiste notatie. Daarbij is deze bug opgelost.
-Problemen gehad met de tooltip omdat google kut is.
-Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
+* Scraping the data
+I had some difficulties with scraping the webpage of the Syrian Archive. I had to scrape multiple pages which I never did before. Later in the process I found out that I also had to scrape the latitude and longitude of each incident to place circles on the map of Syria. I had to change my Python script and scrape the website again. When I placed the circles on the map, I found out that something went wrong with scraping the website. Some incidents were scraped twice. I did not find a bug in my Python script but when I runned the scraper.py script again the problem was solved.
+
+* Timeslider
+I had difficulties with implementing a timeslider, which made me decide to make timebuttons instead. This was a lot easier to implement and the functionality is the same.
+
+* Calendar Heatmap
+During the process of linking the map of Syria with the calendar heatmap I found out that I had to change the way I implemented the tooltip of my calendar heatmap. While hovering over the cirles on the map, the tooltip of the calendar view appeared but on the wrong location of the screen. The location of tooltip I used was relative to the location of the cursor, but I had to change this to the location of the corresponding rectangle in the calendar heatmap. I used an outdatet version of d3tip.js and after using the newest version the bug was solved.
+
+* Map
+One of the biggest problems I had with the map of Syria 
+ stippen die geen latitude en/of longitude hebben + stippen met exact dezelfde coordinaten,  Ik ben erachter gekomen dat er nog een bug in mijn map zit... Ze hebben in de database van meerdere notaties gebruik gemaakt om coördinaten aan te geven. Ik heb dit weekend dus tijd besteed om mijn python script (makedatamap.py) aan te passen, zodat deze coördinaten omgezet worden naar de juiste notatie. Daarbij is deze bug opgelost.
+
+ Problemen gehad met de tooltip omdat google kut is
+
+ Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
+
+ Bug in mijn map: als je met de + en - knoppen inzoomt dan kan je niet meer slepen met het handje. Ook gebeuren er dan gekke dingen met mijn kaart.
+
+* Barchart and Table
 Barchart en table: als je op de tabel gaat staan verscheen de tooltip rechts bovenin de hoek
 
-Ik de tooltip van de calendar view moeten veranderen. Het was me gelukt om de tooltip te laten verschijnen bij de calendar wanneer je over een stip
-van de map hovert, maar deze kwam niet op de goede locatie van het scherm omdat de tooltip keek naar de locatie van mijn muis. Ik heb veranderd dat de tooltip kijkt naar de locatie van het vakje wat overeenkomt met de dag. Nu is het dus gelukt om mijn calendar view te linken met de map (alle stippen die niet overeenkomende datum hebben verdwijnen), plus de map te linken aan de calendar view (de border van de corresponderende dag wordt dikker plus de tooltip van de calendar verschijnt).
-
-During the development of my visualisation, I have met some challenges:
-
-Bug in mijn map: als je met de + en - knoppen inzoomt dan kan je niet meer slepen met het handje. Ook gebeuren er dan gekke dingen met mijn kaart.
-
-Clearly describe challenges that your have met during development. Document all important changes that your have made with regard to your design document (from the PROCESS.md). Here, we can see how much you have learned in the past month.
 
 ##DECISIONS
 
