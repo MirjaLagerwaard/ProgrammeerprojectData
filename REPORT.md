@@ -23,6 +23,12 @@ The **Barchart** displays the amount of incidents per type of violation. What is
 ##TECHNICAL DESIGN
 
 ###High level overview
+My visualisation is styled in the webbrowser **Firefox** zoomed at **60%**. 
+
+* Timeline
+
+Click on the buttons of the timeline to explore the data over different years.
+
 * Calendar Heatmap
 
 The darkness of a day indicates the amount of incidents that occured on that particular day. Hover over the days to see the exact amount of incidents on that day. The Map of Syria will now only show the incidents that took place on that specific day.
@@ -48,6 +54,9 @@ Hover over the bars of the barchart or hover over the rows of the table to see t
 Second, go into detail, and describe the modules/classes and how they relate.
 
 ##CHALLENGES
+
+During the development of my visualisation, I have met some challenges:
+
 
 Clearly describe challenges that your have met during development. Document all important changes that your have made with regard to your design document (from the PROCESS.md). Here, we can see how much you have learned in the past month.
 
