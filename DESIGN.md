@@ -40,4 +40,4 @@ Interactie: on hover zal in de barchart met behulp van een tooltip de exacte waa
 
 Technisch: de barchart zal gelinkt worden met de map. Als je bijvoorbeeld op de bar van hostage-taking gaat staan dan zullen de corresponderende stippen in de map veranderen van kleur, zodat je kan zien waar deze incidenten hebben plaatsgevonden. Bij het maken van de barchart verwacht ik vooralsnog geen problemen.
 
-![Schets](/images/Schets_technical.jpg)
+![Schets](dashboard/images/Schets_technical.jpg)

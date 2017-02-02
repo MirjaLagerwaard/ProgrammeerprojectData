@@ -25,4 +25,4 @@ per type incident laat zien. On hover wil ik het exacte aantal incidenten laten 
 incidenten van dat type incident oplichten op de map. Voor de interactieve barchart gekoppeld met een map heb ik van ieder indicent de datum, latitude,
 longitude, type incident, gebruikte wapen en omschrijving van het incident nodig.
 
-![Schets](/images/Schets_technical.jpg)
+![Schets](/dashboard/images/Schets_technical.jpg)
