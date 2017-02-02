@@ -4,19 +4,42 @@
 
 The Syrian Archive is an initiative launched by a collective of human rights activists dedicated to preserving open source documentation relating to human rights violations and other crimes committed by all sides during the conflict in Syria. Their goal is to preserve the most valuable material to ensure it is organized and accessible for use by current researchers, journalists and others with an interest in the conflict as well as to facilitate the work of future historians and investigators involved in transitional justice and accountability efforts.
 
-Information about the incidents which are included in the The Syrian Archive is visualised on this website. The goal of this visualisation is to increase awareness of the scale of the human rights violations in Syria and to obtain more insight into the background of the incidents. Each visualisation has been carefully picked to highlight a different aspect of the incidents background information:
+Information about the incidents which are included in the The Syrian Archive is visualised. The goal of the visualisation is to increase awareness of the scale of the human rights violations in Syria and to obtain more insight into the background of the incidents. Each visualisation has been carefully picked to highlight a different aspect of the incidents background information:
 
-When: the Calendar Heatmap can be utilised to see the amount of incidents over time. How many incidents took place on one day? How did the amount of incidents develop over time?
+When: the **Calendar Heatmap** can be utilised to see the amount of incidents over time. How many incidents took place on one day? How did the amount of incidents develop over time?
 
-Where: the Map of Syria gives more insight into where the incidents took place. This visualisation is also useful when more information about only one incident is demanded. When did that particular incident take place? What is the type of violation? What happened?
+Where: the **Map of Syria** gives more insight into where the incidents took place. This visualisation is also useful when more information about only one incident is demanded. When did that particular incident take place? What is the type of violation? What happened?
 
-What: the Barchart displays the amount of incidents per type of violation. What is the most common type of violation? Does the amount of incidents per type of violation change over the years?
+What: the **Barchart** displays the amount of incidents per type of violation. What is the most common type of violation? Does the amount of incidents per type of violation change over the years?
 
 ![Schets](dashboard/images/printscreenvisualisation.png)
 
 ##TECHNICAL DESIGN
 
+###High level overview
+* Calendar Heatmap
+
+The Calendar Heatmap can be utilised to see the amount of incidents over time. How many incidents took place on one day? How did the amount of incidents develop over time? The darkness of a day indicates the amount of incidents that occured on that particular day. Hover over the days to see the exact amount of incidents on that day. The Map of Syria will now only show the incidents that took place on that specific day.
+
+* Map
+
+The Map of Syria gives more insight into where the incidents took place. This visualisation is also useful when more information about only one incident is demanded. When did that particular incident take place? What is the type of violation? What happened? Click on a circle on the Map of Syria to see more details about a specific incident. Click on the zoom buttons to explore more details about incidents which took place in a specific city. Hover over the circles on the Map of Syria to see in the Calendar Heatmap on which day the incident took place. The incidents where no latitude and/or longitude were available are not shown on the Map of Syria:
+
+* 2016: 894 incidents not shown
+* 2015: 29 incidents not shown
+* 2014: 13 incidents not shown
+* 2013: 2 incidents not shown
+* 2012: 0 incidents not shown
+
+* Barchart and Table
+
+The Barchart displays the amount of incidents per type of violation. What is the most common type of violation? Does the amount of incidents per type of violation change over the years? Hover over the bars of the barchart or hover over the rows of the table to see the exact amount of incidents per type of violation. Read in the table what the abbreviations on the x-axis of the barchart means.
+
+###Detail
+
 Clearly describe the technical design: how is the functionality implemented in your code? This should be like your DESIGN.md but updated to reflect the final application. First, give a high level overview, which helps us navigate and understand the total of your code (which components are there?). Second, go into detail, and describe the modules/classes and how they relate.
+
+
 
 ##CHALLENGES
 
