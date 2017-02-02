@@ -62,8 +62,8 @@
 
 * Mijn alfa versie gepresenteerd aan de werkgroep. Tips die ik heb gekregen:
 
-1. Buttons maken dat als je daarop klikt dat de kaart automatisch inzoomt op Aleppo/Homs/Damascus, omdat daar de meeste incidenten hebben plaatsgevonden
-2. De stippen die geen exacte coördinaten hebben een andere kleur geven en duidelijk aangeven dat dit dus niet de exacte positie is
+1. Buttons maken dat als je daarop klikt dat de kaart automatisch inzoomt op Aleppo/Homs/Damascus, omdat daar de meeste incidenten hebben plaatsgevonden.
+2. De stippen die geen exacte coördinaten hebben een andere kleur geven en duidelijk aangeven dat dit dus niet de exacte positie is.
 
 ###Zaterdag en zondag 21-22 januari
 
@@ -75,88 +75,80 @@
 
 ##WEEK 3
 
-*Maandag 23 januari*
+###Maandag 23 januari
 
 Tijdens de stand-up meeting hebben we de planning voor deze week besproken. Mijn planning:
-Maandag: python script schrijven die de data van de calendar view maakt en deze inladen. Calendar view koppelen met de time buttons.
-Dinsdag: De map en calendar view afmaken en daarbij de overige bugs oplossen die nog aanwezig zijn in de map en calendar.
-Woensdag en donderdag: alle visualisaties aan elkaar linken en code opschonen.
+* Maandag: python script schrijven die de data van de calendar view maakt en deze inladen. Calendar view koppelen met de time buttons.
+* Dinsdag: De map en calendar view afmaken en daarbij de overige bugs oplossen die nog aanwezig zijn in de map en calendar.
+* Woensdag en donderdag: alle visualisaties aan elkaar linken en code opschonen.
 
- *Dinsdag 24 januari*
+###Dinsdag 24 januari
+* De 2 bugs die in de map zaten opgelost: random getal wordt opgetelt bij de lat long to pixel, zodat de stippen die exact over elkaar vallen kleine random geplaatst wordt. Plus ik laat de stippen niet meer zien die of geen latitude/longitude hebben.
+* Calendar ingekleurd met de daadwerkelijke data en deze gelinkt aan de timebuttons.
 
- De 2 bugs die in de map zaten opgelost: random getal wordt opgetelt bij de lat long to pixel, zodat de stippen die exact over elkaar vallen kleine random geplaatst wordt. Plus ik laat de stippen niet meer zien die of geen latitude/longitude hebben. Daarnaast heb ik de calendar ingekleurd met de daadwerkelijke data en deze gelinkt aan de timebuttons.
+###Woensdag 25 januari
+* Tooltip gemaakt voor de calendar heatmap
 
- *Woensdag 25 januari*
+###Donderdag 26 januari
+* Tooltip gemaakt voor de stippen op de map. Hier heel veel problemen mee gehad, omdat Google vervelend doet.
+* About me page gemaakt.
 
- Tooltip gemaakt voor de calendar view
-
-*Donderdag 26 januari*
-
-Tooltip gemaakt voor de stippen op de map. Hier heel veel problemen mee gehad, omdat Google vervelend doet. Daarnaast de about me page gemaakt.
-
-*Vrijdag 27 januari*
-
-De calendar view gelinkt met de map: alle stippen kleuren nu anders als je op een dag van de calendar gaat staan. Ik moet nog uitvogelen hoe ik alleen de
+###Vrijdag 27 januari
+* De calendar heatmap gelinkt met de map: alle stippen kleuren nu anders als je op een dag van de calendar gaat staan. Ik moet nog uitvogelen hoe ik alleen de
 stippen selecteer waarvan de datum overeenkomt met die van de calendar view.
 
-*Zaterdag en zondag 28 en 29 januari*
-Het is gelukt om alleen de stippen te selecteren die overeenkomen met de datum van de calendar view. Ik heb besloten om niet meer de stippen van kleur te veranderen,
-maar de stippen die niet overeenkomen onzichtbaar te maken. Ook heb ik de map gelinkt met de calendar view. Ik heb ervoor gekozen om de on hover van de calendar view zo te doen dat alleen de border van het vakje van de dag dikker wordt, zodat je de oorspronkelijke kleur van het vakje nog kunt zien ook als je hovert. Het enige wat me nog niet gelukt is, is dat als je over een stip hovert dat dan ook de tooltip van de calendar view verschijnt. Hier ga ik morgen mee verder.
+###Zaterdag en zondag 28 en 29 januari
+* Het is gelukt om alleen de stippen te selecteren die overeenkomen met de datum van de calendar heatmap.
+* Ik heb besloten om niet meer de stippen van kleur te veranderen, maar de stippen die niet overeenkomen onzichtbaar te maken. Dit doe ik omdat er zoveel stippen over elkaar liggen dat je de stippen die eronder zitten niet ziet wanneer je hovert over de calendar heatmap.
+* Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
+* Map gelinkt met de calendar view. Ik heb ervoor gekozen om de on hover van de calendar heatmap zo te doen dat alleen de border van het vakje van de dag dikker wordt, zodat je de oorspronkelijke kleur van het vakje nog kunt zien ook als je hovert. Het enige wat me nog niet gelukt is, is dat als je over een stip hovert dat dan ook de tooltip van de calendar view verschijnt. Hier ga ik morgen mee verder.
+* Daarnaast is het jammer dat zodra je weer van de calendar af hovert alle stippen weer verschijnen. Je kunt nu dus niet de tooltip bekijken van een incident op een specifieke datum. Dit kun je wel doen door niet een on hover te maken maar een on click. Het probleem is dan echter dat de stippen die ik onzichtbaar maak niet verdwenen zijn van de kaart, dus als je dan op een stip wilt klikken dan kun je ook (per ongeluk) op een onzichtbare stip klikken en dan krijg je de verkeerde tooltip te zien. Je kunt de stippen die moeten verdwijnen ook daadwerkelijk van de kaart afhalen, maar dit is zo'n gedoe dat ik hier helaas geen tijd meer voor heb. Dit zal ik meenemen voor mijn verslag voor dingen die ik nog had willen doen.
 
-Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
+##WEEK 4
 
-Daarnaast is het jammer dat zodra je weer van de calendar af hovert alle stippen weer verschijnen. Je kunt nu dus niet de tooltip bekijken van een incident op een specifieke datum. Dit kun je wel doen door niet een on hover te maken maar een on click. Het probleem is dan echter dat de stippen die ik onzichtbaar maak niet verdwenen zijn van de kaart, dus als je dan op een stip wilt klikken dan kun je ook (per ongeluk) op een onzichtbare stip klikken en dan krijg je de verkeerde tooltip te zien. Je kunt de stippen die moeten verdwijnen ook daadwerkelijk van de kaart afhalen, maar dit is zo'n gedoe dat ik hier helaas geen tijd meer voor heb. Dit zal ik meenemen voor mijn verslag voor dingen die ik nog had willen doen.
+###Maandag 30 januari
+Vandaag met mijn vergadergroepje de planning van de week besproken.
+* Maandag: functionaliteit afmaken.
+* Dinsdag: opmaak en indeling van de site afmaken.
+* Woensdag: verslag schrijven en code opschonen.
+* Donderdag: verslag afmaken en puntjes op de i.
 
-*Maandag 30 januari*
-
-Planning voor de week:
-Maandag: functionaliteit afmaken
-Dinsdag: opmaak en indeling van de site afmaken
-Woensdag: verslag schrijven en code opschonen
-Donderdag: verslag afmaken en puntjes op de i
-
-Wat ik heb gedaan:
 * Ik de tooltip van de calendar view moeten veranderen. Het was me gelukt om de tooltip te laten verschijnen bij de calendar wanneer je over een stip
-van de map hovert, maar deze kwam niet op de goede locatie van het scherm omdat de tooltip keek naar de locatie van mijn muis. Ik heb veranderd dat de tooltip kijkt naar de locatie van het vakje wat overeenkomt met de dag. Nu is het dus gelukt om mijn calendar view te linken met de map (alle stippen die niet overeenkomende datum hebben verdwijnen), plus de map te linken aan de calendar view (de border van de corresponderende dag wordt dikker plus de tooltip van de calendar verschijnt)
+van de map hovert, maar deze kwam niet op de goede locatie van het scherm omdat de tooltip keek naar de locatie van mijn muis. Ik heb veranderd dat de tooltip kijkt naar de locatie van het vakje wat overeenkomt met de dag. Nu is het dus gelukt om mijn calendar view te linken met de map (alle stippen die niet overeenkomende datum hebben verdwijnen), plus de map te linken aan de calendar view (de border van de corresponderende dag wordt dikker plus de tooltip van de calendar verschijnt).
 * Homepage mooi gemaakt
 
-*Dinsdag 31 januari*
+###Dinsdag 31 januari
 
 De dag begonnen met een stand-up meeting met mijn vergadergroepje. Ik kreeg een aantal tips:
 * In plaats van in de tekst aan te geven hoeveel stippen per jaar niet worden weergeven op de kaart is het mooi als je dit in de tooltip van de calendar per dag kunt laten zien. Dit is inderdaad een mooi idee, maar hier ga ik geen tijd meer voor hebben. Dit zal ik meenemen voor in mijn verslag voor dingen die ik nog had willen doen.
-* Opacity van de tooltip van de calendar view aanpassen dat deze ietwat doorzichtig wordt
+* Opacity van de tooltip van de calendar view aanpassen dat deze ietwat doorzichtig wordt.
 * Op mijn homepage heb ik staan: 3864 TOTAL INCIDENTS PRESERVED en vervolgens hoeveel incidenten per type violation. Dit was erg druk en onleesbaar. Ik kon het beste de opmaak hiervan veranderen.
 * Ik zou het vet vinden om de functionaliteit van de barchart nog af kunnen krijgen (dat als je op een bar klikt van een bepaald incident dat je in de kaart en in de calendar alleen nog de incidenten van dat type incident ziet), maar ik weet niet of dit realistisch is. Ik kreeg als tip eerst mijn pagina af te maken qua tekst en opmaak, het verslag te schrijven en als ik dan nog tijd over heb kan ik altijd nog naar die filter kijken.
 
-Wat ik allemaal heb gedaan vandaag:
 * Ik heb op mijn homepagina alleen nog de tekst: 3864 TOTAL INCIDENTS PRESERVED laten staan, omdat de rest van de informatie te zien is in de visualisaties. Dus ik heb besloten dit weg te laten.
 * Vandaag heb ik de lay-out van mijn homepage veranderd. Ook heb ik het informatiestukje op mijn homepage en over mijn visualisatie geschreven.
 * Ik heb de lay-out van mijn menubalk veranderd.
 * Ik heb mijn visualisation pagina opnieuw ingedeeld, titels voor de visualisaties toegevoegd en de opmaak verbeterd.
 * Ik heb op mijn visualisation pagina onderaan een kopje toegevoegd met walkthrough, hier zal per visualisatie meer informatie over de visualisatie komen te staan.
 
-* Woensdag 1 februari *
+###Woensdag 1 februari
 
 Na de stand-up meeting heb ik nog een aantal tips gekregen:
 * Bug in mijn map: als je met de + en - knoppen inzoomt dan kan je niet meer slepen met het handje. Ook gebeuren er dan gekke dingen met mijn kaart.
-* Break toevoegen in de tooltip van mijn calendar view + tooltip doorzichtig maken
+* Break toevoegen in de tooltip van mijn calendar view + tooltip doorzichtig maken.
 * Het is niet duidelijk waar de maanden stoppen in mijn calendar. Kijken of deze lijnen dikker kunnen worden/andere kleur?
-* Lettertype in mijn table is te klein
+* Lettertype in mijn table is te klein.
 * Jelle is niet overtuigd van een volledig witte barchart.
 
-TODO:
-* Report schrijven: vergeet niet te vermelden in welke webbrowser en % inzoomen je je website hebt gestyled.
-* Code opschonen
-
-Dingen die ik graag had willen doen:
-* Vaste menubar
-* Filteren van barchart
-
 Wat ik vandaag heb gedaan:
-* None verwijderd uit barchart en map
+* Type of violation: "None" verwijderd uit barchart en map.
 * Bug in map opgelost: als je inzoomde met + en - knoppen dan kon je de map niet meer slepen. Dit bleek te liggen aan de d3 tip file die ik inlaad. Die maakte een nieuwe overlay en toen werkte het allemaal niet. Ik heb het opgelost door de d3 tip te koppelen aan het html element ipv locatie.
+* Informatiestukje op de homepage en walkthrough van de visualisatie op de visualisation page afgemaakt.
+* CSS code opgeschoond.
 
-* Donderdag 2 februari*
+###Donderdag 2 februari
 
 * Code opgeschoond
 * LICENSE.md gemaakt
+* Layout van logboek aangepast
+* Report geschreven
