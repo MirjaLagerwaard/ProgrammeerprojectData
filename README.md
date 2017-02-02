@@ -45,14 +45,18 @@ In this file you can find all the javascript code for the barchart. The code for
 * Map
 
 https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+
 https://bl.ocks.org/mbostock/899711
+
 http://bl.ocks.org/tommyskg/6111032
 
 * Calendar heatmap
 
-// https://bl.ocks.org/mbostock/4063318
-// https://www.crowdanalytix.com/communityBlog/10-steps-to-create-calendar-view-heatmap-in-d3-js
-// http://bl.ocks.org/d3noob/a22c42db65eb00d4e369
+https://bl.ocks.org/mbostock/4063318
+
+https://www.crowdanalytix.com/communityBlog/10-steps-to-create-calendar-view-heatmap-in-d3-js
+
+http://bl.ocks.org/d3noob/a22c42db65eb00d4e369
 
 ###Screenshot of the visualisation
 

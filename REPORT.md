@@ -73,7 +73,7 @@ In this file you can find all the javascript code for the map of Syria. The code
 
 * barchart.js
 
-In this file you can find all the javascript code for the barchart. The code for the link between the barchart and the table can also be found in this file. 
+In this file you can find all the javascript code for the barchart. The code for the link between the barchart and the table can also be found in this file.
 
 ##CHALLENGES
 
@@ -104,11 +104,13 @@ After I linked the barchart with the table I found out that when hovering over a
 
 ##DECISIONS
 
-* Color scheme
-
 * Calendar Heatmap
+The border-width changes on hover instead of changing the color of the rectangle, because the color says something about the amount of incidents on one day. I don't change the stroke color, because the lines which draw the days are not a part of the border and this will result in something ugly. The tooltip of the calendar heatmap shows the amount of incidents that happened on that particular day.
+
+The calendar heatmap is 
 
 * Map
+The color of the circles on the map changes on hover and when you click on a circle you will see a tooltip with details about that particular incident. I have chosen for the on click interactivity, because the circles are very close to each other on the map. When you change this to an on hover interactivity it is harder to see the details of one particular incident.
 
 * Barchart and Table
 
