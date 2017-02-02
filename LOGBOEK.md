@@ -148,7 +148,6 @@ Na de stand-up meeting heb ik nog een aantal tips gekregen:
 * Jelle is niet overtuigd van een volledig witte barchart.
 
 TODO:
-* Readme een copyright toevoegen (wat mogen mensen met mijn visualisatie doen)
 * Report schrijven: vergeet niet te vermelden in welke webbrowser en % inzoomen je je website hebt gestyled.
 * Code opschonen
 
@@ -161,4 +160,6 @@ Wat ik vandaag heb gedaan:
 * Bug in map opgelost: als je inzoomde met + en - knoppen dan kon je de map niet meer slepen. Dit bleek te liggen aan de d3 tip file die ik inlaad. Die maakte een nieuwe overlay en toen werkte het allemaal niet. Ik heb het opgelost door de d3 tip te koppelen aan het html element ipv locatie.
 
 * Donderdag 2 februari*
+
 * Code opgeschoond
+* LICENSE.md gemaakt
