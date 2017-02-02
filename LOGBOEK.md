@@ -152,3 +152,4 @@ Wat ik vandaag heb gedaan:
 * LICENSE.md gemaakt
 * Layout van logboek aangepast
 * Report geschreven
+* Favicon toegevoegd
