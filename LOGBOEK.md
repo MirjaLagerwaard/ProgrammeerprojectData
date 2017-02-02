@@ -138,7 +138,7 @@ Wat ik allemaal heb gedaan vandaag:
 * Ik heb mijn visualisation pagina opnieuw ingedeeld, titels voor de visualisaties toegevoegd en de opmaak verbeterd.
 * Ik heb op mijn visualisation pagina onderaan een kopje toegevoegd met walkthrough, hier zal per visualisatie meer informatie over de visualisatie komen te staan.
 
-* Woensdag 1 februari*
+* Woensdag 1 februari *
 
 Na de stand-up meeting heb ik nog een aantal tips gekregen:
 * Bug in mijn map: als je met de + en - knoppen inzoomt dan kan je niet meer slepen met het handje. Ook gebeuren er dan gekke dingen met mijn kaart.
@@ -148,14 +148,17 @@ Na de stand-up meeting heb ik nog een aantal tips gekregen:
 * Jelle is niet overtuigd van een volledig witte barchart.
 
 TODO:
-* Kijken naar bug in mijn map
 * Readme een copyright toevoegen (wat mogen mensen met mijn visualisatie doen)
 * Report schrijven: vergeet niet te vermelden in welke webbrowser en % inzoomen je je website hebt gestyled.
-* Visualisation information op homepage afmaken
-* Filteren van barchart
 * Code opschonen
-* None verwijderen uit de data van de map
 
 Dingen die ik graag had willen doen:
 * Vaste menubar
-*
+* Filteren van barchart
+
+Wat ik vandaag heb gedaan:
+* None verwijderd uit barchart en map
+* Bug in map opgelost: als je inzoomde met + en - knoppen dan kon je de map niet meer slepen. Dit bleek te liggen aan de d3 tip file die ik inlaad. Die maakte een nieuwe overlay en toen werkte het allemaal niet. Ik heb het opgelost door de d3 tip te koppelen aan het html element ipv locatie.
+
+* Donderdag 2 februari*
+* Code opgeschoond

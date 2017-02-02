@@ -126,6 +126,7 @@ function load_data_chart() {
             .attr("transform", "rotate(30)")
             .style("text-anchor", "start")
 
+    // append title of the x-axis
     chart.select("g")
         .append("text")
             .attr("x", width / 1.75)
@@ -154,18 +155,22 @@ function load_data_chart() {
       .attr("height", function(d) { return height - y(d.amount) + 1; })
       .attr("width", x.rangeBand())
       .attr("id", function(d) { return d.typeofviolation.replace(/\s/g, ''); })
+
       // change color of the bars on mouse hover and show the data value by using the d3-tip
       .on("mouseover", function(d){
         d3.select(this)
           .style("fill", "#ff7f50");
         tip.show(d, this)
         var t = d
+
+        // change the background-color of the corresponding table row
         d3.selectAll("tr").filter(function() {
           return this.innerText.startsWith(t.typeofviolation)
         })
           .style("background-color", "#ff7f50")
       })
-      // change the color back on mouse out and hide the d3-tip
+
+      // change the color back on mouse out, hide the d3-tip and make background-color of table transparent again
       .on("mouseout", function(){
         d3.select(this)
           .style("fill", "#595959");
@@ -174,9 +179,10 @@ function load_data_chart() {
         tip.hide()
       });
 
+      // update barchart when hovering over the table rows
       d3.selectAll("tr")
-        .attr("onmouseover","myScript(this)")
-        .attr("onmouseout","myScript2()")
+        .attr("onmouseover","updateBarchart(this)")
+        .attr("onmouseout","returnUpdateBarchart()")
   });
 
   function type(d) {
@@ -185,7 +191,7 @@ function load_data_chart() {
   }
 }
 
-function myScript(x) {
+function updateBarchart(x) {
   x.style = "background-color: #ff7f50"
   d3.selectAll(".bar").filter(function(d) {
     if (d.typeofviolation == x.innerText.split("\t")[0]) {
@@ -197,7 +203,7 @@ function myScript(x) {
     .style("fill", "#ff7f50")
 }
 
-function myScript2() {
+function returnUpdateBarchart() {
   d3.selectAll(".bar")
     .style("fill", "#595959")
   d3.selectAll("tr")

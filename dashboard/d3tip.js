@@ -1,3 +1,8 @@
+/*
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+*/
+
 // d3.tip
 // Copyright (c) 2013 Justin Palmer
 //
