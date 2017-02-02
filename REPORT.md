@@ -57,7 +57,9 @@ Second, go into detail, and describe the modules/classes and how they relate.
 
 * Scraping the data
 
-I had some difficulties with scraping the webpage of the Syrian Archive. I had to scrape multiple pages which I never did before. Later in the process I found out that I also had to scrape the latitude and longitude of each incident to place circles on the map of Syria. I had to change my Python script and scrape the website again. When I placed the circles on the map, I found out that something went wrong with scraping the website. Some incidents were scraped twice. I did not find a bug in my Python script but when I runned the scraper.py script again the problem was solved.
+1. I had some difficulties with scraping the webpage of the Syrian Archive. I had to scrape multiple pages which I never did before.
+2. Later in the process I found out that I also had to scrape the latitude and longitude of each incident to place circles on the map of Syria. I had to change my Python script and scrape the website again.
+3. When I placed the circles on the map, I found out that something went wrong with scraping the website. Some incidents were scraped twice. I did not find a bug in my Python script, but when I runned the scraper.py script again the problem was solved.
 
 * Timeslider
 
@@ -69,16 +71,15 @@ During the process of linking the map of Syria with the calendar heatmap I found
 
 * Map
 
-In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the map of Syria, because you need the coördinates of an incident to place a circle on the map of Syria. For this reason I was forced to not display these incidents on the map. Another problem with the map of Syria was that there were incidents with exactly the same coördinates, which will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to reached the circle which is on top of the other. To solve this problem I have chosen to change the
+1. In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the map of Syria, because you need the coördinates of an incident to place a circle on the map of Syria. For this reason I was forced to not display these incidents on the map.
+2. Another problem with the map of Syria was that there were incidents with exactly the same coordinates, which will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to reached the circle which is on top of the other. To solve this problem I add a random generated number to the pixel values where the circles are placed. This random number is not greater than the diameter of the circle itself, so the deviation is minimal.
+3. I found out that the Syrian Archive uses multiple formats do display the coordinates of an incident. I had to make an python script which transforms all these multiple formats to the format which was needed to place the circles on the map.
+4. Two days before the deadline one of my group members found another bug in my map. After using + or - buttons you could not drag the map anymore. This bug was caused due to the link between the map of Syria and the calendar heatmap.
 
-
- stippen die geen latitude en/of longitude hebben + stippen met exact dezelfde coordinaten,  Ik ben erachter gekomen dat er nog een bug in mijn map zit... Ze hebben in de database van meerdere notaties gebruik gemaakt om coördinaten aan te geven. Ik heb dit weekend dus tijd besteed om mijn python script (makedatamap.py) aan te passen, zodat deze coördinaten omgezet worden naar de juiste notatie. Daarbij is deze bug opgelost.
 
  Problemen gehad met de tooltip omdat google kut is
 
  Door de stippen onzichtbaar te maken kwam ik er wel achter dat de stippen waarvan geen coordinaten beschikbaar zijn allemaal in oktober/november zitten. Als je daar hovert over een dag waarbij 40+ incidenten zijn plaatsgevonden dan verdwijnen alle stippen op de kaart. Ik ga dit duidelijk vermelden in de tekst die bij mijn visualisatie hoort hoeveel stippen er per jaar niet worden weergeven.
-
- Bug in mijn map: als je met de + en - knoppen inzoomt dan kan je niet meer slepen met het handje. Ook gebeuren er dan gekke dingen met mijn kaart.
 
 * Barchart and Table
 
