@@ -1,6 +1,7 @@
 # VISUALIZING THE HUMAN RIGHTS VIOLATION IN SYRIA
 
 **Mirja Lagerwaard**
+
 ***Copyright (c) 2017 MirjaLagerwaard***
 
 ###Purpose
@@ -42,6 +43,7 @@ In this file you can find all the javascript code for the barchart. The code for
 ###Sources
 
 * Map
+
 https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 https://bl.ocks.org/mbostock/899711
 http://bl.ocks.org/tommyskg/6111032
