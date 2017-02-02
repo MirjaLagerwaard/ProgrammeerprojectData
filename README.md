@@ -1,28 +1,52 @@
 # ProgrammeerprojectData
 
-**Visualistion of "The Syrian Archive"**
+## VISUALIZING THE HUMAN RIGHTS VIOLATION IN SYRIA
 
-"The Syrian Archive" is een archief waarin bewijsmteriaal (video's, foto's) van incidenten waarbij mensenrechten zijn geschonden in Syrië worden gedocumenteerd.
-In dit archief wordt van een incident bijgehouden wat er is gebeurd, waar het is gebeurd, welk wapen is gebruikt, wie de daders zijn, hoeveel slachtoffers
-er zijn gevallen en om welk type incident het gaat. Inmiddels zijn er 2305 geverifieerde incidenten opgenomen in het archief.
+### Mirja Lagerwaard
+### Student number: 10363149
 
-Voor mijn programmeerproject wil ik informatie uit dit archief gaan visualiseren. De database is terug te vinden op de site van "The Syrian Archive": https://syrianarchive.org/database/
+###Where can you find what?
 
-Ideeën van visualisaties die ik heb:
+####FOLDERS
+* dashboard
 
-1. Calendar view (voorbeeld: http://bl.ocks.org/mbostock/4063318) en line chart
+In this folder you can find al the python script, data, javascript files, css files and html files for the visualisation.
 
-Door middel van de calendar view wil ik per dag/week/maand van het jaar aangeven hoeveel indicenten er hebben plaatsgevonden om zo de ontwikkeling
-van het aantal incidenten over tijd te weergeven. On hover wil ik per type indicent het aantal incidenten weergeven van die dag/week/maand. Om de
-ontwikkeling ook nog op een andere manier weer te geven wil ik nog een linechart maken van dezelfde data. On hover wordt opnieuw per type indicent
-het aantal incidenten weergegeven. Voor de Calendar view en linechart heb ik van ieder incident de datum nodig en het type incident.
+* dashboard > data
 
-2. Interactieve barchart gekoppeld met een map (map van Syrië: http://www.codewritingcow.com/d3-js/maps/middle-east/syria/)
+In this folder you can find all the .json and .csv files which contains the data of the calendar heatmap, map of Syria and the barchart.  
 
-Voor ieder incident wil ik met behulp van een map laten zien waar het incident heeft plaatsgevonden. On hover wil ik laten zien wat het type incident
-is, het gebruikte wapen, omschrijving van het incident en de datum van het incident. Deze map wil ik koppelen met een barchart, die het aantal incidenten
-per type incident laat zien. On hover wil ik het exacte aantal incidenten laten zien. De link is dat wanneer je hovert over de barchart dat de bijbehorende
-incidenten van dat type incident oplichten op de map. Voor de interactieve barchart gekoppeld met een map heb ik van ieder indicent de datum, latitude,
-longitude, type incident, gebruikte wapen en omschrijving van het incident nodig.
+* dashboard > images
 
-![Schets](/dashboard/images/Schets_technical.jpg)
+In this folder you can find all the images which are used for the website / design document / report.
+
+* dashboard > pythonscripts
+
+In this folder you can find all the python scripts which are used to scrape the data of the website of the syrian archive and to convert the data in the correct format.
+
+####FILES
+* calendar.js
+
+In this file you can find all the javascript code for the calendar heatmap. The code for the link between the calendar heatmap and the map of Syria can also be found in this file.
+
+* map.js
+
+In this file you can find all the javascript code for the map of Syria. The code for the link between the map of Syria and the calendar view can also be found in this file.
+
+* barchart.js
+
+In this file you can find all the javascript code for the barchart. The code for the link between the barchart and the table can also be found in this file.
+
+Your GitHub repository should contain a complete README.md file that states the application name, a couple of screen shots (resized to appropriate width/height for readability), its purpose, your name and a copyright statement. The README should be easy to read.
+
+The copyright statement can be either:
+
+    a public domain release, which releases your code to the public without any restrictions (you could also use the unlicense for this)
+
+    a copyright notice which states who actually owns the rights to the materials in the repository (probably only you)
+
+Make sure that you have the correct license in your LICENSE file.
+
+The README.md should also acknowledge sources of external code, images and other materials that are in the repository but not created by yourself. Make sure that it is clear which directories are copyrighted by different creators.
+
+Also note that these materials have their own respective licenses. You should at the very least note this fact (again, in the README.md). Make sure you also check the licenses to see if you should make a special statement about the source of the materials.
