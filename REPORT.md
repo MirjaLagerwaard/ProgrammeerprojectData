@@ -25,11 +25,7 @@ The Calendar Heatmap can be utilised to see the amount of incidents over time. H
 
 The Map of Syria gives more insight into where the incidents took place. This visualisation is also useful when more information about only one incident is demanded. When did that particular incident take place? What is the type of violation? What happened? Click on a circle on the Map of Syria to see more details about a specific incident. Click on the zoom buttons to explore more details about incidents which took place in a specific city. Hover over the circles on the Map of Syria to see in the Calendar Heatmap on which day the incident took place. The incidents where no latitude and/or longitude were available are not shown on the Map of Syria:
 
-* 2016: 894 incidents not shown
-* 2015: 29 incidents not shown
-* 2014: 13 incidents not shown
-* 2013: 2 incidents not shown
-* 2012: 0 incidents not shown
+2016: 894 incidents not shown | 2015: 29 incidents not shown | 2014: 13 incidents not shown | 2013: 2 incidents not shown | 2012: 0 incidents not shown
 
 * Barchart and Table
 
