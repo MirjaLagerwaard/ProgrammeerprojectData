@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+
 import csv
 import json
 from string import find

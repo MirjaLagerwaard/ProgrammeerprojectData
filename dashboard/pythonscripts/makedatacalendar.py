@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+
 import csv
 import json
 import copy
@@ -18,7 +22,6 @@ fieldnames = (
 
 reader = csv.DictReader(csvfiletotal, fieldnames)
 
-# Maak dict van type violation [type: 0] waar je 0 gaat optellen voor iedere violation die van een bepaald type is
 amountofviolation = {'ACCFRA':0, 'UOIW':0, 'UA':0, 'SPPAO':0, 'SAESCR':0, 'VOCR':0, 'AAFD':0, 'Other':0, 'None':0}
 translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
                     'Use of illegal weapons':'UOIW',
@@ -29,7 +32,6 @@ translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
                     'Arbitrary and forcible displacement':'AAFD',
                     'Other':'Other',
                     'None':'None'}
-
 result = {}
 
 for row in reader:

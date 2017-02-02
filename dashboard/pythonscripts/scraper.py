@@ -2,9 +2,6 @@
 # Name: Mirja Lagerwaard
 # Student number: 10363149
 
-'''
-TODO
-'''
 import csv
 
 from pattern.web import URL, DOM
@@ -17,9 +14,6 @@ OUTPUT_CSV = 'syrianarchive.csv'
 PAGES = 77
 
 def extract_incidents(dom):
-    """
-    TODO
-    """
 
     incident_list = []
     i = 0
@@ -49,9 +43,7 @@ def extract_incidents(dom):
     return incident_list
 
 def save_csv(f, incidents):
-    '''
-    TODO
-    '''
+
     writer = csv.writer(f)
     writer.writerow(['link', 'weapons', 'description', 'date', 'location', 'violation'])
 
@@ -59,27 +51,13 @@ def save_csv(f, incidents):
         writer.writerow(row)
 
 if __name__ == '__main__':
-    # # Download the HTML file
-    # url = URL(TARGET_URL + '1')
-    # html = url.download(timeout=100)
-    #
-    # # Save a copy to disk in the current directory, this serves as an backup
-    # # of the original HTML, will be used in grading.
-    # with open(BACKUP_HTML, 'wb') as f:
-    #     f.write(html)
-
-    # Parse the HTML file into a DOM representation
     incidents = []
     for i in range(1, PAGES + 1):
         url = URL(TARGET_URL + str(i))
-        print url
         html = url.download(timeout=100)
         dom = DOM(html)
 
-        # Extract the tv series (using the function you implemented)
         incidents += extract_incidents(dom)
-        # print incidents
-        print i
 
     # Write the CSV file to disk (including a header)
     with open(OUTPUT_CSV, 'wb') as output_file:

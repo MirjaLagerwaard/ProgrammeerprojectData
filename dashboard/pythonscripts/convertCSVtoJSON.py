@@ -25,5 +25,6 @@ for row in reader:
 
 # make dictionary for the json
 points_dict = {'data' : points}
+
 # make the json file
 json.dump(points_dict, jsonfile)

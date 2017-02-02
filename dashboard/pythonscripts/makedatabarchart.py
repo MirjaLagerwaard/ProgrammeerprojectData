@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# Name: Mirja Lagerwaard
+# Student number: 10363149
+
 import csv
 import json
 
@@ -18,7 +22,6 @@ fieldnames = (
 
 reader = csv.DictReader(csvfiletotal, fieldnames)
 
-# Maak dict van type violation [type: 0] waar je 0 gaat optellen voor iedere violation die van een bepaald type is
 amountofviolation = {'ACCFRA':0, 'UOIW':0, 'UA':0, 'SPPAO':0, 'SAESCR':0, 'VOCR':0, 'AAFD':0, 'Other':0, 'None':0}
 translateDict = {'Alleged civilian casualties from Russian attacks':'ACCFRA',
                     'Use of illegal weapons':'UOIW',
@@ -38,10 +41,11 @@ for row in reader:
         short = translateDict[typeViolation]
         amountofviolation[short] += 1
 
-
 for key, value in amountofviolation.iteritems():
     result.append({"typeofviolation":key, "amount":str(value)})
+
 # make dictionary for the json
 points_dict = {'data': result}
+
 # make the json file
 json.dump(points_dict, jsonfile)
