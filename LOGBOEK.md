@@ -28,7 +28,7 @@
 
 * Prototype gepresenteerd aan mijn werkgroep. Het onderwerp en ideeën van visualisaties waren goed. Als tip kreeg ik nog mee dat ik voor de kaart van Syrië ook een google API in zo kunnen laden, zodat je ook zou kunnen inzoomen op de gebieden waar incidenten plaatsgevonden. Daarnaast is een voordeel dat de steden en gebieden dan ook al in de kaart getekent zijn. Ik ga volgende week kijken hoe dit werkt en besluiten of ik dit daadwerkelijk zal doen.
 * Tabel gemaakt waarin de afkortingen van de incidenten weergegeven staan. Ik wil deze tabel linken aan de barchart, zodat als je op de bar staat van een corresponderende type incident deze oplicht in de tabel, zodat je niet zelf hoeft te zoeken in de tabel naar de afkorting.
-* Data voorbereid voor mijn barchart
+* Data voorbereid voor mijn barchart.
 * Menubalk aangepast: je kunt nu via een knop in het menu naar de originele site van the Syrian Archive.
 
 ##WEEK 2
@@ -36,8 +36,8 @@
 ###Maandag 16 januari
 
 * Voortgang en planning voor deze week besproken met mijn vergadergroepje. Aan het einde van de week wil ik een timeslider hebben die gekoppeld is aan de Calendar Heatmap en de barchart. Daarnaast wil ik de google API ingeladen hebben en de kaart ingezoomd hebben staan op Syrië. Als er tijd over is dan wil ik ook al stippen op de kaart hebben staan die de locatie van de incidenten aangeven.
-* Google API in te laten en deze in te zoomen op Syrië
-* Indeling van pagina veranderd
+* Google API in te laten en deze in te zoomen op Syrië.
+* Indeling van pagina veranderd.
 * Data opnieuw moeten scrapen: ik kwam erachter dat ik de latitude en longitude van een incident nodig heb om de stippen op de kaart te plaatsen, dus ik heb mijn code aangepast.
 * Begonnen om de data voor mijn barchart per jaar te selecteren uit de json file, zodat deze apart kunnen worden weergegeven.
 
@@ -58,25 +58,22 @@
 1. Niet van alle incidenten zijn de coordinaten beschikbaar, waardoor deze stippen nu linksbovenin de hoek worden geplaatst. Wel zijn van deze incidenten de locatie/stad. Ik wil van deze incidenten de coordinaten opzoeken van de bijbehorende stad en deze toekennen. Een probleem is echter wel dat ze niet allemaal dezelfde coordinaten kunnen krijgen, omdat de stippen dan allemaal over elkaar komen te liggen. Misschien moet ik ze allemaal net een ander coordinaat geven die wel nog behoort tot de stad.
 2. Wanneer je op de tabel op een type incident gaat staan waar de data 0 is, dan verschijnt de tooltip links bovenin de hoek. Dit komt omdat er geen bar getekend is, waardoor de code niet weet waar het gepositioneerd moet worden. Ik ga kijken of het lukt om deze tooltip toch op de goede plek te krijgen. Lukt dit niet dan wil ik ervoor zorgen dat hij geen tooltip laat zien als de data 0 is.
 
-*Vrijdag 20 januari*
+###Vrijdag 20 januari
 
-Mijn alfa versie gepresenteerd aan de werkgroep. Tips die ik heb gekregen:
+* Mijn alfa versie gepresenteerd aan de werkgroep. Tips die ik heb gekregen:
 
-* Buttons maken dat als je daarop klikt dat de kaart automatisch inzoomt op Aleppo/Homs/Damascus, omdat daar de meeste incidenten hebben plaatsgevonden
+1. Buttons maken dat als je daarop klikt dat de kaart automatisch inzoomt op Aleppo/Homs/Damascus, omdat daar de meeste incidenten hebben plaatsgevonden
+2. De stippen die geen exacte coördinaten hebben een andere kleur geven en duidelijk aangeven dat dit dus niet de exacte positie is
 
-* De stippen die geen exacte coördinaten hebben een andere kleur geven en duidelijk aangeven dat dit dus niet de exacte positie is
+###Zaterdag en zondag 21-22 januari
 
-*Zaterdag en zondag 21-22 januari*
-
-* Zoom buttons gemaakt, en een zoom out button
-
+* Zoom buttons gemaakt, en een zoom out button.
 * Ik ben erachter gekomen dat er nog een bug in mijn map zit... Ze hebben in de database van meerdere notaties gebruik gemaakt om coördinaten aan te geven. Ik heb dit weekend dus tijd besteed om mijn python script (makedatamap.py) aan te passen, zodat deze coördinaten omgezet worden naar de juiste notatie. Daarbij is deze bug opgelost.
-
 * Ik heb daarnaast de bug in de barchart opgelost. Als je nu hovert over type incidenten die 0 keer voorkomen verschijnt de tooltip op de juiste plek. Ik heb dit opgelost door een bar te laten tekenen van 1px groot, waardoor de code weet waar de tooltip moet verschijnen.
+* x-as label toegevoegd aan de barchart.
+* Met testdata heb ik voor elkaar gekregen dat ik de hokjes van de calendarview op de juiste manier kan inkleuren.
 
-* x-as label toegevoegd aan de barchart
-
-* Met testdata heb ik voor elkaar gekregen dat ik de hokjes van de calendarview op de juiste manier kan inkleuren
+##WEEK 3
 
 *Maandag 23 januari*
 

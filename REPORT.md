@@ -57,6 +57,8 @@ Second, go into detail, and describe the modules/classes and how they relate.
 
 Scrapen van data (meerdere pagina's, opnieuw omdat ik lat en long ook nodig had, opnieuw ivm bug)
 timeslider werden timebuttons
+Map: stippen die geen latitude en/of longitude hebben + stippen met exact dezelfde coordinaten,  Ik ben erachter gekomen dat er nog een bug in mijn map zit... Ze hebben in de database van meerdere notaties gebruik gemaakt om coördinaten aan te geven. Ik heb dit weekend dus tijd besteed om mijn python script (makedatamap.py) aan te passen, zodat deze coördinaten omgezet worden naar de juiste notatie. Daarbij is deze bug opgelost.
+Barchart en table: als je op de tabel gaat staan verscheen de tooltip rechts bovenin de hoek
 
 During the development of my visualisation, I have met some challenges:
 
