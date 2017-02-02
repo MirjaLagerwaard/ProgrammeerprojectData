@@ -81,9 +81,11 @@ In this file you can find all the javascript code for the Barchart. The code for
 
 * Scraping the data
 
-1. I had some difficulties with scraping the webpage of the Syrian Archive. I had to scrape multiple pages which I had never did before.
-2. Later in the process I found out that I also had to scrape the latitude and longitude of each incident to be able to place circles on the Map of Syria. Therefore, I had to change my Python script and scrape the website again.
-3. When I placed the circles on the map, I found out that something went wrong with scraping the website. Some incidents were scraped twice. I did not find a bug in my Python script, but when I runned the scraper.py script again the problem was solved.
+I had some difficulties with scraping the webpage of the Syrian Archive. I had to scrape multiple pages which I had never did before.
+
+Later in the process I found out that I also had to scrape the latitude and longitude of each incident to be able to place circles on the Map of Syria. Therefore, I had to change my Python script and scrape the website again.
+
+When I placed the circles on the map, I found out that something went wrong with scraping the website. Some incidents were scraped twice. I did not find a bug in my Python script, but when I runned the scraper.py script again the problem was solved.
 
 * Timeslider
 
@@ -95,10 +97,13 @@ During the process of linking the Map of Syria with the Calendar Heatmap I found
 
 * Map
 
-1. In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the Map of Syria, because you need the coordinates of an incident to place a circle on the Map of Syria. For this reason I was forced to not display these incidents on the map.
-2. Another problem with the Map of Syria was that there were incidents with exactly the same coordinates. This will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to hover or click the circle which is on top. To solve this problem I add a random generated number to the pixel values where the circles are placed. This random number is not greater than the diameter of the circle itself, so the deviation is minimal. This solution is called jitter.
-3. I found out that the Syrian Archive uses multiple formats to display the coordinates of an incident. I had to make an python script which transforms all these multiple formats to the format which was needed to place the circles on the map.
-4. Two days before the deadline one of my group members found another bug in my map. After using + or - zoombuttons you could not drag the map anymore. This bug was caused due to the link between the Map of Syria and the Calendar Heatmap. After linking the tooltip to the correct HTML element the bug was solved.
+In the Syrian Archive are incidents included where the latitude and/or longitude are not available. This is a problem for the Map of Syria, because you need the coordinates of an incident to place a circle on the Map of Syria. For this reason I was forced to not display these incidents on the map.
+
+Another problem with the Map of Syria was that there were incidents with exactly the same coordinates. This will result into two circles on the same location in the map. When you want to hover or click on these incidents, you will only be able to hover or click the circle which is on top. To solve this problem I add a random generated number to the pixel values where the circles are placed. This random number is not greater than the diameter of the circle itself, so the deviation is minimal. This solution is called jitter.
+
+I found out that the Syrian Archive uses multiple formats to display the coordinates of an incident. I had to make an python script which transforms all these multiple formats to the format which was needed to place the circles on the map.
+
+Two days before the deadline one of my group members found another bug in my map. After using + or - zoombuttons you could not drag the map anymore. This bug was caused due to the link between the Map of Syria and the Calendar Heatmap. After linking the tooltip to the correct HTML element the bug was solved.
 
 * Barchart and Table
 
