@@ -45,7 +45,7 @@ Hover over the bars of the barchart or hover over the rows of the table to see t
 
 ###Detail
 
-#FOLDERS
+####FOLDERS
 * dashboard
 
 In this folder you can find al the python script, data, javascript files, css files and html files for the visualisation.
@@ -62,7 +62,7 @@ In this folder you can find all the images which are used for the website / desi
 
 In this folder you can find all the python scripts which are used to scrape the data of the website of the syrian archive and to convert the data in the correct format.
 
-#FILES
+####FILES
 * calendar.js
 
 In this file you can find all the javascript code for the calendar heatmap. The code for the link between the calendar heatmap and the map of Syria can also be found in this file.
