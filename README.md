@@ -1,9 +1,7 @@
-# ProgrammeerprojectData
+# VISUALIZING THE HUMAN RIGHTS VIOLATION IN SYRIA
 
-## VISUALIZING THE HUMAN RIGHTS VIOLATION IN SYRIA
-
-### Mirja Lagerwaard
-### Student number: 10363149
+## Mirja Lagerwaard
+## Student number: 10363149
 
 ###Where can you find what?
 
